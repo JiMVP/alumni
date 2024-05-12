@@ -1,0 +1,96 @@
+* {
+	font-family: sans-serif;
+	box-sizing: border-box;
+	text-align: center;
+}
+body{
+	background-color: whitesmoke;
+}
+.std-contain{
+	background-color: whitesmoke;
+	width: 1190px;
+	margin:auto;
+}
+@media only screen and (max-width: 1190px) {
+	.std-contain{
+		width: 100%;
+	}
+}
+
+
+
+/*LOGIN.HTML & REGISTER.HTML------------------------------------------------------------------------------------*/
+
+
+
+.reglogin-contain{
+	width: 100%;
+	padding: 50px
+}
+.regloginbox{
+	background-color: white;
+	padding: 50px 60px;
+	width: 700px;
+	margin: auto;
+	border-radius: 40px;
+	/*mel's default shadow: */
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	 */
+}
+.reglog-title{
+	font-style: bold;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+.regloginbox input[type=text], input[type=password], input[type=submit]{
+	height: 50px;
+	font-size: 20px;
+	border-radius: 10px;
+
+}
+.regloginbox input[type=text], input[type=password]{	
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid;
+}
+.regloginbox input[type=submit]{
+	margin-top: 10px;
+	width: 200px;
+	border: none;
+}
+
+
+
+/*HOME.HTML-----------------------------------------------------------------------------------------------------*/
+
+
+
+div.topbar, div.masthd, div.banner, div.auxmenu, div.content, div.agenft, div.stdft{
+	width: 100%;
+}
+div.topbar, div.auxmenu{
+	background-color: grey;
+	height: 45px;
+}
+
+div.masthd{
+	background-color: darkgrey;
+	height: 140px;
+}
+div.banner{
+	height: 460px;
+	background-color: lightgray;
+}
+
+div.content{
+	height: 50%;
+	background-color: whitesmoke;
+}
+div.agenft{
+	height: 30%;
+	background-color: darkgray;
+}
+div.stdft{
+	height:20%;
+	background-color: gray;
+}
