@@ -37,16 +37,36 @@ body{
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	 */
 }
+@media only screen and (max-width:816px){
+	.regloginbox{
+		width:100%;
+	}
+	.reglogin-contain{
+		padding:0px;
+	}
+}
 .reglog-title{
 	font-style: bold;
 	font-size: 40px;
 	margin-bottom: 30px;
+}
+@media only screen and (max-width:559px){
+	.reglog-title{
+		font-size:20px;
+	}
 }
 .regloginbox input[type=text], input[type=password], input[type=submit]{
 	height: 50px;
 	font-size: 20px;
 	border-radius: 10px;
 
+}
+@media only screen and (max-width:559px){
+	.regloginbox input[type=text], input[type=password], input[type=submit]{
+		height: 30px;
+		font-size: 15px;
+		border-radius: 8px;
+	}
 }
 .regloginbox input[type=text], input[type=password]{	
 	width: 100%;
