@@ -30,11 +30,17 @@ body{
 	width: 100%;
 	padding: 50px
 }
-.regloginbox{
+
+
+
+/*LOGIN.HTML------------------------------------------------------------------------------------*/
+
+
+
+.loginbox{
 	background-color: white;
 	padding: 50px 60px;
 	width: 700px;
-
 	margin: auto;
 	border-radius: 40px;
 	/*mel's default shadow: */
@@ -42,7 +48,7 @@ body{
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	 */
 }
 @media only screen and (max-width:816px){
-	.regloginbox{
+	.loginbox{
 		width:100%;
 	}
 	.reglogin-contain{
@@ -59,38 +65,103 @@ body{
 		font-size:20px;
 	}
 }
-.regloginbox input[type=text], input[type=password], input[type=submit]{
+.loginbox input[type=text], input[type=password], input[type=submit]{
 	height: 50px;
 	font-size: 20px;
 	border-radius: 10px;
 
 }
 @media only screen and (max-width:559px){
-	.regloginbox input[type=text], input[type=password], input[type=submit]{
+	.loginbox input[type=text], input[type=password], input[type=submit]{
 		height: 30px;
 		font-size: 15px;
 		border-radius: 8px;
 	}
 }
-.regloginbox input[type=text], input[type=password]{	
+.loginbox input[type=text], input[type=password]{	
 	width: 100%;
 	margin-bottom: 20px;
 	border: 1px solid;
 }
-.regloginbox input[type=submit]{
+.loginbox input[type=submit]{
 	margin-top: 10px;
 	width: 200px;
 	border: none;
 }
 @media only screen and (max-width: 338px){
-	.regloginbox{
+	.loginbox{
 		padding: 50px 30px;
 	}
-	.regloginbox input[type=submit]{
+	.loginbox input[type=submit]{
 		width: 100%;
 	}
 }
 
+
+
+/*REGISTER.HTML------------------------------------------------------------------------------------*/
+
+
+
+.regbox{
+	background-color: white;
+	padding: 50px 60px;
+	min-width: 700px;
+	max-width: 1190px;
+	margin: auto;
+	border-radius: 40px;
+	/*mel's default shadow: */
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
+}
+@media only screen and (max-width:816px){
+	.regbox{
+		width:100%;
+	}
+	.reglogin-contain{
+		padding:0px;
+	}
+}
+/* .reglog-title{
+	font-style: bold;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+@media only screen and (max-width:559px){
+	.reglog-title{
+		font-size:20px;
+	}
+} */
+.regbox input[type=text], input[type=password], input[type=submit]{
+	height: 50px;
+	font-size: 20px;
+	border-radius: 10px;
+
+}
+@media only screen and (max-width:559px){
+	.regbox input[type=text], input[type=password], input[type=submit]{
+		height: 30px;
+		font-size: 15px;
+		border-radius: 8px;
+	}
+}
+.regbox input[type=text], input[type=password]{	
+	width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid;
+}
+.regbox input[type=submit]{
+	margin-top: 10px;
+	width: 200px;
+	border: none;
+}
+@media only screen and (max-width: 338px){
+	.regbox{
+		padding: 50px 30px;
+	}
+	.regbox input[type=submit]{
+		width: 100%;
+	}
+}
 
 
 
