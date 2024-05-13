@@ -3,6 +3,9 @@
 	box-sizing: border-box;
 	text-align: center;
 }
+html{
+	min-width: 180px;
+}
 body{
 	background-color: whitesmoke;
 }
@@ -78,7 +81,10 @@ body{
 	width: 200px;
 	border: none;
 }
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 338px){
+	.regloginbox{
+		padding: 50px 30px;
+	}
 	.regloginbox input[type=submit]{
 		width: 100%;
 	}
