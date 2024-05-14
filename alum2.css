@@ -106,21 +106,22 @@ body{
 .regbox{
 	background-color: white;
 	padding: 50px 60px;
-	min-width: 700px;
+	/* min-width: 700px; */
+	width: 100%;
 	max-width: 1190px;
 	margin: auto;
 	border-radius: 40px;
 	/*mel's default shadow: */
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
 }
-@media only screen and (max-width:816px){
+/* @media only screen and (max-width:816px){
 	.regbox{
 		width:100%;
 	}
-	.reglogin-contain{
+	/* .reglogin-contain{
 		padding:0px;
-	}
-}
+	} 
+} */
 /* .reglog-title{
 	font-style: bold;
 	font-size: 40px;
