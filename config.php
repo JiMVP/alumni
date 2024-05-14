@@ -23,4 +23,25 @@
 
 	}
 
+	if(isset($_POST['reg-submit'])){
+
+		$regpwd=$_POST['reg-pwd'];
+		$conpass=$_POST['reg-conpass'];
+
+		if($conpass != $regpwd){
+			header("location:register.html?notif=conpasserror");
+		}
+
+		$regusn=$_POST['reg-usn'];
+		$reglname=$_POST['reg-lname'];
+		$regfname=$_POST['reg-fname'];
+		$regmname=$_POST['reg-mname'];
+		$regsuffix=$_POST['reg-suffix'];
+
+		mysqli_query($con, "INSERT INTO `alum-user` (`lname`, `fname`, `mname`, `suffix`, `usn`, `pwd`) VALUES('$reglname', '$regfname', '$regmname', '$regsuffix', '$regusn', '$regpwd')");
+
+		header("location:login.html");
+		
+	}
+
 ?>
