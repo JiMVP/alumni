@@ -55,31 +55,31 @@ body{
 		padding:0px;
 	}
 }
-.reglog-title{
+.log-title{
 	font-style: bold;
 	font-size: 40px;
 	margin-bottom: 30px;
 }
 @media only screen and (max-width:559px){
-	.reglog-title{
+	.log-title{
 		font-size:20px;
 	}
 }
-.loginbox input[type=text], input[type=password], input[type=submit]{
+.loginbox input[type=text], .loginbox input[type=password], .loginbox input[type=submit]{
 	height: 50px;
 	font-size: 20px;
 	border-radius: 10px;
 
 }
 @media only screen and (max-width:559px){
-	.loginbox input[type=text], input[type=password], input[type=submit]{
+	.loginbox input[type=text], .loginbox input[type=password], .loginbox input[type=submit]{
 		height: 30px;
 		font-size: 15px;
 		border-radius: 8px;
 	}
 }
-.loginbox input[type=text], input[type=password]{	
-	width: 100%;
+.loginbox input[type=text], .loginbox input[type=password]{	
+	width: 80%;
 	margin-bottom: 20px;
 	border: 1px solid;
 }
@@ -104,6 +104,7 @@ body{
 
 
 .regbox{
+	/* text-align: left; */
 	background-color: white;
 	padding: 50px 60px;
 	/* min-width: 700px; */
@@ -122,33 +123,93 @@ body{
 		padding:0px;
 	} 
 } */
-/* .reglog-title{
+.reg-title{
+	padding: 50px;
 	font-style: bold;
 	font-size: 40px;
 	margin-bottom: 30px;
+	/* text-align: center; */
 }
 @media only screen and (max-width:559px){
-	.reglog-title{
+	.reg-title{
 		font-size:20px;
+		padding: 50px 0px;
 	}
-} */
-.regbox input[type=text], input[type=password], input[type=submit]{
+}
+
+.regbox input[type=text], .regbox input[type=password], .regbox input[type=submit]{
 	height: 50px;
 	font-size: 20px;
 	border-radius: 10px;
 
 }
 @media only screen and (max-width:559px){
-	.regbox input[type=text], input[type=password], input[type=submit]{
+	.regbox input[type=text], .regbox input[type=password], .regbox input[type=submit]{
 		height: 30px;
 		font-size: 15px;
 		border-radius: 8px;
 	}
 }
-.regbox input[type=text], input[type=password]{	
-	width: 100%;
+
+.reglog-cin-form{
+	padding: 10px 200px;
+	display: flex;
+}
+@media only screen and (max-width: 1040px){
+	.reglog-cin-form{
+		padding: 10px 100px;
+	}
+}
+@media only screen and (max-width: 711px){
+	.reglog-cin-form{
+		padding: 10px 20px;
+		/* display: block; */
+	}
+}
+@media only screen and (max-width: 565px){
+	.reglog-cin-form{
+		padding: 10px 0px;
+	}
+}
+@media only screen and (max-width: 435px){
+	.reglog-cin-form{
+		display:block;
+	}
+}
+.regbox label{
+	text-align: left;
+	font-size: 20px;
+	width: 30%;
+	padding: 12px;
+	margin: auto;
+}
+@media only screen and (max-width:559px){
+	.regbox label{
+		font-size: 15px;
+	}
+}
+@media only screen and (max-width: 435px){
+	.reglog-cin-form{
+		display:block;
+	}
+	.regbox label{
+		width: 100%;
+		margin: 0px;
+	}
+}
+.regbox input[type=text], .regbox input[type=password]{	
+	width: 70%;
 	margin-bottom: 20px;
 	border: 1px solid;
+	margin: auto;
+}
+@media only screen and (max-width: 435px){
+	.regbox input[type=text], .regbox input[type=password]{	
+		width: 100%;
+	}
+	.reglog-cin-form{
+		text-align: left;
+	}
 }
 .regbox input[type=submit]{
 	margin-top: 10px;
@@ -159,8 +220,14 @@ body{
 	.regbox{
 		padding: 50px 30px;
 	}
+	
 	.regbox input[type=submit]{
 		width: 100%;
+	}
+}
+@media only screen and (max-width:220px){
+	.regbox{
+		padding: 50px 15px;
 	}
 }
 

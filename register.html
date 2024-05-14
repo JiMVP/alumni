@@ -9,7 +9,54 @@
     <div class="std-contain">
         <div class="reglogin-contain">
             <div class="regbox">
-                <div class="reglog-title"><b>ACLC Alumni Registration</b></div>
+                <div class="reg-title"><b>ACLC Alumni Registration</b></div>
+                <!-- <div class="regbox-txt-left"> -->
+                    <form class="regform" action="config.php" method="POST">
+                        <div class="reglog-cin-form">
+                            <label for="reg-usn">USN: </label>
+                            <input type="text" name="reg-usn" required>
+                        </div>
+                        <!-- <br> -->
+                        <div class="reglog-cin-form">
+                            <label for="reg-pwd">Password: </label>
+                            <input type="password" name="reg-pwd" required>
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-conpass">Confirm Password: </label>
+                            <input type="password" name="reg-conpass" required>
+                        </div>
+                        <br>
+                        <hr width="50%">
+                        <br>
+                        <!-- <div class="reglog-cin-form">
+                            <label for="reg-lname">Last Name, </label><label for="reg-fname">First Name, </label><label for="reg-mname">Middle Name, </label><label for="reg-suffix">Suffix:</label>
+                        </div>
+                        
+                        <div class="reglog-cin-form">
+                            <input type="text" name="reg-lname" placeholder="Last Name"><input type="text" name="reg-lname" placeholder="Last Name">
+                        </div> -->
+                        <div class="reglog-cin-form">
+                            <label for="reg-lname">Last Name: </label>
+                            <input type="text" name="reg-lname" required>
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-fname">First Name: </label>
+                            <input type="text" name="reg-fname" required>
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-mname">Middle Name: </label>
+                            <input type="text" name="reg-mname">
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-suffix">Suffix: </label>
+                            <input type="text" name="reg-suffix">
+                        </div>
+                        <br>
+                        <input type="submit" value="Register">
+                    </form>
+                <!-- </div> -->
+                
+                <div>Already registered? <a href="login.html">Log In</a></div>
             </div>
         </div>
     </div>
