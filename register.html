@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ACLC Alumni Registration</title>
-    <link rel="stylesheet" href="alum2.css">
+    <link rel="stylesheet" href="alum.css">
 </head>
 <body>
     <div class="std-contain">
@@ -50,6 +50,39 @@
                         <div class="reglog-cin-form">
                             <label for="reg-suffix">Suffix: </label>
                             <input type="text" name="reg-suffix">
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-gender">Gender: </label>
+                            <input list="genders" type="text" name="reg-gender" required>
+                            <datalist id="genders">
+                                <option value="Male">
+                                <option value="Female">
+                                <option value="Rather Not Specify">
+                            </datalist>
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-no">Phone Number: </label>
+                            <input type="number" name="reg-no">
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-email">Email Address: </label>
+                            <input type="email" name="reg-email">
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-subd">Village / Subdivision: </label>
+                            <input type="text" name="reg-subd">
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-brgy">Barangay: </label>
+                            <input type="text" name="reg-brgy">
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-muncit">City / Municipality: </label>
+                            <input type="text" name="reg-muncit">
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-prov">Province: </label>
+                            <input type="text" name="reg-prov">
                         </div>
                         <br>
                         <input type="submit" name="reg-submit" value="Register">

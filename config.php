@@ -16,6 +16,8 @@
 		$fpwd=$sqlfet['pwd'];
 		
 		if($usn==$fusn && $pwd==$fpwd){
+			session_start();
+			$_SESSION["usn"] = $usn;
 			header("location:home.php");
 		}else{
 			header("location:login.html");

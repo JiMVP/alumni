@@ -1,11 +1,16 @@
-
+<?php
+session_start();
+if($_SESSION["usn"]==""){
+	header("location:login.html");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alumni Information Management System</title>
-	<link rel="stylesheet" href="alum2.css">
+	<link rel="stylesheet" href="alum.css">
 	
 </head>
 <body>
