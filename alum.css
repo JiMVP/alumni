@@ -55,22 +55,26 @@ body{
 		padding:0px;
 	}
 }
+/*ACLC ALUMNI LOG IN*/
 .log-title{
 	font-style: bold;
 	font-size: 40px;
 	margin-bottom: 30px;
 }
+/*LOG IN SCREEN @ 559px AND LESS: SMALLER FONT*/
 @media only screen and (max-width:559px){
 	.log-title{
 		font-size:20px;
 	}
 }
+/*ALL INPUT TYPES HEIGHT, FONT SIZE, AND EDGE CURVES DEFAULTS*/
 .loginbox input[type=text], .loginbox input[type=password], .loginbox input[type=submit]{
 	height: 50px;
 	font-size: 20px;
 	border-radius: 10px;
 
 }
+/*ALL INPUT TYPES IN 559px AND LESS: SMALLER HEIGHT, FONT SIZE, LESS CURVES ON THE EDGES*/
 @media only screen and (max-width:559px){
 	.loginbox input[type=text], .loginbox input[type=password], .loginbox input[type=submit]{
 		height: 30px;
@@ -78,11 +82,13 @@ body{
 		border-radius: 8px;
 	}
 }
+/*USERNAME AND PASSWORD INPUTS' DEFAULT WIDTH, MARGINS, AND BORDERS */
 .loginbox input[type=text], .loginbox input[type=password]{	
 	width: 80%;
 	margin-bottom: 20px;
 	border: 1px solid;
 }
+/*LOGIN BUTTON DEFAULT WIDTH, MARGINS, AND BORDERS */
 .loginbox input[type=submit]{
 	margin-top: 10px;
 	width: 200px;
@@ -102,7 +108,7 @@ body{
 /*REGISTER.HTML------------------------------------------------------------------------------------*/
 
 
-
+/*REGISTRATION BOX, WHERE ALL BLOCKS FOR REGISTER.HTML GOES IN*/
 .regbox{
 	/* text-align: left; */
 	background-color: white;
@@ -123,6 +129,7 @@ body{
 		padding:0px;
 	} 
 } */
+/*ACLC ALUMNI REGISTRATION DEFAULTS*/
 .reg-title{
 	padding: 50px;
 	font-style: bold;
@@ -130,6 +137,7 @@ body{
 	margin-bottom: 30px;
 	/* text-align: center; */
 }
+/*ACLC ALUMNI REGISTRATION on 559px SCREEN OR LESS: SMALLER FONT SIZE, LESS PADDING*/
 @media only screen and (max-width:559px){
 	.reg-title{
 		font-size:20px;
@@ -137,14 +145,14 @@ body{
 	}
 }
 
-.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=password], .regbox input[type=submit]{
+.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox input[type=submit]{
 	height: 50px;
 	font-size: 20px;
 	border-radius: 10px;
 
 }
 @media only screen and (max-width:559px){
-	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=password], .regbox input[type=submit]{
+	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox input[type=submit]{
 		height: 30px;
 		font-size: 15px;
 		border-radius: 8px;
@@ -197,7 +205,7 @@ body{
 		margin: 0px;
 	}
 }
-.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=password]{
+.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password]{
 	text-align: left;
 	padding: 10px;	
 	width: 70%;
@@ -206,7 +214,7 @@ body{
 	margin: auto;
 }
 @media only screen and (max-width: 435px){
-	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=password]{	
+	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password]{	
 		width: 100%;
 	}
 	.reglog-cin-form{
