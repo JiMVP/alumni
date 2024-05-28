@@ -137,6 +137,15 @@ body{
 	margin-bottom: 30px;
 	/* text-align: center; */
 }
+.regform-title{
+	text-align: left;
+	margin: 10px 200px;
+	font-size: 25px;
+}
+/* .regform-title label{
+	
+	
+} */
 /*ACLC ALUMNI REGISTRATION on 559px SCREEN OR LESS: SMALLER FONT SIZE, LESS PADDING*/
 @media only screen and (max-width:559px){
 	.reg-title{

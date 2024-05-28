@@ -35,7 +35,10 @@
                         <div class="reglog-cin-form">
                             <input type="text" name="reg-lname" placeholder="Last Name"><input type="text" name="reg-lname" placeholder="Last Name">
                         </div> -->
-                        <div>Name:</div>
+                        
+                        <div class="regform-title">
+                            <b>Name:</b>                                           
+                        </div>
                         <div class="reglog-cin-form">
                             <label for="reg-lname">Last Name: </label>
                             <input type="text" name="reg-lname" required>
@@ -51,17 +54,22 @@
                         <div class="reglog-cin-form">
                             <label for="reg-suffix">Suffix: </label>
                             <input type="text" name="reg-suffix">
-                        </div>
+                        </div>                           
                         <br>
                         <br>
                         <div class="reglog-cin-form">
                             <label for="reg-gender">Gender: </label>
-                            <input list="genders" type="text" name="reg-gender" required>
-                            <datalist id="genders">
+                            
+                            <input type="radio" id="gen-radio" name="reg-gender" value="Male" onclick="document.getElementById('gen-text').style.display='none'" required><label for="reg-gend">Male</label>
+                            <input type="radio" id="gen-radio" name="reg-gender" value="Female" onclick="document.getElementById('gen-text').style.display='none'" required><label for="reg-gend">Female</label>
+                            <input type="radio" id="gen-radio" name="reg-gender" value="Others" onclick="document.getElementById('gen-text').style.display='block'" required><label for="reg-gend">Others</label>
+                            <input type="text" id="gen-text" name="reg-gender" style="display: none;" placeholder="Gender" required>                          
+                            
+                            <!-- <datalist id="genders">
                                 <option value="Male">
                                 <option value="Female">
                                 <option value="Rather Not Specify">
-                            </datalist>
+                            </datalist> -->
                         </div>
                         <div class="reglog-cin-form">
                             <label for="reg-bday">Date Of Birth</label>
@@ -69,7 +77,23 @@
                         </div>
                         <br>
                         <br>
-                        <div>Contact Information:</div>
+                        <div class="regform-title">
+                            <b>Place Of Birth:</b>
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-muncit">City / Municipality: </label>
+                            <input type="text" name="reg-muncit">
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-prov">Province: </label>
+                            <input type="text" name="reg-prov">
+                        </div>
+                        <br>
+                        <br>
+                        <div class="regform-title">
+                            <b>Contact Information:</b>
+                        </div>
+                        
                         <div class="reglog-cin-form">
                             <label for="reg-no">Phone Number: </label>
                             <input type="number" name="reg-no">
@@ -80,7 +104,10 @@
                         </div>
                         <br>
                         <br>
-                        <div>Address:</div>
+                        <div class="regform-title">
+                            <b>Address:</b>
+                        </div>
+                        
                         <div class="reglog-cin-form">
                             <label for="reg-subd">Village / Subdivision: </label>
                             <input type="text" name="reg-subd">
