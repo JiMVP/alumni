@@ -39,8 +39,21 @@
 		$regfname=$_POST['reg-fname'];
 		$regmname=$_POST['reg-mname'];
 		$regsuffix=$_POST['reg-suffix'];
+		$reggend=$_POST['reg-gender'];
+		if($reggend=="Others"){
+			$reggend=$_POST['reg-gender-txt'];
+		}
+		$regbday=$_POST['reg-bday'];
+		$regbmuncit=$_POST['reg-birth-muncit'];
+		$regbprov=$_POST['reg-birth-prov'];
+		$regconno=$_POST['reg-conno'];
+		$regemail=$_POST['reg-email'];
+		$regsubd=$_POST['reg-subd'];
+		$regbrgy=$_POST['reg-brgy'];
+		$regmuncit=$_POST['reg-muncit'];
+		$regprov=$_POST['reg-prov'];
 
-		mysqli_query($con, "INSERT INTO `alum-user` (`lname`, `fname`, `mname`, `suffix`, `usn`, `pwd`) VALUES('$reglname', '$regfname', '$regmname', '$regsuffix', '$regusn', '$regpwd')");
+		mysqli_query($con, "INSERT INTO `alum-user` (`lname`, `fname`, `mname`, `suffix`, `usn`, `pwd`, `gender`, `bday`, `bmuncit`, `bprov`, `conno`, `email`, `subd`, `brgy`, `muncit`, `prov`) VALUES('$reglname', '$regfname', '$regmname', '$regsuffix', '$regusn', '$regpwd', '$reggend', '$regbday', '$regbmuncit', '$regbprov', '$regconno', '$regemail', '$regsubd', '$regbrgy', '$regmuncit', '$regprov')");
 
 		header("location:login.html");
 		
