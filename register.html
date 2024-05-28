@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -25,9 +26,9 @@
                             <label for="reg-conpass">Confirm Password: </label>
                             <input type="password" name="reg-conpass" required>
                         </div>
-                        <br>
+                        
                         <!-- <hr width="50%"> -->
-                        <br>
+                        
                         <!-- <div class="reglog-cin-form">
                             <label for="reg-lname">Last Name, </label><label for="reg-fname">First Name, </label><label for="reg-mname">Middle Name, </label><label for="reg-suffix">Suffix:</label>
                         </div>
@@ -36,7 +37,7 @@
                             <input type="text" name="reg-lname" placeholder="Last Name"><input type="text" name="reg-lname" placeholder="Last Name">
                         </div> -->
                         
-                        <div class="regform-title">
+                        <div class="reg-form-title">
                             <b>Name:</b>                                           
                         </div>
                         <div class="reglog-cin-form">
@@ -55,56 +56,75 @@
                             <label for="reg-suffix">Suffix: </label>
                             <input type="text" name="reg-suffix">
                         </div>                           
-                        <br>
-                        <br>
-                        <div class="reglog-cin-form">
+                        
+                        
+                        <!-- <div class="reglog-cin-form">
                             <label for="reg-gender">Gender: </label>
                             
-                            <input type="radio" id="gen-radio" name="reg-gender" value="Male" onclick="document.getElementById('gen-text').style.display='none'" required><label for="reg-gend">Male</label>
-                            <input type="radio" id="gen-radio" name="reg-gender" value="Female" onclick="document.getElementById('gen-text').style.display='none'" required><label for="reg-gend">Female</label>
-                            <input type="radio" id="gen-radio" name="reg-gender" value="Others" onclick="document.getElementById('gen-text').style.display='block'" required><label for="reg-gend">Others</label>
-                            <input type="text" id="gen-text" name="reg-gender" style="display: none;" placeholder="Gender" required>                          
+                                                      
                             
-                            <!-- <datalist id="genders">
+                            <datalist id="genders">
                                 <option value="Male">
                                 <option value="Female">
                                 <option value="Rather Not Specify">
-                            </datalist> -->
+                            </datalist> 
+                        </div> -->
+                        <div class="reg-form-title">
+                            <b>Gender:</b>                                           
                         </div>
+                        <div class="reglog-gen-radio">
+                            <div class="div-gen">
+                                <input type="radio" id="gen-radio" name="reg-gender" value="Male" onclick="document.getElementById('gen-text').style.display='none'" required>
+                                <label for="reg-gend">Male</label>
+                                <div></div>
+                            </div>
+                            <div class="div-gen">
+                                <input type="radio" id="gen-radio" name="reg-gender" value="Female" onclick="document.getElementById('gen-text').style.display='none'" required>
+                                <label for="reg-gend">Female</label>
+                                <div></div>
+                            </div>
+                            <div class="div-gen">
+                                <input type="radio" id="gen-radio" name="reg-gender" value="Others" onclick="document.getElementById('gen-text').style.display='block'" required>
+                                <label for="reg-gend">Others</label>
+                                <input type="text" id="gen-text" name="reg-gender-txt" style="display: none;" placeholder="Gender" required>
+                            </div>    
+                        </div>
+                        
+                        <div class="reg-form-title"></div>
                         <div class="reglog-cin-form">
                             <label for="reg-bday">Date Of Birth</label>
-                            <input type="date" name="reg-bday">
+                            <input type="date" name="reg-bday" required>
                         </div>
-                        <br>
-                        <br>
-                        <div class="regform-title">
+                        
+                        
+                        <div class="reg-form-title">
                             <b>Place Of Birth:</b>
                         </div>
                         <div class="reglog-cin-form">
                             <label for="reg-muncit">City / Municipality: </label>
-                            <input type="text" name="reg-muncit">
+                            <input type="text" name="reg-muncit" required>
                         </div>
                         <div class="reglog-cin-form">
                             <label for="reg-prov">Province: </label>
-                            <input type="text" name="reg-prov">
+                            <input type="text" name="reg-prov" required>
                         </div>
-                        <br>
-                        <br>
-                        <div class="regform-title">
+                        
+                        
+                        <div class="reg-form-title">
                             <b>Contact Information:</b>
                         </div>
                         
                         <div class="reglog-cin-form">
                             <label for="reg-no">Phone Number: </label>
-                            <input type="number" name="reg-no">
+                            <input type="number" name="reg-no" required>
                         </div>
                         <div class="reglog-cin-form">
                             <label for="reg-email">Email Address: </label>
                             <input type="email" name="reg-email">
                         </div>
-                        <br>
-                        <br>
-                        <div class="regform-title">
+                        
+                        
+                        <div class="reg-form-title">
                             <b>Address:</b>
                         </div>
                         
@@ -118,17 +138,17 @@
                         </div>
                         <div class="reglog-cin-form">
                             <label for="reg-muncit">City / Municipality: </label>
-                            <input type="text" name="reg-muncit">
+                            <input type="text" name="reg-muncit" required>
                         </div>
                         <div class="reglog-cin-form">
                             <label for="reg-prov">Province: </label>
-                            <input type="text" name="reg-prov">
+                            <input type="text" name="reg-prov" required>
                         </div>
                         <br>
                         <input type="submit" name="reg-submit" value="Register">
                     </form>
                 <!-- </div> -->
-                
+                <br>
                 <div>Already registered? <a href="login.html">Log In</a></div>
             </div>
         </div>

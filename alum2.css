@@ -137,11 +137,30 @@ body{
 	margin-bottom: 30px;
 	/* text-align: center; */
 }
-.regform-title{
+.reg-form-title{
 	text-align: left;
-	margin: 10px 200px;
+	margin: 30px 200px 10px;
 	font-size: 25px;
 }
+@media only screen and (max-width: 1040px){
+
+	.reg-form-title{
+		margin: 20px 100px 5px;
+	}
+}
+@media only screen and (max-width: 711px){
+
+	.reg-form-title{
+		margin: 15px 20px 3px;
+	}
+}
+@media only screen and (max-width: 565px){
+
+	.reg-form-title{
+		margin: 10px 0px 0px;
+	}
+}
+
 /* .regform-title label{
 	
 	
@@ -150,7 +169,11 @@ body{
 @media only screen and (max-width:559px){
 	.reg-title{
 		font-size:20px;
-		padding: 50px 0px;
+		padding: 25px 0px;
+		margin-bottom: 0px;
+	}
+	.reg-form-title{
+		font-size: 17px;
 	}
 }
 
@@ -168,28 +191,58 @@ body{
 	}
 }
 
-.reglog-cin-form{
+.reglog-cin-form, .reglog-gen-radio{
 	padding: 10px 200px;
 	display: flex;
 }
+/* .reglog-cin-form{
+	display: flex;
+}*/
+.reglog-gen-radio{	
+	text-align: left;
+	/* display: flex; */
+}
+.div-gen{
+	text-align: left;
+	display: flex;
+}
+
+
+/* .reglog-cin-form-blk{
+	padding: 10px 200px;
+	display: block;
+} */
+@media only screen and (max-width: 1190px){
+	.reglog-gen-radio{
+		display: block;
+	}
+	
+	
+}
 @media only screen and (max-width: 1040px){
-	.reglog-cin-form{
+	.reglog-cin-form, .reglog-gen-radio{
 		padding: 10px 100px;
 	}
+	
+	
 }
 @media only screen and (max-width: 711px){
-	.reglog-cin-form{
+	.reglog-cin-form, .reglog-gen-radio{
 		padding: 10px 20px;
 		/* display: block; */
 	}
+	
 }
 @media only screen and (max-width: 565px){
-	.reglog-cin-form{
-		padding: 10px 0px;
+	.reglog-cin-form, .reglog-gen-radio{
+		padding: 5px 0px;
 	}
+	
+	
 }
 @media only screen and (max-width: 435px){
-	.reglog-cin-form{
+	.reglog-cin-form, .reglog-gen-radio{
+
 		display:block;
 	}
 }
@@ -200,6 +253,10 @@ body{
 	padding: 12px;
 	margin: auto;
 }
+.div-gen label{
+	text-align: left;
+	margin: 0px;
+} 
 @media only screen and (max-width:559px){
 	.regbox label{
 		font-size: 15px;
@@ -225,6 +282,7 @@ body{
 @media only screen and (max-width: 435px){
 	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password]{	
 		width: 100%;
+		margin-bottom: 10px;
 	}
 	.reglog-cin-form{
 		text-align: left;
