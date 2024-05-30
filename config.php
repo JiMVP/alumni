@@ -44,16 +44,13 @@
 			$reggend=$_POST['reg-gender-txt'];
 		}
 		$regbday=$_POST['reg-bday'];
-		$regbmuncit=$_POST['reg-birth-muncit'];
-		$regbprov=$_POST['reg-birth-prov'];
+		$regbplace=$_POST['reg-bplace'];
+
 		$regconno=$_POST['reg-conno'];
 		$regemail=$_POST['reg-email'];
-		$regsubd=$_POST['reg-subd'];
-		$regbrgy=$_POST['reg-brgy'];
-		$regmuncit=$_POST['reg-muncit'];
-		$regprov=$_POST['reg-prov'];
+		$regadd=$_POST['reg-address'];
 
-		mysqli_query($con, "INSERT INTO `alum-user` (`lname`, `fname`, `mname`, `suffix`, `usn`, `pwd`, `gender`, `bday`, `bmuncit`, `bprov`, `conno`, `email`, `subd`, `brgy`, `muncit`, `prov`) VALUES('$reglname', '$regfname', '$regmname', '$regsuffix', '$regusn', '$regpwd', '$reggend', '$regbday', '$regbmuncit', '$regbprov', '$regconno', '$regemail', '$regsubd', '$regbrgy', '$regmuncit', '$regprov')");
+		mysqli_query($con, "INSERT INTO `alum-user` (`lname`, `fname`, `mname`, `suffix`, `usn`, `pwd`, `gender`, `bday`, `bplace`, `conno`, `email`, `address`) VALUES('$reglname', '$regfname', '$regmname', '$regsuffix', '$regusn', '$regpwd', '$reggend', '$regbday', '$regbplace', '$regconno', '$regemail', '$regadd')");
 
 		header("location:login.html");
 		

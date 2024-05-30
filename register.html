@@ -13,6 +13,9 @@
                 <div class="reg-title"><b>ACLC Alumni Registration</b></div>
                 <!-- <div class="regbox-txt-left"> -->
                     <form class="regform" action="config.php" method="POST">
+                        <div class="reg-form-title">
+                            <b>Log In Information:</b>                                           
+                        </div>
                         <div class="reglog-cin-form">
                             <label for="reg-usn">USN: </label>
                             <input type="text" name="reg-usn" required>
@@ -86,7 +89,7 @@
                             <div class="div-gen">
                                 <input type="radio" id="gen-radio" name="reg-gender" value="Others" onclick="document.getElementById('gen-text').style.display='block'" required>
                                 <label for="reg-gender">Others</label>
-                                <input type="text" id="gen-text" name="reg-gender-txt" style="display: none;" placeholder="Gender" required>
+                                <input type="text" id="gen-text" name="reg-gender-txt" style="display: none;" placeholder="Gender">
                             </div>    
                         </div>
                         
@@ -97,21 +100,13 @@
                         </div>
                         
                         
-                        <div class="reg-form-title">
-                            <b>Place Of Birth:</b>
-                        </div>
                         <div class="reglog-cin-form">
-                            <label for="reg-muncit">City / Municipality: </label>
-                            <input type="text" name="reg-birth-muncit" required>
-                        </div>
-                        <div class="reglog-cin-form">
-                            <label for="reg-prov">Province: </label>
-                            <input type="text" name="reg-birth-prov" required>
-                        </div>
-                        
+                            <label for="reg-muncit">Place Of Birth: </label>
+                            <input type="text" name="reg-bplace" placeholder="Village/Brgy., City/Municipality, Province" required>
+                        </div>                       
                         
                         <div class="reg-form-title">
-                            <b>Contact Information:</b>
+                            <b>Contact Information and Address:</b>
                         </div>
                         
                         <div class="reglog-cin-form">
@@ -124,15 +119,15 @@
                         </div>
                         
                         
-                        <div class="reg-form-title">
+                        <!-- <div class="reg-form-title">
                             <b>Address:</b>
-                        </div>
+                        </div> -->
                         
                         <div class="reglog-cin-form">
-                            <label for="reg-subd">Village / Subdivision: </label>
-                            <input type="text" name="reg-subd">
+                            <label for="reg-subd">Present Address: </label>
+                            <input type="text" name="reg-address" placeholder="Village/Brgy., City/Municipality, Province" required>
                         </div>
-                        <div class="reglog-cin-form">
+                        <!-- <div class="reglog-cin-form">
                             <label for="reg-brgy">Barangay: </label>
                             <input type="text" name="reg-brgy">
                         </div>
@@ -143,7 +138,7 @@
                         <div class="reglog-cin-form">
                             <label for="reg-prov">Province: </label>
                             <input type="text" name="reg-prov" required>
-                        </div>
+                        </div> -->
                         <br>
                         <input type="submit" name="reg-submit" value="Register">
                     </form>
