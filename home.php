@@ -3,7 +3,7 @@ session_start();
 if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 	header("location:login.html");
 }
-echo $_SESSION["usn"];
+// echo $_SESSION["usn"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,17 +23,35 @@ echo $_SESSION["usn"];
 </head>
 <body>
 	<div class="std-contain">
-		<div class="topbar">
-			<div>
-				<form action="config.php" method="post">
-					<input type="submit" name="logout" value="Log Out">
-				</form>
+		<form id="tb-menu-form" action="logout.php" method="post">
+			<div class="topbar">
+				<div class="tb-menu">
+					<div class="tb-menu-opt"><a href="#" onclick="cont_home()">Home</a></div>
+					
+					<div class="tb-menu-opt"><a href="#" onclick="cont_dir()">Directory</a></div>
+				
+					<div class="tb-menu-opt"><a href="#" onclick="logout()">Log Out</a></div>				
+				</div>
+				<div class="tb-profile">
+					<div class="tb-menu-opt"><a href="#" onclick="cont_prof()">Profile</a></div>
+				</div>
+				
+			
+			
+				
+				<!-- <input type="submit" name="logout" id="logout" value="Log Out"> -->
+			
+			
 			</div>
-		</div>
+		</form>
 		<div class="masthd">MASTHEAD</div>
 		<div class="banner">BANNER</div>
 		<div class="auxmenu">AUXILIARY MENU</div>
-		<div class="content">CONTENT AREA</div>
+		<div class="content">
+			<div class="cont-home" id="cont-home">HOME</div>
+			<div class="cont-dir" id="cont-dir">DIRECTORY</div>
+			<div class="cont-prof" id="cont-prof">PROFILE</div>
+		</div>
 		<div class="agenft">AGENCY FOOTER</div>
 		<div class="stdft">STANDARD FOOTER</div>
 
@@ -42,3 +60,30 @@ echo $_SESSION["usn"];
 
 </body>
 </html>
+<script>
+	function logout(){
+		document.getElementById("tb-menu-form").submit();
+	}
+	function cont_home(){
+		// if(document.getElementById("cont-home").style.display == "none"){
+			document.getElementById("cont-home").style.display="block";
+			document.getElementById("cont-dir").style.display="none";
+			document.getElementById("cont-prof").style.display="none";
+		// }	
+		// document.getElementById("context").style.display="none";
+	}
+	function cont_dir(){
+		// var getdir = document.getElementById("cont-dir").style.display;
+		// if(getdir == "none"){
+			document.getElementById("cont-dir").style.display="block";
+			document.getElementById("cont-home").style.display="none";
+			document.getElementById("cont-prof").style.display="none";
+		// }	
+		
+	}
+	function cont_prof(){
+		document.getElementById("cont-prof").style.display="block";
+		document.getElementById("cont-dir").style.display="none";
+		document.getElementById("cont-home").style.display="none";
+	}
+</script>

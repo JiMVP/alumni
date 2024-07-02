@@ -31,14 +31,46 @@ div.topbar, div.masthd, div.banner, div.auxmenu, div.content, div.agenft, div.st
 	width: 100%;
 }
 div.topbar, div.auxmenu{
-	background-color: grey;
-	height: 45px;
+	/* background-color: grey; */
+    display: flex;
 }
-.topbar input[type=submit]{
-	height: 50px;
+.tb-menu{
+    display: flex;
+    width: 80%;
+}
+.tb-profile{
+    display: flex;
+    width: 20%;
+    border: solid 1px;
+    /* text-align: center; */
+}
+.tb-menu-opt{
+    padding: 20px 35px;
+}
+.tb-menu .tb-menu-opt{
+    border: solid 1px;
+    /* width: 100%; */
+    text-align: center;
+}
+.tb-profile .tb-menu-opt{
+    /* border: solid 1px; */
+    width: 100%;
+    text-align: center;
+}
+
+/* div.topbar, div.auxmenu{
+	background-color: grey; */
+	/* min-height: 50px; */
+    /* display: flex;
+} */
+
+/* .topbar input[type=submit]{
 	font-size: 20px;
 	border-radius: 10px;
-}
+    display: none;
+} */
+
+
 
 div.masthd{
 	background-color: darkgrey;
@@ -52,6 +84,15 @@ div.banner{
 div.content{
 	height: 50%;
 	background-color: whitesmoke;
+}
+.cont-home{
+    display: block;
+}
+.cont-dir{
+    display: none;
+}
+.cont-prof{
+    display: none;
 }
 div.agenft{
 	height: 30%;
