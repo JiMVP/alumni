@@ -25,6 +25,11 @@
 
 	}
 
+	if(isset($_POST['logout'])){
+		session_abort();
+		header("location:login.html");
+	}
+
 	if(isset($_POST['reg-submit'])){
 
 		$regpwd=$_POST['reg-pwd'];

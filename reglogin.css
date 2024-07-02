@@ -1,0 +1,302 @@
+* {
+	font-family: sans-serif;
+	box-sizing: border-box;
+	text-align: center;
+}
+html{
+	min-width: 180px;
+}
+body{
+	background-color: whitesmoke;
+}
+.std-contain{
+	background-color: whitesmoke;
+	width: 1190px;
+	margin:auto;
+}
+
+/*LOGIN.HTML & REGISTER.HTML------------------------------------------------------------------------------------*/
+
+
+
+.reglogin-contain{
+	width: 100%;
+	padding: 50px
+}
+
+
+
+/*LOGIN.HTML------------------------------------------------------------------------------------*/
+
+
+
+.loginbox{
+	background-color: white;
+	padding: 50px 60px;
+	width: 700px;
+	margin: auto;
+	border-radius: 40px;
+	/*mel's default shadow: */
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	 */
+}
+@media only screen and (max-width:816px){
+	.loginbox{
+		width:100%;
+	}
+	.reglogin-contain{
+		padding:0px;
+	}
+}
+/*ACLC ALUMNI LOG IN*/
+.log-title{
+	font-style: bold;
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+/*LOG IN SCREEN @ 559px AND LESS: SMALLER FONT*/
+@media only screen and (max-width:559px){
+	.log-title{
+		font-size:20px;
+	}
+}
+/*ALL INPUT TYPES HEIGHT, FONT SIZE, AND EDGE CURVES DEFAULTS*/
+.loginbox input[type=text], .loginbox input[type=password], .loginbox input[type=submit]{
+	height: 50px;
+	font-size: 20px;
+	border-radius: 10px;
+
+}
+/*ALL INPUT TYPES IN 559px AND LESS: SMALLER HEIGHT, FONT SIZE, LESS CURVES ON THE EDGES*/
+@media only screen and (max-width:559px){
+	.loginbox input[type=text], .loginbox input[type=password], .loginbox input[type=submit]{
+		height: 30px;
+		font-size: 15px;
+		border-radius: 8px;
+	}
+}
+/*USERNAME AND PASSWORD INPUTS' DEFAULT WIDTH, MARGINS, AND BORDERS */
+.loginbox input[type=text], .loginbox input[type=password]{	
+	width: 80%;
+	margin-bottom: 20px;
+	border: 1px solid;
+}
+/*LOGIN BUTTON DEFAULT WIDTH, MARGINS, AND BORDERS */
+.loginbox input[type=submit]{
+	margin-top: 10px;
+	width: 200px;
+	border: none;
+}
+@media only screen and (max-width: 338px){
+	.loginbox{
+		padding: 50px 30px;
+	}
+	.loginbox input[type=submit]{
+		width: 100%;
+	}
+}
+
+
+
+/*REGISTER.HTML------------------------------------------------------------------------------------*/
+
+
+/*REGISTRATION BOX, WHERE ALL BLOCKS FOR REGISTER.HTML GOES IN*/
+.regbox{
+	/* text-align: left; */
+	background-color: white;
+	padding: 50px 60px;
+	/* min-width: 700px; */
+	width: 100%;
+	max-width: 1190px;
+	margin: auto;
+	border-radius: 40px;
+	/*mel's default shadow: */
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
+}
+/* @media only screen and (max-width:816px){
+	.regbox{
+		width:100%;
+	}
+	/* .reglogin-contain{
+		padding:0px;
+	} 
+} */
+/*ACLC ALUMNI REGISTRATION DEFAULTS*/
+.reg-title{
+	padding: 50px;
+	font-style: bold;
+	font-size: 40px;
+	margin-bottom: 30px;
+	/* text-align: center; */
+}
+.reg-form-title{
+	text-align: left;
+	margin: 30px 200px 10px;
+	font-size: 25px;
+}
+@media only screen and (max-width: 1040px){
+
+	.reg-form-title{
+		margin: 20px 100px 5px;
+	}
+}
+@media only screen and (max-width: 711px){
+
+	.reg-form-title{
+		margin: 15px 20px 3px;
+	}
+}
+@media only screen and (max-width: 565px){
+
+	.reg-form-title{
+		margin: 10px 0px 0px;
+	}
+}
+
+/* .regform-title label{
+	
+	
+} */
+/*ACLC ALUMNI REGISTRATION on 559px SCREEN OR LESS: SMALLER FONT SIZE, LESS PADDING*/
+@media only screen and (max-width:559px){
+	.reg-title{
+		font-size:20px;
+		padding: 25px 0px;
+		margin-bottom: 0px;
+	}
+	.reg-form-title{
+		font-size: 17px;
+	}
+}
+
+.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox input[type=submit]{
+	height: 50px;
+	font-size: 20px;
+	border-radius: 10px;
+
+}
+@media only screen and (max-width:559px){
+	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox input[type=submit]{
+		height: 30px;
+		font-size: 15px;
+		border-radius: 8px;
+	}
+}
+
+.reglog-cin-form, .reglog-gen-radio{
+	padding: 10px 200px;
+	display: flex;
+}
+/* .reglog-cin-form{
+	display: flex;
+}*/
+.reglog-gen-radio{	
+	text-align: left;
+	/* display: flex; */
+}
+.div-gen{
+	text-align: left;
+	display: flex;
+}
+
+
+/* .reglog-cin-form-blk{
+	padding: 10px 200px;
+	display: block;
+} */
+@media only screen and (max-width: 1190px){
+	.reglog-gen-radio{
+		display: block;
+	}
+	
+	
+}
+@media only screen and (max-width: 1040px){
+	.reglog-cin-form, .reglog-gen-radio{
+		padding: 10px 100px;
+	}
+	
+	
+}
+@media only screen and (max-width: 711px){
+	.reglog-cin-form, .reglog-gen-radio{
+		padding: 10px 20px;
+		/* display: block; */
+	}
+	
+}
+@media only screen and (max-width: 565px){
+	.reglog-cin-form, .reglog-gen-radio{
+		padding: 5px 0px;
+	}
+	
+	
+}
+@media only screen and (max-width: 435px){
+	.reglog-cin-form, .reglog-gen-radio{
+
+		display:block;
+	}
+}
+.regbox label{
+	text-align: left;
+	font-size: 18px;
+	width: 30%;
+	padding: 12px;
+	margin: auto;
+}
+.div-gen label{
+	text-align: left;
+	margin: 0px;
+} 
+@media only screen and (max-width:559px){
+	.regbox label{
+		font-size: 15px;
+	}
+}
+@media only screen and (max-width: 435px){
+	.reglog-cin-form{
+		display:block;
+	}
+	.regbox label{
+		width: 100%;
+		margin: 0px;
+	}
+}
+.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password]{
+	text-align: left;
+	padding: 10px;	
+	width: 70%;
+	margin-bottom: 20px;
+	border: 1px solid;
+	margin: auto;
+}
+@media only screen and (max-width: 435px){
+	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password]{	
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.reglog-cin-form{
+		text-align: left;
+	}
+}
+.regbox input[type=submit]{
+	margin-top: 10px;
+	width: 200px;
+	border: none;
+}
+@media only screen and (max-width: 338px){
+	.regbox{
+		padding: 50px 30px;
+	}
+	
+	.regbox input[type=submit]{
+		width: 100%;
+	}
+}
+@media only screen and (max-width:220px){
+	.regbox{
+		padding: 50px 15px;
+	}
+}

@@ -10,7 +10,7 @@ if($_SESSION["usn"]==""){
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alumni Information Management System</title>
-	<link rel="stylesheet" href="alum2.css">
+	<link rel="stylesheet" href="home.css">
 	 <!-- <style>
 		.logoutbtn input[type=submit]{
 			height: 50px;
@@ -25,7 +25,7 @@ if($_SESSION["usn"]==""){
 		<div class="topbar">
 			<div>
 				<form action="config.php" method="post">
-					<input type="submit" value="Log Out">
+					<input type="submit" name="logout" value="Log Out">
 				</form>
 			</div>
 		</div>
