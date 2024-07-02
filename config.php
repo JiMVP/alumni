@@ -12,12 +12,14 @@
 
 		$sql=mysqli_query($con, "SELECT * FROM `alum-user` WHERE `usn` = '$usn'");
 		$sqlfet=mysqli_fetch_assoc($sql);
+		$fid=$sqlfet['id'];
 		$fusn=$sqlfet['usn'];
 		$fpwd=$sqlfet['pwd'];
 		
 		if($usn==$fusn && $pwd==$fpwd){
 			session_start();
 			$_SESSION["usn"] = $usn;
+			$_SESSION["id"] = $fid;
 			header("location:home.php");
 		}else{
 			header("location:login.html");
@@ -26,7 +28,9 @@
 	}
 
 	if(isset($_POST['logout'])){
-		session_abort();
+		session_start();
+		session_unset();
+		session_destroy();
 		header("location:login.html");
 	}
 

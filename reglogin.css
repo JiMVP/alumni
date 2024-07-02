@@ -14,6 +14,12 @@ body{
 	width: 1190px;
 	margin:auto;
 }
+@media only screen and (max-width: 1190px) {
+	.std-contain{
+		width: 100%;
+	}
+}
+
 
 /*LOGIN.HTML & REGISTER.HTML------------------------------------------------------------------------------------*/
 

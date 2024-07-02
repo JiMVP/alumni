@@ -32,9 +32,9 @@ div.topbar, div.masthd, div.banner, div.auxmenu, div.content, div.agenft, div.st
 }
 div.topbar, div.auxmenu{
 	background-color: grey;
-	height: 45px;
+	height: 100%;
 }
-.topbar input[type=submit]{
+.std-contain .topbar input[type=submit]{
 	height: 50px;
 	font-size: 20px;
 	border-radius: 10px;

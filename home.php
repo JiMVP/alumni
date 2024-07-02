@@ -1,8 +1,9 @@
 <?php
 session_start();
-if($_SESSION["usn"]==""){
+if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 	header("location:login.html");
 }
+echo $_SESSION["usn"];
 ?>
 <!DOCTYPE html>
 <html>
