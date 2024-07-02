@@ -11,13 +11,22 @@ if($_SESSION["usn"]==""){
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alumni Information Management System</title>
 	<link rel="stylesheet" href="alum2.css">
+	 <!-- <style>
+		.logoutbtn input[type=submit]{
+			height: 50px;
+			font-size: 20px;
+			border-radius: 10px;
+		}
+	 </style> -->
 	
 </head>
 <body>
 	<div class="std-contain">
 		<div class="topbar">
-			<div >
-				TOPBAR
+			<div>
+				<form action="config.php" method="post">
+					<input type="submit" value="Log Out">
+				</form>
 			</div>
 		</div>
 		<div class="masthd">MASTHEAD</div>
