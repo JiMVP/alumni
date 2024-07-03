@@ -22,8 +22,29 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 	
 </head>
 <body>
+	<form id="tb-menu-form" action="logout.php" method="post">
+		<div class="topbar">
+			<div class="tb-menu">
+				<a href="#" onclick="cont_home()"><div class="tb-menu-opt">Home</div></a>
+				
+				<a href="#" onclick="cont_dir()"><div class="tb-menu-opt">Directory</div></a>
+			
+				<a href="#" onclick="logout()"><div class="tb-menu-opt">Log Out</div></a>				
+			</div>
+			<div class="tb-profile">
+				<a href="#" onclick="cont_prof()"><div class="tb-menu-opt">Profile</div></a>
+			</div>
+			
+		
+		
+			
+			<!-- <input type="submit" name="logout" id="logout" value="Log Out"> -->
+		
+		
+		</div>
+	</form>
 	<div class="std-contain">
-		<form id="tb-menu-form" action="logout.php" method="post">
+		<!-- <form id="tb-menu-form" action="logout.php" method="post">
 			<div class="topbar">
 				<div class="tb-menu">
 					<div class="tb-menu-opt"><a href="#" onclick="cont_home()">Home</a></div>
@@ -39,11 +60,11 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 			
 			
 				
-				<!-- <input type="submit" name="logout" id="logout" value="Log Out"> -->
+				
 			
 			
 			</div>
-		</form>
+		</form> -->
 		<div class="masthd">MASTHEAD</div>
 		<div class="banner">BANNER</div>
 		<div class="auxmenu">AUXILIARY MENU</div>

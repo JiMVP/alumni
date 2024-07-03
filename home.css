@@ -36,21 +36,53 @@ div.topbar, div.auxmenu{
 }
 .tb-menu{
     display: flex;
-    width: 80%;
-}
-.tb-profile{
-    display: flex;
-    width: 20%;
-    border: solid 1px;
-    /* text-align: center; */
+    width: 90%;
 }
 .tb-menu-opt{
     padding: 20px 35px;
 }
+.tb-menu a:link, .tb-menu a:visited{
+	background-color: whitesmoke;
+	color: black;
+	text-decoration: none;
+}
+.tb-menu a:hover{
+	background-color: lightgray;
+	color: black;
+	text-decoration: none;
+}
+.tb-menu a:active{
+	background-color: gray;
+	color: white;
+	text-decoration: none;
+}
 .tb-menu .tb-menu-opt{
-    border: solid 1px;
+    /* border: solid 1px; */
     /* width: 100%; */
     text-align: center;
+}
+.tb-profile{
+    display: flex;
+    width: 10%;
+    /* border: solid 1px; */
+    
+}
+/* text-align: center; */
+
+.tb-profile a:link, .tb-profile a:visited{
+	background-color: whitesmoke;
+	color: black;
+	text-decoration: none;
+}
+.tb-profile a:hover{
+	background-color: lightgray;
+	color: black;
+	text-decoration: none;
+}
+.tb-profile a:active{
+	background-color: gray;
+	color: white;
+	text-decoration: none;
 }
 .tb-profile .tb-menu-opt{
     /* border: solid 1px; */
