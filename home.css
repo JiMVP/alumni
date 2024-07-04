@@ -36,7 +36,7 @@ div.topbar, div.auxmenu{
 }
 .tb-menu{
     display: flex;
-    width: 90%;
+    
 }
 .tb-menu-opt{
     padding: 20px 35px;
@@ -63,7 +63,9 @@ div.topbar, div.auxmenu{
 }
 .tb-profile{
     display: flex;
-    width: 10%;
+    width:inherit;
+	float: right;
+	text-align: right;
     /* border: solid 1px; */
     
 }
