@@ -12,6 +12,7 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alumni Information Management System</title>
 	<link rel="stylesheet" href="home.css">
+	<script src="https://kit.fontawesome.com/8a1d3beb0c.js" crossorigin="anonymous"></script>
 	 <!-- <style>
 		.logoutbtn input[type=submit]{
 			height: 50px;
@@ -24,6 +25,10 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 <body>
 	<form id="tb-menu-form" action="logout.php" method="post">
 		<div class="topbar">
+			<a class="tb-a" id="tb-a-bars" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-bars" id="bars"  style="font-size:34px;color:black"></i></div></a>
+			<a class="tb-a" id="tb-a-x" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-xmark" id="x"  style="font-size:34px;color:black"></i></div></a>
+			<div class="tb-title" id="tb-title"><b>ACLC ALUMNI</b></div>
+			
 			<div class="tb-menu">
 				<a href="#" onclick="cont_home()"><div class="tb-menu-opt">Home</div></a>
 				
@@ -32,7 +37,7 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 				<a href="#" onclick="logout()"><div class="tb-menu-opt">Log Out</div></a>				
 			</div>
 			<div class="tb-profile">
-				<a href="#" onclick="cont_prof()"><div class="tb-menu-opt">Profile</div></a>
+				<a href="#" onclick="cont_prof()"><div class="tb-pf-opt">Profile</div></a>
 			</div>
 			
 		
@@ -43,6 +48,13 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 		
 		</div>
 	</form>
+	<div class="popup-tb-menu" id="popup-tb-menu">
+		<a href="#" onclick="cont_home()"><div class="popup-tb-menu-opt">Home</div></a>
+				
+		<a href="#" onclick="cont_dir()"><div class="popup-tb-menu-opt">Directory</div></a>
+			
+		<a href="#" onclick="logout()"><div class="popup-tb-menu-opt">Log Out</div></a>		
+	</div>
 	<div class="std-contain">
 		<!-- <form id="tb-menu-form" action="logout.php" method="post">
 			<div class="topbar">
@@ -82,6 +94,37 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 </body>
 </html>
 <script>
+	function popmenu(){
+		var catstat = document.getElementById("popup-tb-menu").style.display;
+		var xlogo = document.getElementById("x").style.display;
+		var barlogo = document.getElementById("bars").style.display;
+		if(catstat == "none"){
+			document.getElementById("popup-tb-menu").style.display="block";
+			document.getElementById("x").style.display="block";
+			document.getElementById("bars").style.display="none";
+			document.getElementById("tb-a-x").style.display="block";
+			document.getElementById("tb-a-bars").style.display="none";
+		}else if(catstat == "block"){
+			document.getElementById("popup-tb-menu").style.display="none";
+			document.getElementById("x").style.display="none";
+			document.getElementById("bars").style.display="block";
+			document.getElementById("tb-a-x").style.display="none";
+			document.getElementById("tb-a-bars").style.display="block";
+		}else{
+			document.getElementById("popup-tb-menu").style.display="block";
+			document.getElementById("x").style.display="block";
+			document.getElementById("bars").style.display="none";
+			document.getElementById("tb-a-x").style.display="block";
+			document.getElementById("tb-a-bars").style.display="none";
+		}
+		
+	}
+	// function closepopmenu(){
+	// 	document.getElementById("popup-tb-menu").style.display="none";
+	// }
+	function barshover(){
+		document.getElementByClassName("fas fa-bars").style.color="grey";
+	}
 	function logout(){
 		document.getElementById("tb-menu-form").submit();
 	}
