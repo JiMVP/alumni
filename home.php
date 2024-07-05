@@ -22,7 +22,7 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 	 </style> -->
 	
 </head>
-<body>
+<body id="body">
 	<form id="tb-menu-form" action="logout.php" method="post">
 		<div class="topbar">
 			<a class="tb-a" id="tb-a-bars" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-bars" id="bars"  style="font-size:34px;color:black"></i></div></a>
@@ -104,18 +104,21 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 			document.getElementById("bars").style.display="none";
 			document.getElementById("tb-a-x").style.display="block";
 			document.getElementById("tb-a-bars").style.display="none";
+			document.getElementById("body").style.overflow="hidden";
 		}else if(catstat == "block"){
 			document.getElementById("popup-tb-menu").style.display="none";
 			document.getElementById("x").style.display="none";
 			document.getElementById("bars").style.display="block";
 			document.getElementById("tb-a-x").style.display="none";
 			document.getElementById("tb-a-bars").style.display="block";
+			document.getElementById("body").style.overflow="scroll";
 		}else{
 			document.getElementById("popup-tb-menu").style.display="block";
 			document.getElementById("x").style.display="block";
 			document.getElementById("bars").style.display="none";
 			document.getElementById("tb-a-x").style.display="block";
 			document.getElementById("tb-a-bars").style.display="none";
+			document.getElementById("body").style.overflow="hidden";
 		}
 		
 	}
@@ -130,18 +133,35 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 	}
 	function cont_home(){
 		// if(document.getElementById("cont-home").style.display == "none"){
-			document.getElementById("cont-home").style.display="block";
-			document.getElementById("cont-dir").style.display="none";
-			document.getElementById("cont-prof").style.display="none";
+		document.getElementById("cont-home").style.display="block";
+		document.getElementById("cont-dir").style.display="none";
+		document.getElementById("cont-prof").style.display="none";
+
+		if(document.getElementById("popup-tb-menu").style.display=="block"){
+			document.getElementById("popup-tb-menu").style.display="none";
+			document.getElementById("x").style.display="none";
+			document.getElementById("bars").style.display="block";
+			document.getElementById("tb-a-x").style.display="none";
+			document.getElementById("tb-a-bars").style.display="block";
+			document.getElementById("body").style.overflow="scroll";
+		}
 		// }	
 		// document.getElementById("context").style.display="none";
 	}
 	function cont_dir(){
 		// var getdir = document.getElementById("cont-dir").style.display;
 		// if(getdir == "none"){
-			document.getElementById("cont-dir").style.display="block";
-			document.getElementById("cont-home").style.display="none";
-			document.getElementById("cont-prof").style.display="none";
+		document.getElementById("cont-dir").style.display="block";
+		document.getElementById("cont-home").style.display="none";
+		document.getElementById("cont-prof").style.display="none";
+		if(document.getElementById("popup-tb-menu").style.display=="block"){
+			document.getElementById("popup-tb-menu").style.display="none";
+			document.getElementById("x").style.display="none";
+			document.getElementById("bars").style.display="block";
+			document.getElementById("tb-a-x").style.display="none";
+			document.getElementById("tb-a-bars").style.display="block";
+			document.getElementById("body").style.overflow="scroll";
+		}
 		// }	
 		
 	}
@@ -149,5 +169,13 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 		document.getElementById("cont-prof").style.display="block";
 		document.getElementById("cont-dir").style.display="none";
 		document.getElementById("cont-home").style.display="none";
+		if(document.getElementById("popup-tb-menu").style.display=="block"){
+			document.getElementById("popup-tb-menu").style.display="none";
+			document.getElementById("x").style.display="none";
+			document.getElementById("bars").style.display="block";
+			document.getElementById("tb-a-x").style.display="none";
+			document.getElementById("tb-a-bars").style.display="block";
+			document.getElementById("body").style.overflow="scroll";
+		}
 	}
 </script>

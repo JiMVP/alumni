@@ -65,8 +65,12 @@ div.topbar, div.auxmenu{
 }
 .popup-tb-menu{
 	width: 300px;
+	height: 1000px;
+	position: fixed;
 	display: none;
-	border: solid 1px black;
+	opacity: 0.9;
+	/* border: solid 1px black; */
+	background-color: whitesmoke;
 }
 @media only screen and (max-width:753px) {
 	.tb-title, .tb-menu a{
@@ -82,6 +86,11 @@ div.topbar, div.auxmenu{
 		display: block;
 	}
 }
+/* @media only screen and (min-width:754px){
+	.popup-tb-menu{
+		display: none;
+	}
+} */
 .tb-menu-opt, .tb-pf-opt, .popup-tb-menu-opt{
     padding: 20px 35px;
 }
