@@ -22,7 +22,7 @@
 			$_SESSION["id"] = $fid;
 			header("location:home.php");
 		}else{
-			header("location:login.html");
+			header("location:login.html?notif='Login Error'");
 		}
 
 	}

@@ -1,7 +1,8 @@
 <?php
+include "config.php";
 session_start();
 if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
-	header("location:login.html");
+	header("location:index.php");
 }
 // echo $_SESSION["usn"];
 ?>
@@ -11,7 +12,7 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alumni Information Management System</title>
-	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="alum.css">
 	<script src="https://kit.fontawesome.com/8a1d3beb0c.js" crossorigin="anonymous"></script>
 	 <!-- <style>
 		.logoutbtn input[type=submit]{
@@ -81,7 +82,9 @@ if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
 		<div class="banner">BANNER</div>
 		<div class="auxmenu">AUXILIARY MENU</div>
 		<div class="content">
-			<div class="cont-home" id="cont-home">HOME</div>
+			<div class="cont-home" id="cont-home">
+				<h1>WELCOME</h1>
+			</div>
 			<div class="cont-dir" id="cont-dir">DIRECTORY</div>
 			<div class="cont-prof" id="cont-prof">PROFILE</div>
 		</div>
