@@ -15,10 +15,10 @@
 		<div class="index-tb-logo"><img src="alum-images/aclclogo.png" alt="ACLC Logo"></div>
 		<!-- <div class="tb-title"></div> -->
 		<div class="tb-menu">
-			<a href="#"><div class="tb-menu-opt">Home</div></a>
-			<a href="register.html"><div class="tb-menu-opt">Alumni</div></a>
-			<a href="#"><div class="tb-menu-opt">Gallery</div></a>
-			<a href="#"><div class="tb-menu-opt">About</div></a>
+			<a href="#"><div class="tb-menu-opt">HOME</div></a>
+			<a href="register.html"><div class="tb-menu-opt">ALUMNI</div></a>
+			<a href="#"><div class="tb-menu-opt">GALLERY</div></a>
+			<a href="#"><div class="tb-menu-opt">ABOUT</div></a>
 			<!-- <a href="login.html"><div class="tb-menu-opt">Log In</div></a> -->
 		</div>
 	</div>
@@ -31,13 +31,31 @@
 			<div class="mast-aclc-img"><img src="alum-images/namedaclclogo.jpg" alt="ACLC COLLEGE"></div>
 			<div style="font-size: 40px;"><B>ALUMNI</B></div>
 		</div>
-		<div class="banner">BANNER</div>
+		<!-- <div class="banner">BANNER</div> -->
 		<div class="auxmenu">AUXILIARY MENU</div>
-		<div class="content">
-			CONTENT AREA
+		<div class="index-content">
+			<div class="index-cont-events">EVENTS</div>
+			<div class="index-cont-jobdesc">JOB DESCRIPTIONS</div>
+			<div class="index-cont-featalum">FEATURED ALUMNI</div>
 		</div>
-		<div class="agenft">AGENCY FOOTER</div>
-		<div class="stdft">STANDARD FOOTER</div>
+		
+		<div class="index-agenft">
+			<div class="index-af-left-blk">
+				<div class="index-af-lb-img">
+					<img src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
+				</div>
+				<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
+			</div>
+			<div class="index-af-mid-blk">
+				<div>bla</div>
+				<div>bla</div>
+				<div>bla</div>
+			</div>
+			<div class="index-af-right-blk">
+				alr they on block
+			</div>
+		</div>
+		<!-- <div class="stdft">STANDARD FOOTER</div> -->
 
 	</div>
 </body>
