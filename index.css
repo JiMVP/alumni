@@ -45,14 +45,14 @@ div.auxmenu{
 	display: none;
 }
 div.index-content{
-	height: 30%;
-	background-color: whitesmoke;
+	/* height: 30%; */
+	background-color: white;
 }
 div.index-agenft{
 	display: flex;
 	padding-top: 100px;
 	padding-bottom: 50px;
-	background-color: darkgray;
+	background-color: rgb(235, 239, 250);
 }
 div.stdft{
 	height:20%;
@@ -226,10 +226,85 @@ div.stdft{
     display: none;
 }
 
+.index-cont-title{
+	font-size: 35px;
+	padding: 20px;
+	color: rgb(1, 3, 126);
+}
+.index-cont-events, .index-cont-jobdesc, .index-cont-featalum{
+	/* border: solid 1px black; */
+	display: flex;
+}
+.index-ce-contain, .index-cjd-contain, .index-cfa-contain{
+	/* display: flex; */
+	/* border: solid 1px black; */
+	width: 33.275%;
+	padding: 10px;
+}
+.index-cectn-post, .index-cjdctn-post, .index-cfactn-post{
+	width: 100%;
+	/* border: solid 1px black; */
+	background-color: rgb(224, 230, 247);
+}
+/* .index-cectn-post:link, .index-cectn-post:visited{
+	background-color: rgb(1, 3, 126);
+	color: white;
+	text-decoration: none;
+} */
+.index-cectn-post, .index-cjdctn-post, .index-cfactn-post{
+	/* background-color: rgb(1, 3, 126); */
+	color: black;
+	text-decoration: none;
+}
+.index-cectn-postcover img, .index-cjdctn-post img, .index-cfactn-post img{
+	width: 100%;
+}
+.index-cectn-posttitle, .index-cjdctn-posttitle, .index-cfactn-posttitle{
+	color: rgb(1, 3, 126);
+	padding: 5px;
+	padding-top: 10px;
+	text-align: left;
+}
+.index-cectn-postcontent, .index-cjdctn-postcontent, .index-cfactn-postcontent{
+	font-size: 15px;
+	padding: 5px;
+	padding-bottom: 10px;
+	text-align: left;
+}
+.index-cectn-post:hover, .index-cjdctn-post:hover, .index-cfactn-post:hover{
+	background-color: rgb(203, 203, 255);
+	/* color: white; */
+	text-decoration: none;
+}
+.index-cectn-post:active, .index-cjdctn-post:active, .index-cfactn-post:active{
+	background-color: rgb(181, 181, 252);
+	/* color: white; */
+	text-decoration: none;
+}
+
+	/*
+.index-cectn-posttitle:hover, .index-cjdctn-posttitle:hover, .index-cfactn-posttitle:hover{
+	color: rgb(1, 3, 126);
+} */
+
+/* .index-cjdctn-post{
+	width: 100%;
+	border: solid 1px black;
+}
+
+
+.index-cfactn-post{
+	width: 100%;
+	border: solid 1px black;
+} */
+
 /*AGENCY FOOTER--------------------------------------------------------------------------------------*/
 
 .index-af-left-blk, .index-af-mid-blk, .index-af-right-blk{
 	display: block;
+}
+.index-af-mid-blk div, .index-af-right-blk{
+	text-align: left;
 }
 .index-af-left-blk{
 	width: 33%;
@@ -241,7 +316,7 @@ div.stdft{
 	width: 33%;
 }
 .index-af-lb-img img{
-	width: 100%;
+	width: 60%;
 }
 
 

@@ -34,29 +34,149 @@
 		<!-- <div class="banner">BANNER</div> -->
 		<div class="auxmenu">AUXILIARY MENU</div>
 		<div class="index-content">
-			<div class="index-cont-events">EVENTS</div>
-			<div class="index-cont-jobdesc">JOB DESCRIPTIONS</div>
-			<div class="index-cont-featalum">FEATURED ALUMNI</div>
+		<div class="index-cont-title">EVENTS</div>
+			<div class="index-cont-events">
+				
+
+				<?php
+				
+for($i=0; $i<3; $i=$i+1){
+
+				?>
+
+				<div class="index-ce-contain">
+					<div class="index-cectn-post" onclick="window.location.href='login.html';">
+						<div class="index-cectn-postcover">
+							<img src="alum-images/HIGHLIGHTS2.png" alt="HIGHLIGHTS2">
+						</div>
+						<div class="index-cectn-posttitle">
+							POST TITLE
+						</div>
+						<div class="index-cectn-postcontent">
+							POST CONTENT SD
+						</div>
+					</div>										
+				</div>
+
+				<?php
+
+}
+
+				?>
+				<!-- <div class="index-ce-contain">
+					<div class="index-cectn-post">
+						<div class="index-cectn-postcover">
+							POST COVER
+						</div>
+						<div class="index-cectn-posttitle">
+							POST TITLE
+						</div>
+						<div class="index-cectn-postcont">
+							POST CONTENT
+						</div>
+					</div>										
+				</div>
+				<div class="index-ce-contain">
+					<div class="index-cectn-post">
+						<div class="index-cectn-postcover">
+							POST COVER
+						</div>
+						<div class="index-cectn-posttitle">
+							POST TITLE
+						</div>
+						<div class="index-cectn-postcont">
+							POST CONTENT SD
+						</div>
+					</div>
+				</div> -->
+				
+			</div>
+			<div class="index-cont-title">JOBS</div>
+			<div class="index-cont-jobdesc">
+				<?php
+				
+for($i=0; $i<3; $i=$i+1){
+
+				?>
+
+				<div class="index-cjd-contain">
+					<div class="index-cjdctn-post" onclick="window.location.href='login.html';">
+						<div class="index-cjdctn-postcover">
+							<img src="alum-images/HIGHLIGHTS2.png" alt="HIGHLIGHTS2">
+						</div>
+						<div class="index-cjdctn-posttitle">
+							POST TITLE
+						</div>
+						<div class="index-cjdctn-postcontent">
+							POST CONTENT SD						
+						</div>
+					</div>
+				</div>
+
+				<?php
+
+}
+
+				?>
+				
+			</div>
+			<div class="index-cont-title">FEATURED ALUMNI</div>
+			<div class="index-cont-featalum">
+
+				<?php
+
+$content = [
+	"them mfkin roxxo got bitchslapped by azul the entire damn series",
+	"azul sweeps roxxo 2-0 in dominance",
+	"roxxo allegedly having connection issues despite biased commentary from the casters",
+];
+for($i=0; $i<3; $i=$i+1){
+
+				?>
+
+				<div class="index-cfa-contain">
+					<div class="index-cfactn-post" onclick="window.location.href='login.html';">
+						<div class="index-cfactn-postcover">
+							<img src="alum-images/HIGHLIGHTS2.png" alt="HIGHLIGHTS2">
+						</div>
+						<div class="index-cfactn-posttitle">
+							GAME 1 HIGHLIGHTS
+						</div>
+						<div class="index-cfactn-postcontent">
+							<?php echo $content[$i]; ?>						
+						</div>
+					</div>
+				</div>
+
+				<?php
+
+}
+
+				?>
+
+			</div>
 		</div>
 		
-		<div class="index-agenft">
-			<div class="index-af-left-blk">
-				<div class="index-af-lb-img">
-					<img src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
-				</div>
-				<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
-			</div>
-			<div class="index-af-mid-blk">
-				<div>bla</div>
-				<div>bla</div>
-				<div>bla</div>
-			</div>
-			<div class="index-af-right-blk">
-				alr they on block
-			</div>
-		</div>
+		
 		<!-- <div class="stdft">STANDARD FOOTER</div> -->
 
+	</div>
+	<div class="index-agenft">
+		<div class="index-af-left-blk">
+			<div class="index-af-lb-img">
+				<img src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
+			</div>
+			<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
+		</div>
+		<div class="index-af-mid-blk">
+			<div>Footer of the dying mel</div>
+			<div>Mel is the only one makin the damned system</div>
+			<div>For the sake of experience</div>
+		</div>
+		<div class="index-af-right-blk">
+			alr they on block
+			but not aligned on the left
+		</div>
 	</div>
 </body>
 </html>
