@@ -34,11 +34,22 @@ div.index-topbar{
 }
 div.index-masthd{
     height: auto;
-	background-color: white;
+	background-image: url("alum-images/banner-tp.png");
+	background-repeat: no-repeat;
+	background-size:100%;
+	/* opacity: 0.5; */
+}
+.index-masthd::before{
+	/* height: auto;
+	content: "";
+	background-image: url("alum-images/banner.png");
+	opacity: 1.0; */
+	background-color: rgba(0, 0, 0, 0.5);
 }
 div.banner{
 	height: 460px;
-	background-color: lightgray;
+	/* background-color: lightgray; */
+	/* background-image: url("alum-images/banner.png"); */
 }
 
 div.auxmenu{
@@ -209,9 +220,22 @@ div.stdft{
 
 /*MASTHEAD-----------------------------------------------------------------------------*/
 
+.mast-title, .mast-aclc-img{
+	opacity: 1.0;
+}
 .mast-aclc-img{
     height: auto;
+	padding: 100px;
 }
+.mast-aclc-img img{
+	
+	width: 500px;
+	/* background-color: white; */
+}
+.mast-title{
+	font-size: 50px;
+}
+
 
 /*CONTENT AREA------------------------------------------------------------------------------*/
 
