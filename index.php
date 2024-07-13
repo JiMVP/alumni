@@ -61,10 +61,14 @@ while($eventfet=mysqli_fetch_assoc($eventssql)){
 								<img src="alum-images/HIGHLIGHTS2.png" alt="HIGHLIGHTS2">
 							</div>
 							<div class="index-cectn-posttitle">
-								POST TITLE
+								<?php echo $title; ?>
 							</div>
 							<div class="index-cectn-postcontent">
-								POST CONTENT SD
+								<?php echo substr($post,0,120)."..."; ?>
+								<br>
+								<b>ANAY LA DI KO PA NA A ADD AN PIC</b>
+								<br>
+								<div style="color:red; text-align:left">mel.exe is not responding</div>
 							</div>
 						</div>										
 					</div>
