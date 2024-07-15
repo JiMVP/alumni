@@ -10,18 +10,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ACLC Alumni</title>
     <link rel="stylesheet" href="index.css">
+	<script src="https://kit.fontawesome.com/8a1d3beb0c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="index-topbar">
 		<div class="index-tb-logo"><img src="alum-images/aclclogo.png" alt="ACLC Logo"></div>
+		<a class="tb-a" id="tb-a-bars" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-bars" id="bars"  style="font-size:50px;color:white"></i></div></a>
+		<a class="tb-a" id="tb-a-x" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-xmark" id="x"  style="font-size:50px;color:white"></i></div></a>
 		<!-- <div class="tb-title"></div> -->
+		<div class="tb-selected-menu">
+			
+		</div>
 		<div class="tb-menu">
-			<a href="#"><div class="tb-menu-opt">HOME</div></a>
+			<a href="" ><div class="tb-menu-selectedopt">HOME</div></a>
 			<a href="register.html"><div class="tb-menu-opt">ALUMNI</div></a>
 			<a href="#"><div class="tb-menu-opt">GALLERY</div></a>
 			<a href="#"><div class="tb-menu-opt">ABOUT</div></a>
 			<!-- <a href="login.html"><div class="tb-menu-opt">Log In</div></a> -->
 		</div>
+	</div>
+	<!-- <div class="index-popup-selectedmenu" id="index-popup-selectedmenu">
+		
+	</div> -->
+	<div class="index-popup-menu" id="index-popup-menu">
+		<a href="#" onclick="cont_home()"><div class="index-popmenu-selectedopt">HOME</div></a>
+				
+		<a href="register.html" ><div class="index-popmenu-opt">ALUMNI</div></a>
+			
+		<a href="#" ><div class="index-popmenu-opt">GALLERY</div></a>
+		<a href="#" ><div class="index-popmenu-opt">ABOUT</div></a>		
 	</div>
 	<div class="index-masthd">
 		<div class="mast-aclc-img">
@@ -47,8 +64,10 @@
 				
 $eventssql = mysqli_query($con, "SELECT * FROM `event-test` WHERE 1");
 // for($i=0; $i<3; $i=$i+1){
+$i = 0;
 while($eventfet=mysqli_fetch_assoc($eventssql)){
 
+	$id=$eventfet['id'];
 	$cover=$eventfet['cover'];
 	$title=$eventfet['title'];
 	$post=$eventfet['post'];
@@ -58,23 +77,36 @@ while($eventfet=mysqli_fetch_assoc($eventssql)){
 					<div class="index-ce-contain">
 						<div class="index-cectn-post" onclick="window.location.href='login.html';">
 							<div class="index-cectn-postcover">
-								<img src="alum-images/HIGHLIGHTS2.png" alt="HIGHLIGHTS2">
+								<!-- <img src="image.php?id='<?php echo $id; ?>'" alt="HIGHLIGHTS2"> -->
+								<?php 
+								
+									echo '<img src="data:image/jpeg;base64,'.base64_encode($cover).'"/>'; 
+									// echo '<img src="image.php?id='.$id.'"/>';
+
+								?>
 							</div>
 							<div class="index-cectn-posttitle">
 								<?php echo $title; ?>
 							</div>
 							<div class="index-cectn-postcontent">
-								<?php echo substr($post,0,120)."..."; ?>
+								<?php echo substr($post,0,120)."..."; 
+								if($i<1){
+								
+								?>
+								
 								<br>
-								<b>ANAY LA DI KO PA NA A ADD AN PIC</b>
+								<b>FINALLY!!!</b>
 								<br>
-								<div style="color:red; text-align:left">mel.exe is not responding</div>
+								<div style="color:red; text-align:left">Task Failed Successfully!</div>
+								<?php
+								}
+								?>	
 							</div>
 						</div>										
 					</div>
 
 					<?php
-
+	$i=$i+1;
 }
 
 					?>
@@ -203,3 +235,57 @@ while($featalumfet=mysqli_fetch_assoc($featalumsql)){
 	</div>
 </body>
 </html>
+<script>
+
+	function popmenu(){
+		var catstat = document.getElementById("index-popup-menu").style.display;
+		// var catstat2 = document.getElementById("index-popup-selectedmenu").style.display;
+		var xlogo = document.getElementById("x").style.display;
+		var barlogo = document.getElementById("bars").style.display;
+		if(catstat == "none"){
+			// document.getElementById("index-popup-selectedmenu").style.display="block";
+			document.getElementById("index-popup-menu").style.display="block";
+			document.getElementById("x").style.display="block";
+			document.getElementById("bars").style.display="none";
+			document.getElementById("tb-a-x").style.display="block";
+			document.getElementById("tb-a-bars").style.display="none";
+			document.getElementById("body").style.overflow="hidden";
+		}else if(catstat == "block"){
+			// document.getElementById("index-popup-selectedmenu").style.display="none";
+			document.getElementById("index-popup-menu").style.display="none";
+			document.getElementById("x").style.display="none";
+			document.getElementById("bars").style.display="block";
+			document.getElementById("tb-a-x").style.display="none";
+			document.getElementById("tb-a-bars").style.display="block";
+			document.getElementById("body").style.overflow="scroll";
+		}else{
+			// document.getElementById("index-popup-selectedmenu").style.display="block";
+			document.getElementById("index-popup-menu").style.display="block";
+			document.getElementById("x").style.display="block";
+			document.getElementById("bars").style.display="none";
+			document.getElementById("tb-a-x").style.display="block";
+			document.getElementById("tb-a-bars").style.display="none";
+			document.getElementById("body").style.overflow="hidden";
+		}
+		
+	}
+	function cont_home(){
+		// if(document.getElementById("cont-home").style.display == "none"){
+		// document.getElementById("cont-home").style.display="block";
+		// document.getElementById("cont-dir").style.display="none";
+		// document.getElementById("cont-prof").style.display="none";
+
+		if(document.getElementById("index-popup-menu").style.display=="block"){
+			document.getElementById("index-popup-menu").style.display="none";
+			// document.getElementById("index-popup-selectedmenu").style.display="none";
+			document.getElementById("x").style.display="none";
+			document.getElementById("bars").style.display="block";
+			document.getElementById("tb-a-x").style.display="none";
+			document.getElementById("tb-a-bars").style.display="block";
+			document.getElementById("body").style.overflow="scroll";
+		}
+		// }	
+		// document.getElementById("context").style.display="none";
+	}
+
+</script>
