@@ -75,6 +75,12 @@ div.index-agenft{
 	padding-bottom: 50px;
 	background-color: rgb(235, 239, 250);
 }
+@media only screen and (max-width:930px){
+	div.index-agenft{
+		display: block;
+		/* text-align: center; */
+	}
+}
 div.stdft{
 	height:20%;
 	background-color: gray;
@@ -460,9 +466,15 @@ div.stdft{
 .index-af-left-blk, .index-af-mid-blk, .index-af-right-blk{
 	display: block;
 }
+/* @media only screen and (max-width:930px){
+	.index-af-left-blk, .index-af-mid-blk, .index-af-right-blk{
+		display: block;
+	}
+} */
 .index-af-mid-blk div, .index-af-right-blk{
 	text-align: left;
 }
+
 .index-af-left-blk{
 	width: 33%;
 }
@@ -474,6 +486,15 @@ div.stdft{
 }
 .index-af-lb-img img{
 	width: 60%;
+}
+@media only screen and (max-width:930px){
+	.index-af-left-blk, .index-af-mid-blk, .index-af-right-blk{
+		/* text-align: center; */
+		width: 100%;
+	}
+	/* .index-af-mid-blk div, .index-af-right-blk{
+		text-align: center;
+	} */
 }
 
 
