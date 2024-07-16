@@ -101,4 +101,46 @@
 		
 	}
 
+	if(isset($_POST['admin-login-submit'])){
+
+		$adminusn = array(
+			"aclctac",
+			"aclcormoc",
+			"aclccebu",
+		);
+		$adminpwd = array(
+			"admintac",
+			"adminormoc",
+			"admincebu",
+		);
+
+		for($i = 0; $i<3; $i++){
+			if($_POST['admin-login-usn'] == $adminusn[$i] && $_POST['admin-login-pwd'] == $adminpwd[$i]){
+				session_start();
+				if($_POST['admin-login-usn'] == $adminusn[0]){
+					
+					$_SESSION['admin-branch'] = "Tacloban";
+					header("location:admin.php");
+				}
+				if($_POST['admin-login-usn'] == $adminusn[1]){
+					$_SESSION['admin-branch'] = "Ormoc";
+					header("location:admin.php");
+				}
+				if($_POST['admin-login-usn'] == $adminusn[2]){
+					$_SESSION['admin-branch'] = "Cebu";
+					header("location:admin.php");
+				}
+			}
+		}
+		header("location:admin-login.html");
+
+	}
+
+	if(isset($_POST['admin-logout'])){
+		session_start();
+		session_unset();
+		session_destroy();
+		header("location:admin-login.html");
+	}
+
 ?>

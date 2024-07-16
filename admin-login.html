@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Log In</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body style="background-color: whitesmoke;">
+    <div class="std-contain" style="background-color: whitesmoke;">
+        <div class="reglogin-contain">
+            <div class="loginbox">
+                <div class="log-title"><b>ACLC Admin Log In</b></div>
+		        <form action="config.php" method="POST">
+                    <!-- <div class="reglog-cin-form"> -->
+                    <input type="text" name="admin-login-usn" placeholder="Username" required>
+                    <!-- </div> -->
+                    <!-- <div class="reglog-cin-form"> -->
+                    <input type="password" name="admin-login-pwd" placeholder="Password" required>
+                    <!-- </div>                     -->
+                    <input type="submit" name="admin-login-submit" value="Log In">
+		        </form>
+                <!-- <div class="linklogin">Don't have an account? <a href="register.html">Register</a></div> -->
+                <!-- <a href="index.php"><button>Back</button></a> -->
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
