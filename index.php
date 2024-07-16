@@ -86,24 +86,16 @@ while($eventfet=mysqli_fetch_assoc($eventssql)){
 								<?php echo $title; ?>
 							</div>
 							<div class="index-cectn-postcontent">
-								<?php echo substr($post,0,120)."..."; 
-								if($i<1){
-								
-								?>
-								
-								<br>
-								<b>FINALLY!!!</b>
-								<br>
-								<div style="color:red; text-align:left">Task Failed Successfully!</div>
-								<?php
-								}
-								?>	
+								<?php echo substr($post,0,120)."..."; ?>	
 							</div>
 						</div>										
 					</div>
 
 					<?php
 	$i=$i+1;
+	if(!($i<3)){
+		break;
+	}
 }
 
 					?>
@@ -177,6 +169,7 @@ for($i=0; $i<3; $i=$i+1){
 // ];
 $featalumsql = mysqli_query($con, "SELECT * FROM `alum-user` WHERE 1");
 // for($i=0; $i<3; $i=$i+1){
+$i=0;
 while($featalumfet=mysqli_fetch_assoc($featalumsql)){
 
 	$lname = $featalumfet['lname'];
@@ -199,6 +192,11 @@ while($featalumfet=mysqli_fetch_assoc($featalumsql)){
 					</div>
 
 					<?php
+
+	$i++;
+	if(!($i<3)){
+		break;
+	}
 
 }
 

@@ -36,22 +36,22 @@
 
 	if(isset($_POST['reg-submit'])){
 
-		$regpwd=$_POST['reg-pwd'];
-		$conpass=$_POST['reg-conpass'];
+		// $regpwd=$_POST['reg-pwd'];
+		// $conpass=$_POST['reg-conpass'];
 
-		if($conpass != $regpwd){
-			header("location:register.html?notif=conpasserror");
-		}
+		// if($conpass != $regpwd){
+		// 	header("location:register.html?notif=conpasserror");
+		// }
 
 		$regusn=$_POST['reg-usn'];
 		$reglname=$_POST['reg-lname'];
 		$regfname=$_POST['reg-fname'];
 		$regmname=$_POST['reg-mname'];
 		$regsuffix=$_POST['reg-suffix'];
-		$reggend=$_POST['reg-gender'];
-		if($reggend=="Others"){
-			$reggend=$_POST['reg-gender-txt'];
-		}
+		// $reggend=$_POST['reg-gender'];
+		// if($reggend=="Others"){
+		// 	$reggend=$_POST['reg-gender-txt'];
+		// }
 		$regbday=$_POST['reg-bday'];
 		$regbplace=$_POST['reg-bplace'];
 
@@ -59,9 +59,45 @@
 		$regemail=$_POST['reg-email'];
 		$regadd=$_POST['reg-address'];
 
-		mysqli_query($con, "INSERT INTO `alum-user` (`lname`, `fname`, `mname`, `suffix`, `usn`, `pwd`, `gender`, `bday`, `bplace`, `conno`, `email`, `address`) VALUES('$reglname', '$regfname', '$regmname', '$regsuffix', '$regusn', '$regpwd', '$reggend', '$regbday', '$regbplace', '$regconno', '$regemail', '$regadd')");
+		$regcampus=$_POST['reg-campus'];
+		// $regcampus=$_POST['reg-campus'];
+		$regdegree=$_POST['reg-degree'];
+		$regdatetime=date("Y-m-d H:i:s");
 
-		header("location:login.html");
+		mysqli_query($con, "INSERT INTO `alum-user` (
+			`lname`, 
+			`fname`, 
+			`mname`, 
+			`suffix`, 
+			`usn`, 
+			
+			`bday`, 
+			`bplace`, 
+			`conno`, 
+			`email`, 
+			`address`, 
+			`branch`, 
+			`degree`, 
+			`regdatetime`
+		) 
+		VALUES(
+			'$reglname', 
+			'$regfname', 
+			'$regmname', 
+			'$regsuffix', 
+			'$regusn', 
+			 
+			'$regbday', 
+			'$regbplace', 
+			'$regconno',
+			'$regemail', 
+			'$regadd', 
+			'$regcampus', 
+			'$regdegree', 
+			'$regdatetime'
+		)");
+
+		header("location:prompt.php?prompt=regsuccess");
 		
 	}
 

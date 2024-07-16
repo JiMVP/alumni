@@ -30,6 +30,7 @@ body{
 	width: 100%;
 	padding: 50px;
 	background-color: whitesmoke;
+	min-height: 600px;
 	/* color: white; */
 }
 /* .loginbox, .regbox{
