@@ -102,37 +102,48 @@
 	}
 
 	if(isset($_POST['admin-login-submit'])){
-
+		// echo "config";
 		$adminusn = array(
+			
 			"aclctac",
 			"aclcormoc",
 			"aclccebu",
 		);
 		$adminpwd = array(
+			
 			"admintac",
 			"adminormoc",
 			"admincebu",
 		);
 
-		for($i = 0; $i<3; $i++){
-			if($_POST['admin-login-usn'] == $adminusn[$i] && $_POST['admin-login-pwd'] == $adminpwd[$i]){
-				session_start();
-				if($_POST['admin-login-usn'] == $adminusn[0]){
-					
-					$_SESSION['admin-branch'] = "Tacloban";
-					header("location:admin.php");
-				}
-				if($_POST['admin-login-usn'] == $adminusn[1]){
-					$_SESSION['admin-branch'] = "Ormoc";
-					header("location:admin.php");
-				}
-				if($_POST['admin-login-usn'] == $adminusn[2]){
-					$_SESSION['admin-branch'] = "Cebu";
-					header("location:admin.php");
-				}
-			}
+		// if($_POST['admin-login-usn'] == "admin" && $_POST['admin-login-pwd'] == "admin"){
+		// 	header("location:admin.php?notif=failed");
+		// 		}
+		// for($i = 0; $i<3; $i++){
+		// 	if($_POST['admin-login-usn'] == $adminusn[$i] && $_POST['admin-login-pwd'] == $adminpwd[$i]){
+				
+		if($_POST['admin-login-usn'] == $adminusn[0] && $_POST['admin-login-pwd'] == $adminpwd[0]){
+			session_start();
+			$_SESSION['admin-branch'] = "Tacloban";
+			header("location:admin.php");
+		}elseif($_POST['admin-login-usn'] == $adminusn[1] && $_POST['admin-login-pwd'] == $adminpwd[1]){
+			session_start();
+			$_SESSION['admin-branch'] = "Ormoc";
+			header("location:admin.php");
+		}elseif($_POST['admin-login-usn'] == $adminusn[2] && $_POST['admin-login-pwd'] == $adminpwd[2]){
+			session_start();
+			$_SESSION['admin-branch'] = "Cebu";
+			header("location:admin.php");
+		}else{
+			header("location:admin-login.html?notif=loginfailed");
 		}
-		header("location:admin-login.html");
+			// } 
+			// else if($_POST['admin-login-usn'] == "admin" && $_POST['admin-login-pwd'] == "admin"){
+			// 	header("location:admin-login.html?notif=loginsuccess");
+			// }
+		// }
+		
+		
 
 	}
 
