@@ -18,10 +18,7 @@
 		<a class="tb-a" id="tb-a-bars" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-bars" id="bars"  style="font-size:50px;color:white"></i></div></a>
 		<a class="tb-a" id="tb-a-x" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-xmark" id="x"  style="font-size:50px;color:white"></i></div></a>
 		<!-- <div class="tb-title"></div> -->
-		<div class="tb-selected-menu">
-			
-		</div>
-		<div class="tb-menu">
+		<div class="index-tb-menu">
 			<a href="" ><div class="tb-menu-selectedopt">HOME</div></a>
 			<a href="register.html"><div class="tb-menu-opt">ALUMNI</div></a>
 			<a href="#"><div class="tb-menu-opt">GALLERY</div></a>
