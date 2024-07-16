@@ -125,17 +125,17 @@
 		if($_POST['admin-login-usn'] == $adminusn[0] && $_POST['admin-login-pwd'] == $adminpwd[0]){
 			session_start();
 			$_SESSION['admin-branch'] = "Tacloban";
-			header("location:admin.php");
+			header("location:admin/admin.php");
 		}elseif($_POST['admin-login-usn'] == $adminusn[1] && $_POST['admin-login-pwd'] == $adminpwd[1]){
 			session_start();
 			$_SESSION['admin-branch'] = "Ormoc";
-			header("location:admin.php");
+			header("location:admin/admin.php");
 		}elseif($_POST['admin-login-usn'] == $adminusn[2] && $_POST['admin-login-pwd'] == $adminpwd[2]){
 			session_start();
 			$_SESSION['admin-branch'] = "Cebu";
-			header("location:admin.php");
+			header("location:admin/admin.php");
 		}else{
-			header("location:admin-login.html?notif=loginfailed");
+			header("location:admin/admin-login.html?notif=loginfailed");
 		}
 			// } 
 			// else if($_POST['admin-login-usn'] == "admin" && $_POST['admin-login-pwd'] == "admin"){
@@ -151,7 +151,7 @@
 		session_start();
 		session_unset();
 		session_destroy();
-		header("location:admin-login.html");
+		header("location:admin/admin-login.html");
 	}
 
 ?>

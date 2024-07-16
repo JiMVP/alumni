@@ -1,5 +1,5 @@
 <?php
-    include "config.php";
+    include dirname(__DIR__)."/config.php";
     session_start();
     echo  $_SESSION['admin-branch'];
 ?>
@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="config.php" method="post">
+    <form action="/alumni/config.php" method="post">
         <input type="submit" name="admin-logout" value="Log Out">
     </form>
 </body>
