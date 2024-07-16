@@ -28,8 +28,18 @@ body{
 
 .reglogin-contain{
 	width: 100%;
-	padding: 50px
+	padding: 50px;
+	background-color: whitesmoke;
+	/* color: white; */
 }
+/* .loginbox, .regbox{
+	
+	background-image: url(alum-images/banner-tp.png);
+	background-repeat: no-repeat;
+	background-size: 2000px 1500px;
+	background-attachment: fixed;
+	
+} */
 
 
 
@@ -39,6 +49,10 @@ body{
 
 
 .loginbox{
+	/* background-image: url(alum-images/banner-tp-blue.png);
+	background-repeat: no-repeat;
+	background-size: 2000px 800px;
+	background-attachment: fixed; */
 	background-color: white;
 	padding: 50px 60px;
 	width: 700px;
@@ -111,6 +125,10 @@ body{
 
 /*REGISTRATION BOX, WHERE ALL BLOCKS FOR REGISTER.HTML GOES IN*/
 .regbox{
+	/* background-image: url(alum-images/banner-tp-blue.png);
+	background-repeat: no-repeat;
+	background-size: 2000px 1500px;
+	background-attachment: fixed; */
 	/* text-align: left; */
 	background-color: white;
 	padding: 50px 60px;
@@ -312,7 +330,11 @@ body{
 	font-size: 15px;
 }
 
+
+
 /*index.php----------------------------------------------------------------------------------------------------------------*/
+
+
 
 div.index-topbar, div.index-masthd, div.banner, div.auxmenu, div.content, div.index-agenft, div.stdft{
 	width: 100%;
@@ -677,6 +699,7 @@ div.stdft{
 .index-cont-events, .index-cont-jobdesc, .index-cont-featalum{
 	/* border: solid 1px black; */
 	display: flex;
+	background-color: white;
 }
 @media only screen and (max-width:930px){
 	.index-cont-events, .index-cont-jobdesc, .index-cont-featalum{	
