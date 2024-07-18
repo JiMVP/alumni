@@ -27,24 +27,24 @@
                 document.getElementById("index-popup-menu").style.display="block";
                 document.getElementById("x").style.display="block";
                 document.getElementById("bars").style.display="none";
-                document.getElementById("tb-a-x").style.display="block";
-                document.getElementById("tb-a-bars").style.display="none";
+                document.getElementById("admin-tb-a-x").style.display="block";
+                document.getElementById("admin-tb-a-bars").style.display="none";
                 document.getElementById("body").style.overflow="hidden";
             }else if(catstat == "block"){
                 // document.getElementById("index-popup-selectedmenu").style.display="none";
                 document.getElementById("index-popup-menu").style.display="none";
                 document.getElementById("x").style.display="none";
                 document.getElementById("bars").style.display="block";
-                document.getElementById("tb-a-x").style.display="none";
-                document.getElementById("tb-a-bars").style.display="block";
+                document.getElementById("admin-tb-a-x").style.display="none";
+                document.getElementById("admin-tb-a-bars").style.display="block";
                 document.getElementById("body").style.overflow="scroll";
             }else{
                 // document.getElementById("index-popup-selectedmenu").style.display="block";
                 document.getElementById("index-popup-menu").style.display="block";
                 document.getElementById("x").style.display="block";
                 document.getElementById("bars").style.display="none";
-                document.getElementById("tb-a-x").style.display="block";
-                document.getElementById("tb-a-bars").style.display="none";
+                document.getElementById("admin-tb-a-x").style.display="block";
+                document.getElementById("admin-tb-a-bars").style.display="none";
                 document.getElementById("body").style.overflow="hidden";
             }
             
@@ -60,8 +60,8 @@
                 // document.getElementById("index-popup-selectedmenu").style.display="none";
                 document.getElementById("x").style.display="none";
                 document.getElementById("bars").style.display="block";
-                document.getElementById("tb-a-x").style.display="none";
-                document.getElementById("tb-a-bars").style.display="block";
+                document.getElementById("admin-tb-a-x").style.display="none";
+                document.getElementById("admin-tb-a-bars").style.display="block";
                 document.getElementById("body").style.overflow="scroll";
             }
             // }	

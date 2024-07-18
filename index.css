@@ -541,7 +541,7 @@ div.stdft{
 	text-decoration: none;
 }
 .tb-selected-menu a:active{
-	background-color: rgb(85, 0, 0);
+	background-color: rgb(189, 0, 0);
 	color: white;
 	text-decoration: none;
 }
@@ -568,11 +568,11 @@ div.stdft{
 	
 }
 .index-popmenu-selectedopt{
-	background-color: rgb(85, 0, 0);
+	background-color: rgb(189, 0, 0);
 	color: white;
 }
 .index-popmenu-selectedopt:link, .index-popmenu-selectedopt:visited{
-	background-color: rgb(85, 0, 0);
+	background-color: rgb(189, 0, 0);
 	color: white;
 	/* text-decoration: none; */
 	
@@ -584,7 +584,7 @@ div.stdft{
 	
 }
 .index-popmenu-opt:active, .index-popmenu-selectedopt:active{
-	background-color: rgb(85, 0, 0);
+	background-color: rgb(189, 0, 0);
 	color: white;
 	
 }
