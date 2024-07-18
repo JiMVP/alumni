@@ -1,5 +1,5 @@
 <?php
 
-    header("location:admin-login.html");
+    header("location:login.html");
 
 ?>

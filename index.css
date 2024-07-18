@@ -333,7 +333,7 @@ body{
 
 
 
-/*index.php----------------------------------------------------------------------------------------------------------------*/
+/*INDEX.PHP----------------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -425,7 +425,7 @@ div.stdft{
 	text-decoration: none;
 }
 .tb-a:active{
-	background-color: rgb(189, 4, 4);
+	background-color: rgb(189, 0, 0);
 	color: white;
 	text-decoration: none;
 }
@@ -506,12 +506,12 @@ div.stdft{
 	text-decoration: none;
 }
 .tb-menu-selectedopt{
-	background-color: rgb(189, 4, 4);
+	background-color: rgb(189, 0, 0);
 	color: white;
 	text-decoration: none;
 }
 .tb-menu-selectedopt:link, .tb-menu-selectedopt:visited{
-	background-color: rgb(189, 4, 4);
+	background-color: rgb(189, 0, 0);
 	color: white;
 	text-decoration: none;
 }
@@ -521,12 +521,12 @@ div.stdft{
 	text-decoration: none;
 }
 .tb-menu-opt:active, .tb-menu-selectedopt:active{
-	background-color: rgb(189, 4, 4);
+	background-color: rgb(189, 0, 0);
 	color: white;
 	text-decoration: none;
 }
 .tb-selected-menu a:link, .tb-selected-menu a:visited{
-	background-color: rgb(189, 4, 4);
+	background-color: rgb(189, 0, 0);
 	color: white;
 	text-decoration: none;
 }
@@ -541,7 +541,7 @@ div.stdft{
 	text-decoration: none;
 }
 .tb-selected-menu a:active{
-	background-color: rgb(189, 4, 4);
+	background-color: rgb(85, 0, 0);
 	color: white;
 	text-decoration: none;
 }
@@ -568,11 +568,11 @@ div.stdft{
 	
 }
 .index-popmenu-selectedopt{
-	background-color: rgb(189, 4, 4);
+	background-color: rgb(85, 0, 0);
 	color: white;
 }
 .index-popmenu-selectedopt:link, .index-popmenu-selectedopt:visited{
-	background-color: rgb(189, 4, 4);
+	background-color: rgb(85, 0, 0);
 	color: white;
 	/* text-decoration: none; */
 	
@@ -584,7 +584,7 @@ div.stdft{
 	
 }
 .index-popmenu-opt:active, .index-popmenu-selectedopt:active{
-	background-color: rgb(189, 4, 4);
+	background-color: rgb(85, 0, 0);
 	color: white;
 	
 }
@@ -813,3 +813,414 @@ div.stdft{
 }
 
 
+
+/*ADMIN.PHP-----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+div.admin-topbar, div.admin-masthd, div.banner, div.auxmenu, div.content, div.index-agenft, div.stdft{
+	width: 100%;
+}
+
+div.admin-topbar{
+	background-color: rgb(150, 21, 21);
+    display: flex;
+    /* font-size: 25px; */
+}
+div.admin-masthd{
+    height: auto;
+	background-image: url("/alumni/alum-images/adminbanner-tp.jpg");
+	background-repeat: no-repeat;
+	background-size:2000px 500px;
+	/* opacity: 0.5; */
+}
+@media only screen and (max-width:912px){
+	div.admin-masthd{
+		background-size: 1366px;
+	}
+}
+@media only screen and (max-width:580px){
+	div.admin-masthd{
+		background-size: 800px;
+	}
+}
+/* .index-masthd::before{
+	height: auto;
+	content: "";
+	background-image: url("alum-images/banner.png");
+	opacity: 1.0;
+	background-color: rgba(0, 0, 0, 0.5);
+} */
+div.banner{
+	height: 460px;
+	/* background-color: lightgray; */
+	/* background-image: url("alum-images/banner.png"); */
+}
+
+div.auxmenu{
+	display: none;
+}
+div.admin-content{
+	/* height: 30%; */
+	background-color: white;
+}
+div.admin-agenft{
+	display: flex;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	background-color: rgb(235, 239, 250);
+}
+@media only screen and (max-width:930px){
+	div.admin-agenft{
+		display: block;
+		/* text-align: center; */
+	}
+}
+div.stdft{
+	height:20%;
+	background-color: gray;
+}
+
+
+/*TOPBAR-------------------------------------------------------------*/
+.admin-tb-logo{
+    width: 200px;
+}
+.admin-tb-logo img{
+    width: 100px;
+    height: 100px;
+    padding: 10px 10px;
+}
+.admin-tb-icon {
+	padding: 26px 20px;
+	display:none;
+}
+.admin-tb-a:link, .admin-tb-a:visited{
+	background-color: rgb(150, 21, 21);
+	color: black;
+	text-decoration: none;
+}
+.admin-tb-a:hover{
+	background-color: rgb(150, 21, 21);
+	color: black;
+	text-decoration: none;
+}
+.admin-tb-a:active{
+	background-color: rgb(1, 3, 126);
+	color: white;
+	text-decoration: none;
+}
+/* .tb-icon i:link, .tb-icon i:visited{
+	color: white;
+}
+.tb-icon i:hover{
+	background-color: rgb(1, 3, 92);
+	color: black;
+	text-decoration: none;
+}
+.tb-icon i:active{
+	background-color: rgb(1, 3, 92);
+	color: white;
+	text-decoration: none;
+} */
+.tb-title{
+	width: 300px;
+	padding: 20px 0px;
+}
+.admin-tb-menu{
+    display: flex;
+    width: 100%;
+}
+.admin-tb-selected-menu{
+    display: flex;
+    /* width: 100%; */
+}
+.admin-popup-menu{
+	width: 300px;
+	height: 1000px;
+	position: fixed;
+	display: none;
+	opacity: 0.9;
+	/* border: solid 1px black; */
+	background-color: rgb(150, 21, 21);
+}
+/* .index-popup-selectedmenu{
+	width: 300px;
+	height: 1000px;
+	position: fixed;
+	display: none;
+	opacity: 0.9;
+	border: solid 1px black;
+	background-color: rgb(189, 4, 4);
+} */
+@media only screen and (max-width:1091px) {
+	.tb-title, .admin-tb-menu a, .admin-tb-selected-menu a{
+		display: none;
+	}
+	.admin-tb-icon{
+		display: block;
+	}
+	#admin-tb-a-x{
+		display: none;
+	}
+	#admin-tb-a-bars{
+		display: block;
+	}
+}
+/* @media only screen and (min-width:754px){
+	.popup-tb-menu{
+		display: none;
+	}
+} */
+.admin-tb-menu-opt, .admin-tb-menu-selectedopt, .admin-tb-pf-opt, .admin-popmenu-opt, .admin-popmenu-selectedopt{
+    padding: 41px 40px;
+}
+
+.admin-tb-menu a{
+	text-decoration: none;
+	color: white;
+}
+
+.admin-tb-menu-opt:link, .admin-tb-menu-opt:visited{
+	background-color: rgb(150, 21, 21);
+	color: white;
+	text-decoration: none;
+}
+.admin-tb-menu-selectedopt{
+	background-color: rgb(1, 3, 126);
+	color: white;
+	text-decoration: none;
+}
+.admin-tb-menu-selectedopt:link, .admin-tb-menu-selectedopt:visited{
+	background-color: rgb(150, 21, 21);
+	color: white;
+	text-decoration: none;
+}
+.admin-tb-menu-opt:hover, .admin-tb-menu-selectedopt:hover{
+	background-color: whitesmoke;
+	color: black;
+	text-decoration: none;
+}
+.admin-tb-menu-opt:active, .admin-tb-menu-selectedopt:active{
+	background-color: rgb(1, 3, 126);
+	color: white;
+	text-decoration: none;
+}
+.admin-tb-selected-menu a:link, .admin-tb-selected-menu a:visited{
+	background-color: rgb(150, 21, 21);
+	color: white;
+	text-decoration: none;
+}
+/* .tb-menuopt-selected:link, .tb-menuopt-selected:visited{
+	background-color: rgb(189, 4, 4);
+	color: white;
+	text-decoration: none;
+} */
+.admin-tb-selected-menu a:hover{
+	background-color: whitesmoke;
+	color: black;
+	text-decoration: none;
+}
+.admin-tb-selected-menu a:active{
+	background-color: rgb(1, 3, 126);
+	color: white;
+	text-decoration: none;
+}
+
+.admin-tb-menu .admin-tb-menu-opt{
+    /* border: solid 1px; */
+    /* width: 100%; */
+    text-align: center;
+}
+.admin-popmenu-opt, .admin-popmenu-selectedopt{
+	text-align: left;
+}
+/* .popup-tb-menu-opt{
+	border:solid 1px black;
+} */
+.admin-popup-menu a{
+	text-decoration: none;
+	color:white;
+}
+.admin-popmenu-opt:link, .admin-popmenu-opt:visited{
+	background-color: rgb(150, 21, 21);
+	color: white;
+	/* text-decoration: none; */
+	
+}
+.admin-popmenu-selectedopt{
+	background-color: rgb(1, 3, 126);
+	color: white;
+}
+.admin-popmenu-selectedopt:link, .admin-popmenu-selectedopt:visited{
+	background-color: rgb(150, 21, 21);
+	color: white;
+	/* text-decoration: none; */
+	
+}
+.admin-popmenu-opt:hover, .admin-popmenu-selectedopt:hover{
+	background-color: whitesmoke;
+	color: black;
+	/* text-decoration: none; */
+	
+}
+.admin-popmenu-opt:active, .admin-popmenu-selectedopt:active{
+	background-color: rgb(1, 3, 126);
+	color: white;
+	
+}
+
+/* .index-popup-selectedmenu a{
+	background-color: rgb(189, 4, 4);
+	color: white;
+}
+.index-popup-selectedmenu a:link, .index-popup-selectedmenu a:visited{
+	background-color: rgb(189, 4, 4);
+	color: white;
+} */
+/* .index-popup-selectedmenu a:hover{
+	background-color: whitesmoke;
+	color: black; */
+	/* text-decoration: none; */
+	
+/* } */
+/* .index-popup-selectedmenu a:active{
+	background-color: rgb(189, 4, 4);
+	color: white;
+	
+} */
+.tb-profile{
+    display: flex;
+    /* width:inherit; */
+	
+    /* border: solid 1px; */
+    
+}
+/* text-align: center; */
+/* .tb-profile a{
+	width: 100%;
+	text-align: right;
+} */
+
+.tb-profile a:link, .tb-profile a:visited{
+	background-color: whitesmoke;
+	color: black;
+	text-decoration: none;
+}
+.tb-profile a:hover{
+	background-color: lightgray;
+	color: black;
+	text-decoration: none;
+}
+.tb-profile a:active{
+	background-color: gray;
+	color: white;
+	text-decoration: none;
+}
+.tb-profile .tb-menu-opt{
+    /* border: solid 1px; */
+    width: 100%;
+    text-align: center;
+}
+
+/*MASTHEAD-----------------------------------------------------------------------------*/
+
+.mast-title, .admin-mast-aclc-img{
+	opacity: 1.0;
+}
+/*Tacloban-------------------------------------------------------------*/
+.tacadmin-mast-aclc-img{
+    /* height: auto; */
+	padding: 100px;
+	width: 100%;
+}
+.tacadmin-mast-aclc-img img{
+	
+	width: 274px;
+	min-width: none;
+	/* background-color: white; */
+}
+@media only screen and (max-width:715px){
+	.tacadmin-mast-aclc-img img{
+		width: 200px;
+	}
+}
+@media only screen and (max-width:489px){
+	.tacadmin-mast-aclc-img{
+		/* height: auto; */
+		padding: 100px 0px;
+		
+	}
+	.tacadmin-mast-aclc-img img{
+		/* min-width: none; */
+		width: 150px;
+	}
+}
+/*Ormoc-------------------------------------------------------------*/
+
+.mocadmin-mast-aclc-img{
+    /* height: auto; */
+	padding: 100px;
+	width: 100%;
+}
+.mocadmin-mast-aclc-img img{
+	
+	width: 274px;
+	min-width: none;
+	/* background-color: white; */
+}
+@media only screen and (max-width:715px){
+	.mocadmin-mast-aclc-img img{
+		width: 200px;
+	}
+}
+@media only screen and (max-width:489px){
+	.mocadmin-mast-aclc-img{
+		/* height: auto; */
+		padding: 100px 0px;
+		
+	}
+	.mocadmin-mast-aclc-img img{
+		/* min-width: none; */
+		width: 150px;
+	}
+}
+
+
+/*Cebu-------------------------------------------------------------*/
+
+.cebadmin-mast-aclc-img{
+    /* height: auto; */
+	padding: 100px;
+	width: 100%;
+}
+.cebadmin-mast-aclc-img img{
+	
+	width: 274px;
+	min-width: none;
+	/* background-color: white; */
+}
+@media only screen and (max-width:715px){
+	.cebadmin-mast-aclc-img img{
+		width: 200px;
+	}
+}
+@media only screen and (max-width:489px){
+	.cebadmin-mast-aclc-img{
+		/* height: auto; */
+		padding: 100px 0px;
+		
+	}
+	.cebadmin-mast-aclc-img img{
+		/* min-width: none; */
+		width: 150px;
+	}
+}
+
+.mast-title{
+	font-size: 50px;
+}

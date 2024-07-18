@@ -135,7 +135,7 @@
 			$_SESSION['admin-branch'] = "Cebu";
 			header("location:admin/admin.php");
 		}else{
-			header("location:admin/admin-login.html?notif=loginfailed");
+			header("location:admin/login.html?notif=loginfailed");
 		}
 			// } 
 			// else if($_POST['admin-login-usn'] == "admin" && $_POST['admin-login-pwd'] == "admin"){
@@ -151,7 +151,7 @@
 		session_start();
 		session_unset();
 		session_destroy();
-		header("location:admin/admin-login.html");
+		header("location:admin/login.html");
 	}
 
 ?>
