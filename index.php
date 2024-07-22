@@ -167,7 +167,7 @@ for($i=0; $i<3; $i=$i+1){
 // 	"azul sweeps roxxo 2-0 in dominance",
 // 	"roxxo allegedly having connection issues despite biased commentary from the casters",
 // ];
-$featalumsql = mysqli_query($con, "SELECT * FROM `alum-user` WHERE 1");
+$featalumsql = mysqli_query($con, "SELECT * FROM `alum-user` WHERE `verified`=1");
 // for($i=0; $i<3; $i=$i+1){
 $i=0;
 while($featalumfet=mysqli_fetch_assoc($featalumsql)){

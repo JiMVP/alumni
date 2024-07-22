@@ -831,20 +831,54 @@ div.admin-topbar{
     display: flex;
     /* font-size: 25px; */
 }
-div.admin-masthd{
+div.tacadmin-masthd{
     height: auto;
 	background-image: url("/alumni/alum-images/adminbanner-tp.jpg");
+	background-repeat: no-repeat;
+	background-size:2000px 600px;
+	/* opacity: 0.5; */
+}
+@media only screen and (max-width:912px){
+	div.tacadmin-masthd{
+		background-size: 1366px;
+	}
+}
+@media only screen and (max-width:580px){
+	div.tacadmin-masthd{
+		background-size: 800px;
+	}
+}
+div.mocadmin-masthd{
+    height: auto;
+	background-image: url("/alumni/alum-images/HIGHLIGHTS2.png");
 	background-repeat: no-repeat;
 	background-size:2000px 500px;
 	/* opacity: 0.5; */
 }
 @media only screen and (max-width:912px){
-	div.admin-masthd{
+	div.mocadmin-masthd{
 		background-size: 1366px;
 	}
 }
 @media only screen and (max-width:580px){
-	div.admin-masthd{
+	div.mocadmin-masthd{
+		background-size: 800px;
+	}
+}
+div.cebadmin-masthd{
+    height: auto;
+	background-image: url("/alumni/alum-images/banner-tp.png");
+	background-repeat: no-repeat;
+	background-size:2000px 500px;
+	/* opacity: 0.5; */
+}
+@media only screen and (max-width:912px){
+	div.cebadmin-masthd{
+		background-size: 1366px;
+	}
+}
+@media only screen and (max-width:580px){
+	div.cebadmin-masthd{
 		background-size: 800px;
 	}
 }
@@ -888,7 +922,8 @@ div.stdft{
 
 /*TOPBAR-------------------------------------------------------------*/
 .admin-tb-logo{
-    width: 200px;
+    width: 500px;
+	display: flex;
 }
 .admin-tb-logo img{
     width: 100px;
@@ -905,7 +940,7 @@ div.stdft{
 	text-decoration: none;
 }
 .admin-tb-a:hover{
-	background-color: rgb(150, 21, 21);
+	background-color: rgb(114, 16, 16);
 	color: black;
 	text-decoration: none;
 }
@@ -927,9 +962,12 @@ div.stdft{
 	color: white;
 	text-decoration: none;
 } */
-.tb-title{
+.admin-tb-title{
 	width: 300px;
-	padding: 20px 0px;
+	padding: 41px 0px;
+	color: white;
+	text-align: center;
+	/* display: flex; */
 }
 .admin-tb-menu{
     display: flex;
@@ -957,8 +995,8 @@ div.stdft{
 	border: solid 1px black;
 	background-color: rgb(189, 4, 4);
 } */
-@media only screen and (max-width:1091px) {
-	.tb-title, .admin-tb-menu a, .admin-tb-selected-menu a{
+@media only screen and (max-width:1336px) {
+	.admin-tb-menu a, .admin-tb-selected-menu a{
 		display: none;
 	}
 	.admin-tb-icon{
@@ -1223,4 +1261,136 @@ div.stdft{
 
 .mast-title{
 	font-size: 50px;
+}
+
+/*CONTENT AREA------------------------------------------------------------------------------*/
+
+.cont-home h1{
+    display: block;
+	text-align: left;
+}
+.cont-dir{
+    display: none;
+}
+.cont-prof{
+    display: none;
+}
+
+.admin-cont-title{
+	font-size: 35px;
+	padding: 20px;
+	color: rgb(1, 3, 126);
+}
+.admin-cont-verify, .admin-cont-jobdesc, .admin-cont-featalum{
+	/* border: solid 1px black; */
+	display: flex;
+	background-color: white;
+}
+@media only screen and (max-width:930px){
+	.admin-cont-verify, .admin-cont-jobdesc, .admin-cont-featalum{	
+		display: block;
+	}
+}
+.admin-cv-contain, .admin-cjd-contain, .admin-cfa-contain{
+	/* display: flex; */
+	/* border: solid 1px black; */
+	width: 33.275%;
+	padding: 10px;
+}
+@media only screen and (max-width:930px){
+	.admin-cv-contain, .admin-cjd-contain, .admin-cfa-contain{	
+		width: 100%;
+		padding: 10px;
+	}
+}
+.admin-cvctn-post, .admin-cjdctn-post, .admin-cfactn-post{
+	width: 100%;
+	/* border: solid 1px black; */
+	background-color: rgb(224, 230, 247);
+}
+/* .index-cectn-post:link, .index-cectn-post:visited{
+	background-color: rgb(1, 3, 126);
+	color: white;
+	text-decoration: none;
+} */
+.admin-cvctn-post, .admin-cjdctn-post, .admin-cfactn-post{
+	/* background-color: rgb(1, 3, 126); */
+	color: black;
+	text-decoration: none;
+}
+.admin-cvctn-postcover img, .admin-cjdctn-post img, .admin-cfactn-post img{
+	width: 100%;
+}
+.admin-cvctn-posttitle, .admin-cjdctn-posttitle, .admin-cfactn-posttitle{
+	color: rgb(1, 3, 126);
+	padding: 5px;
+	padding-top: 10px;
+	text-align: left;
+}
+.admin-cvctn-postcontent, .admin-cjdctn-postcontent, .admin-cfactn-postcontent{
+	font-size: 15px;
+	padding: 5px;
+	padding-bottom: 10px;
+	text-align: left;
+}
+.admin-cvctn-post:hover, .admin-cjdctn-post:hover, .admin-cfactn-post:hover{
+	background-color: rgb(203, 203, 255);
+	/* color: white; */
+	text-decoration: none;
+}
+.admin-cvctn-post:active, .admin-cjdctn-post:active, .admin-cfactn-post:active{
+	background-color: rgb(181, 181, 252);
+	/* color: white; */
+	text-decoration: none;
+}
+.admin-cvctn-postbtns{
+	background-color: rgb(224, 230, 247);
+	display: flex;
+	font-size: 15px;
+}
+.admin-cvctn-postbtns a{
+	padding: 10px;
+	margin: 5px;
+	text-decoration: none;
+}
+.admin-cycpb-verify{
+	background-color: rgb(0, 87, 0);
+	color: white;
+}
+/* .admin-cycpb-verify:link, .admin-cycpb-verify:visited{
+	background-color: green;
+	color: white;
+} */
+
+.admin-cycpb-verify:hover{
+	background-color: rgb(1, 197, 1);
+	color: white;
+}
+.admin-cycpb-verify:active{
+	background-color: green;
+	color: white;
+}
+.admin-cycpb-details{
+	background-color: rgb(0, 0, 138);
+	color: white;
+}
+.admin-cycpb-details:hover{
+	background-color: rgb(0, 0, 255);
+	color: white;
+}
+.admin-cycpb-details:active{
+	background-color: rgb(0, 0, 199);
+	color: white;
+}
+.admin-cycpb-delete{
+	background-color: rgb(129, 0, 0);
+	color: white;
+}
+.admin-cycpb-delete:hover{
+	background-color: red;
+	color: white;
+}
+.admin-cycpb-delete:active{
+	background-color: rgb(187, 0, 0);
+	color: white;
 }

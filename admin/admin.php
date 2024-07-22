@@ -6,13 +6,28 @@
         header("location:login.html");
     }
     
+    $adminbr = $_SESSION['admin-branch'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>
+        ACLC 
+        
+        <?php 
+    
+    // if($adminbr == "Cebu")
+    //     echo "Mandaue";
+    // else
+    //     echo $adminbr; 
+    
+    ?> 
+
+        Admin 
+    </title>
     <link rel="stylesheet" href="/alumni/index.css">
     <script src="https://kit.fontawesome.com/8a1d3beb0c.js" crossorigin="anonymous"></script>
     <script>
@@ -70,6 +85,10 @@
         function logout(){
             document.getElementById("admin-tb-menu-form").submit();
         }
+
+        function rmuser(){
+            document.getElementById("admin-cycpb-rm-form").submit();
+        }
         
     
     </script>
@@ -77,9 +96,33 @@
 <body id="body">
     <form id ="admin-tb-menu-form" action="logout.php" method="post" style="display:none"></form>
     <div class="admin-topbar">
-		<div class="admin-tb-logo"><img src="/alumni/alum-images/aclclogo.png" alt="ACLC Logo"></div>
-		<a class="admin-tb-a" id="admin-tb-a-bars" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="admin-tb-icon"><i class="fas fa-bars" id="bars"  style="font-size:50px;color:white"></i></div></a>
-		<a class="admin-tb-a" id="admin-tb-a-x" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="admin-tb-icon"><i class="fas fa-xmark" id="x"  style="font-size:50px;color:white"></i></div></a>
+		<div class="admin-tb-logo">
+            <img src="/alumni/alum-images/aclclogo.png" alt="ACLC Logo">
+            <a class="admin-tb-a" id="admin-tb-a-bars" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="admin-tb-icon"><i class="fas fa-bars" id="bars"  style="font-size:50px;color:white"></i></div></a>
+		    <a class="admin-tb-a" id="admin-tb-a-x" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="admin-tb-icon"><i class="fas fa-xmark" id="x"  style="font-size:50px;color:white"></i></div></a>
+
+            <div class="admin-tb-title">
+                <B>
+                    <?php
+            
+    
+
+    if($adminbr == "Tacloban"){
+        echo "ACLC TACLOBAN ADMIN";
+    }else if($adminbr == "Ormoc"){
+        echo "ACLC ORMOC ADMIN";
+    }else if($adminbr == "Mandaue"){
+        echo "ACLC MANDAUE ADMIN";
+    }
+            
+                    ?>
+
+                </B>
+
+            </div>
+        
+        </div>
+		
 		<!-- <div class="tb-title"></div> -->
 		<div class="admin-tb-menu">
 			<a href="" ><div class="admin-tb-menu-selectedopt">HOME</div></a>
@@ -101,42 +144,50 @@
         <a href="#" ><div class="admin-popmenu-opt">GALLERY</div></a>
         <a href="#" onclick="logout()"><div class="admin-popmenu-opt">LOG OUT</div></a>	
 	</div>
-    <div class="admin-masthd">
+    
 
         <?php
     
-    $adminbr = $_SESSION['admin-branch'];
+    
 
     if($adminbr == "Tacloban"){
 
         ?>
+    
+    <div class="tacadmin-masthd">
 
         <div class="tacadmin-mast-aclc-img">
 			<img src="/alumni/alum-images/aclctaclogo2-tp.png" alt="ACLC COLLEGE">
 			<div class="mast-title" style=""><B>ADMIN</B></div>
 		</div>	
 
+    </div>
         <?php
 
     }else if($adminbr == "Ormoc"){
 
         ?>
 
+    <div class="mocadmin-masthd">
         <div class="mocadmin-mast-aclc-img">
-			<!-- <img src="/alumni/alum-images/aclctaclogo2-tp.png" alt="ACLC COLLEGE"> -->
-			<div class="mast-title" style=""><B>ORMOC ADMIN</B></div>
+			<img src="/alumni/alum-images/aclcormoclogo-tp.png" alt="ACLC COLLEGE OF ORMOC">
+			<div class="mast-title" style=""><B>ADMIN</B></div>
 		</div>	
+    </div>
 
         <?php
 
-    }else if($adminbr == "Cebu"){
+    }else if($adminbr == "Mandaue"){
 
         ?>
 
+    <div class="cebadmin-masthd">
         <div class="cebadmin-mast-aclc-img">
-			<!-- <img src="/alumni/alum-images/aclctaclogo2-tp.png" alt="ACLC COLLEGE"> -->
-			<div class="mast-title" style=""><B>CEBU ADMIN</B></div>
+			<img src="/alumni/alum-images/aclccebulogo-tp2.png" alt="ACLC COLLEGE">
+			<div class="mast-title" style=""><B>ADMIN</B></div>
+
 		</div>	
+    </div>
 
         <?php
 
@@ -145,10 +196,93 @@
         ?>
 
 		
-	</div>
-    <?php echo  $_SESSION['admin-branch']; ?>
+	<!-- </div> -->
+    <!-- <?php //echo  $_SESSION['admin-branch']; ?>
     <form action="/alumni/config.php" method="post">
         <input type="submit" name="admin-logout" value="Log Out">
-    </form>
+    </form> -->
+    <div class="std-contain">
+        <div class="admin-content">
+            <div class="admin-cont-title"><div><b>PENDING ALUMNI VERIFICATION</b></div></div>
+            <div class="admin-cont-verify">
+
+                <?php
+
+    $verifysql=mysqli_query($con, "SELECT * FROM `alum-user` WHERE `branch`='$adminbr' AND `verified` = 0;");
+    $i=0;
+    while($verifyfet=mysqli_fetch_assoc($verifysql)){
+
+        $id=$verifyfet['id'];
+        $lname=$verifyfet['lname'];
+        $fname=$verifyfet['fname'];
+        $mname=$verifyfet['mname'];
+        $suffix=$verifyfet['suffix'];
+        if($suffix == "N/A"){
+            $fullname = "$lname, $fname $mname";
+        }else{
+            $fullname = "$lname, $fname $mname, $suffix";
+        }
+        $usn=$verifyfet['usn'];
+        $conno=$verifyfet['conno'];
+        $email=$verifyfet['email'];
+        $branch=$verifyfet['branch'];
+        $degree=$verifyfet['degree'];
+        $regdatetime=$verifyfet['regdatetime'];
+        $verified=$verifyfet['verified'];
+        // $id=$verifyfet['id'];
+        
+
+                ?>
+
+                <div class="admin-cv-contain">
+                    <div class="admin-cvctn-post">
+                        <div class="admin-cvctn-posttitle"><?php echo $fullname ?></div>
+                        <div class="admin-cvctn-postcontent">
+
+                            <?php
+
+                            echo "
+                            
+                            USN: $usn<br>
+                            Contact Number: $conno<br>
+                            Email: $email<br>
+                            
+                            Course: $degree<br>
+                            Registration Date & Time: $regdatetime<br>
+
+                            ";
+
+                            ?>
+
+                        </div>
+                        
+                    </div>
+                    <div class="admin-cvctn-postbtns">
+                            
+                        <a class="admin-cycpb-verify" href="/alumni/configfiles/veruser.php?id=<?php echo $id; ?>">VERIFY</a>
+                        <a class="admin-cycpb-details" href="#">FULL DETAILS</a>
+                        <a class="admin-cycpb-delete" href="/alumni/configfiles/rmuser.php?id=<?php echo $id; ?>">
+                            <!-- <form action="configfiles/rmuser.php" id="admin-cycpb-del-form" method="post" style="display:none"></form> -->
+                            DELETE
+                        </a>
+                    </div>
+                </div>
+
+                <?php
+
+        $i++;
+        if(!($i<3)){
+            break;
+        }
+    }
+
+                ?>
+
+            </div>
+            <!-- <div style="border:solid 1px black; padding:10px">PENDING ALUMNI VERIFICATION LIST</div> -->
+            <div class="admin-cont-title"><div><b>EVENTS & JOBS</b></div></div>
+            <div class="admin-cont-title"><div><b>FEATURED ALUMNI</b></div></div>
+        </div>        
+    </div>
 </body>
 </html>

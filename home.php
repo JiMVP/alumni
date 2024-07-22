@@ -1,9 +1,9 @@
 <?php
 include "config.php";
 session_start();
-if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
-	header("location:index.php");
-}
+// if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
+// 	header("location:index.php");
+// }
 // echo $_SESSION["usn"];
 ?>
 <!DOCTYPE html>

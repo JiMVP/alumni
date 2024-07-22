@@ -10,7 +10,7 @@
 		$usn=$_POST['login-usn'];
 		$pwd=$_POST['login-pwd'];
 
-		$sql=mysqli_query($con, "SELECT * FROM `alum-user` WHERE `usn` = '$usn'");
+		$sql=mysqli_query($con, "SELECT * FROM `alumacc` WHERE `usn` = '$usn' AND `pwd`='$pwd'");
 		$sqlfet=mysqli_fetch_assoc($sql);
 		$fid=$sqlfet['id'];
 		$fusn=$sqlfet['usn'];
@@ -101,6 +101,23 @@
 		
 	}
 
+	if(isset($_POST['alumacc-submit'])){
+
+		$alumaccid=$_POST['alumacc-id'];
+		$alumaccusn=$_POST['alumacc-usn'];
+		$alumaccpwd=$_POST['alumacc-pwd'];
+		$alumaccconfpwd=$_POST['alumacc-confpwd'];
+		if($alumaccpwd != $alumaccconfpwd){
+			header("location:loginusnpwd.php?id=$alumaccid&prompt=confpwderror");
+		}
+
+		mysqli_query($con, "UPDATE `alumacc` SET `usn`='$alumaccusn', `pwd`='$alumaccpwd' WHERE `alum-user_id`='$alumaccid'");
+		header("location:login.html");
+
+
+
+	}
+
 	if(isset($_POST['admin-login-submit'])){
 		// echo "config";
 		$adminusn = array(
@@ -132,7 +149,7 @@
 			header("location:admin/admin.php");
 		}elseif($_POST['admin-login-usn'] == $adminusn[2] && $_POST['admin-login-pwd'] == $adminpwd[2]){
 			session_start();
-			$_SESSION['admin-branch'] = "Cebu";
+			$_SESSION['admin-branch'] = "Mandaue";
 			header("location:admin/admin.php");
 		}else{
 			header("location:admin/login.html?notif=loginfailed");
