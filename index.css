@@ -676,6 +676,7 @@ div.stdft{
 }
 .mast-title{
 	font-size: 50px;
+	font-family: "Lovelo Black";
 }
 
 
@@ -906,7 +907,7 @@ div.admin-agenft{
 	display: flex;
 	padding-top: 100px;
 	padding-bottom: 50px;
-	background-color: rgb(235, 239, 250);
+	background-color: rgb(250, 235, 235);
 }
 @media only screen and (max-width:930px){
 	div.admin-agenft{
@@ -1393,4 +1394,56 @@ div.stdft{
 .admin-cycpb-delete:active{
 	background-color: rgb(187, 0, 0);
 	color: white;
+}
+
+
+/*AGENCY FOOTER--------------------------------------------------------------------------------------*/
+
+.admin-af-left-blk, .admin-af-mid-blk, .admin-af-right-blk{
+	display: block;
+}
+/* @media only screen and (max-width:930px){
+	.index-af-left-blk, .index-af-mid-blk, .index-af-right-blk{
+		display: block;
+	}
+} */
+.admin-af-mid-blk div, .admin-af-right-blk{
+	text-align: left;
+}
+
+.admin-af-left-blk{
+	width: 33%;
+}
+.admin-af-mid-blk{
+	width: 34%;
+}
+.admin-af-right-blk{
+	width: 33%;
+}
+.admin-af-lb-img img{
+	width: 60%;
+}
+@media only screen and (max-width:930px){
+	.admin-af-left-blk, .admin-af-mid-blk, .admin-af-right-blk{
+		/* text-align: center; */
+		width: 100%;
+	}
+	/* .index-af-mid-blk div, .index-af-right-blk{
+		text-align: center;
+	} */
+}
+
+
+/*ALUMLIST.PHP----------------------------------------------------------------------------------------------------------------------*/
+
+
+/*CONTENT AREA TABLE-----------------------------------------------------------------*/
+
+
+.admin-cont-alumlist table, .admin-cont-alumlist th, .admin-cont-alumlist td{
+	border: solid 1px black;
+	border-collapse: collapse;
+}
+.admin-cont-alumlist table{
+	width: 100%;
 }

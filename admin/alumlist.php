@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
+        Alumni List | 
         ACLC 
         
         <?php 
@@ -94,7 +95,7 @@
     </script>
 </head>
 <body id="body">
-    <form id ="admin-tb-menu-form" action="logout.php" method="post" style="display:none"></form>
+<form id ="admin-tb-menu-form" action="logout.php" method="post" style="display:none"></form>
     <div class="admin-topbar">
 		<div class="admin-tb-logo">
             <img src="/alumni/alum-images/aclclogo.png" alt="ACLC Logo">
@@ -125,8 +126,8 @@
 		
 		<!-- <div class="tb-title"></div> -->
 		<div class="admin-tb-menu">
-			<a href="" ><div class="admin-tb-menu-selectedopt">HOME</div></a>
-			<a href="alumlist.php"><div class="admin-tb-menu-opt">ALUMNI LIST</div></a>
+			<a href="admin.php" ><div class="admin-tb-menu-opt">HOME</div></a>
+			<a href=""><div class="admin-tb-menu-selectedopt">ALUMNI LIST</div></a>
 			<a href="#"><div class="admin-tb-menu-opt">EVENTS & JOBS</div></a>
             <a href="#"><div class="admin-tb-menu-opt">GALLERY</div></a>
             <a href="#" onclick="logout()"><div class="admin-tb-menu-opt">LOG OUT</div></a>
@@ -138,152 +139,87 @@
 		
 	</div> -->
 	<div class="admin-popup-menu" id="index-popup-menu">
-		<a href="#" onclick="cont_home()"><div class="admin-popmenu-selectedopt">HOME</div></a>		
-		<a href="alumlist.php" ><div class="admin-popmenu-opt">ALUMNI LIST</div></a>		
+		<a href="admin.php" onclick="cont_home()"><div class="admin-popmenu-opt">HOME</div></a>		
+		<a href="" ><div class="admin-popmenu-selectedopt">ALUMNI LIST</div></a>		
 		<a href="#" ><div class="admin-popmenu-opt">EVENTS & JOBS</div></a>	
         <a href="#" ><div class="admin-popmenu-opt">GALLERY</div></a>
         <a href="#" onclick="logout()"><div class="admin-popmenu-opt">LOG OUT</div></a>	
 	</div>
-    
 
-        <?php
-    
-    
-
-    if($adminbr == "Tacloban"){
-
-        ?>
-    
-    <div class="tacadmin-masthd">
-
-        <div class="tacadmin-mast-aclc-img">
-			<img src="/alumni/alum-images/aclctaclogo2-tp.png" alt="ACLC COLLEGE">
-			<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
-		</div>	
-
-    </div>
-        <?php
-
-    }else if($adminbr == "Ormoc"){
-
-        ?>
-
-    <div class="mocadmin-masthd">
-        <div class="mocadmin-mast-aclc-img">
-			<img src="/alumni/alum-images/aclcormoclogo-tp.png" alt="ACLC COLLEGE OF ORMOC">
-			<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
-		</div>	
-    </div>
-
-        <?php
-
-    }else if($adminbr == "Mandaue"){
-
-        ?>
-
-    <div class="cebadmin-masthd">
-        <div class="cebadmin-mast-aclc-img">
-			<img src="/alumni/alum-images/aclccebulogo-tp2.png" alt="ACLC COLLEGE">
-			<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
-
-		</div>	
-    </div>
-
-        <?php
-
-    }
-        
-        ?>
-
-		
-	<!-- </div> -->
-    <!-- <?php //echo  $_SESSION['admin-branch']; ?>
-    <form action="/alumni/config.php" method="post">
-        <input type="submit" name="admin-logout" value="Log Out">
-    </form> -->
     <div class="std-contain">
         <div class="admin-content">
-            <div class="admin-cont-title"><div><b>PENDING ALUMNI VERIFICATION</b></div></div>
-            <div class="admin-cont-verify">
+            <div class="admin-cont-title"><b>ALUMNI LIST</b></div>
+            <div class="admin-cont-alumlist">
+
+                <table>
+                    <tr>
+                        <th>NAME</th>
+                        <th>USN</th>
+                        <th>COURSE</th>
+                        <th>STATUS</th>
+                    </tr>
+                
 
                 <?php
+                
+    $getalumsql = mysqli_query($con, "SELECT * FROM `alum-user` WHERE `branch`='$adminbr'");
+    while($fetalum=mysqli_fetch_assoc($getalumsql)){
+        $lname=$fetalum['lname'];
+        $fname=$fetalum['fname'];
+        $mname=$fetalum['mname'];
+        $suffix=$fetalum['suffix'];
+        $midini=substr($mname,0,1);
+        $usn=$fetalum['usn'];
+        $course=$fetalum['degree'];
+        $verified=$fetalum['verified'];
 
-    $verifysql=mysqli_query($con, "SELECT * FROM `alum-user` WHERE `branch`='$adminbr' AND `verified` = 0;");
-    $i=0;
-    while($verifyfet=mysqli_fetch_assoc($verifysql)){
+        ?>
 
-        $id=$verifyfet['id'];
-        $lname=$verifyfet['lname'];
-        $fname=$verifyfet['fname'];
-        $mname=$verifyfet['mname'];
-        $suffix=$verifyfet['suffix'];
-        if($suffix == "N/A"){
-            $fullname = "$lname, $fname $mname";
-        }else{
-            $fullname = "$lname, $fname $mname, $suffix";
-        }
-        $usn=$verifyfet['usn'];
-        $conno=$verifyfet['conno'];
-        $email=$verifyfet['email'];
-        $branch=$verifyfet['branch'];
-        $degree=$verifyfet['degree'];
-        $regdatetime=$verifyfet['regdatetime'];
-        $verified=$verifyfet['verified'];
-        // $id=$verifyfet['id'];
+                    <tr>
+                        <td>
+                        <?php 
+
+        if($suffix == "N/A"){                       
+            echo "$lname, $fname $mname";                                                
+        }else{                        
+            echo "$lname, $fname $mname $suffix";                         
+        }            
+                        ?>
+                        </td>
+                        <td><?php echo $usn; ?></td>
+                        <td><?php echo $course; ?></td>                                           
+
+                        <?php
         
+        if($verified!=0){
+            ?>
+                        <td style="color:green"><?php echo "Verified"; ?></td>
+            <?php
+        }else{
+            ?>
+                        <td style="color:red"><?php echo "Not Verified"; ?></td>
+            <?php
+        }
+                
+                        ?>
 
-                ?>
-
-                <div class="admin-cv-contain">
-                    <div class="admin-cvctn-post">
-                        <div class="admin-cvctn-posttitle"><?php echo $fullname ?></div>
-                        <div class="admin-cvctn-postcontent">
-
-                            <?php
-
-                            echo "
-                            
-                            USN: $usn<br>
-                            Contact Number: $conno<br>
-                            Email: $email<br>
-                            
-                            Course: $degree<br>
-                            Registration Date & Time: $regdatetime<br>
-
-                            ";
-
-                            ?>
-
-                        </div>
                         
-                    </div>
-                    <div class="admin-cvctn-postbtns">
-                            
-                        <a class="admin-cycpb-verify" href="/alumni/configfiles/veruser.php?id=<?php echo $id; ?>">VERIFY</a>
-                        <a class="admin-cycpb-details" href="#">FULL DETAILS</a>
-                        <a class="admin-cycpb-delete" href="/alumni/configfiles/rmuser.php?id=<?php echo $id; ?>">
-                            <!-- <form action="configfiles/rmuser.php" id="admin-cycpb-del-form" method="post" style="display:none"></form> -->
-                            DELETE
-                        </a>
-                    </div>
-                </div>
+                    </tr>
+                
 
                 <?php
-
-        $i++;
-        if(!($i<3)){
-            break;
-        }
-    }
-
+                
+    }            
+                
                 ?>
-
+                
+                </table>
             </div>
-            <!-- <div style="border:solid 1px black; padding:10px">PENDING ALUMNI VERIFICATION LIST</div> -->
-            <div class="admin-cont-title"><div><b>EVENTS & JOBS</b></div></div>
-            <div class="admin-cont-title"><div><b>FEATURED ALUMNI</b></div></div>
-        </div>        
+            <div></div>
+
+        </div>
     </div>
+    
     <div class="admin-agenft">
 		<div class="admin-af-left-blk">
 			<div class="admin-af-lb-img">
@@ -303,5 +239,6 @@
 			(they are now)
 		</div>
 	</div>
+
 </body>
 </html>

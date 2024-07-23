@@ -40,7 +40,7 @@
 	<div class="index-masthd">
 		<div class="mast-aclc-img">
 			<img src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
-			<div class="mast-title" style=""><B>ALUMNI</B></div>
+			<div><img src="alum-images/alumni.png" alt="ALUMNI"></div>
 		</div>
 		
 	</div>
