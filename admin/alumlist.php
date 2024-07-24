@@ -151,12 +151,17 @@
             <div class="admin-cont-title"><b>ALUMNI LIST</b></div>
             <div class="admin-cont-alumlist">
 
-                <table>
+                <table class="admin-ca-tblborder">
                     <tr>
-                        <th>NAME</th>
-                        <th>USN</th>
-                        <th>COURSE</th>
-                        <th>STATUS</th>
+                        <th class="admin-ca-tblborder">
+                            <div class="admin-ca-tblcontent">NAME</div>
+                        </th>
+                        
+                        <th class="admin-ca-tblborder">CONTACT NO.</th>
+                        <th class="admin-ca-tblborder">EMAIL</th>
+                        <th class="admin-ca-tblborder">USN</th>
+                        <th class="admin-ca-tblborder">COURSE</th>
+                        <th class="admin-ca-tblborder">STATUS</th>
                     </tr>
                 
 
@@ -164,19 +169,26 @@
                 
     $getalumsql = mysqli_query($con, "SELECT * FROM `alum-user` WHERE `branch`='$adminbr'");
     while($fetalum=mysqli_fetch_assoc($getalumsql)){
+        $id=$fetalum['id'];
         $lname=$fetalum['lname'];
         $fname=$fetalum['fname'];
         $mname=$fetalum['mname'];
         $suffix=$fetalum['suffix'];
         $midini=substr($mname,0,1);
+        $conno=$fetalum['conno'];
+        $email=$fetalum['email'];
         $usn=$fetalum['usn'];
         $course=$fetalum['degree'];
         $verified=$fetalum['verified'];
 
-        ?>
+                ?>
 
-                    <tr>
-                        <td>
+                    <!-- <a href=""> -->
+                    <tr onclick="window.location.href = 'aluminfo.php?id=<?php echo $id; ?>'">
+                        
+                        <td class="admin-ca-tblborder">
+                            <div class="admin-ca-tblcontent">
+
                         <?php 
 
         if($suffix == "N/A"){                       
@@ -185,19 +197,41 @@
             echo "$lname, $fname $mname $suffix";                         
         }            
                         ?>
+
+                            </div>
                         </td>
-                        <td><?php echo $usn; ?></td>
-                        <td><?php echo $course; ?></td>                                           
+                        <td class="admin-ca-tblborder">
+                            <div class="admin-ca-tblcontent">
+                                <?php echo "$conno"; ?>
+                            </div>
+                        </td>
+                        <td class="admin-ca-tblborder">
+                            <div class="admin-ca-tblcontent">
+                                <?php echo "$email"; ?>
+                            </div>
+                        </td>
+                        <td class="admin-ca-tblborder">
+                            <div class="admin-ca-tblcontent">
+                                <?php echo "$usn"; ?>
+                            </div>
+                            
+                        </td>
+                        <td class="admin-ca-tblborder">
+                            <div class="admin-ca-tblcontent">
+                                <?php echo "$course"; ?>
+                            </div>
+                        </td>
+                                                                   
 
                         <?php
         
         if($verified!=0){
             ?>
-                        <td style="color:green"><?php echo "Verified"; ?></td>
+                        <td class="admin-ca-tblborder" style="color:green"><?php echo "Verified"; ?></td>
             <?php
         }else{
             ?>
-                        <td style="color:red"><?php echo "Not Verified"; ?></td>
+                        <td class="admin-ca-tblborder" style="color:red"><?php echo "Not Verified"; ?></td>
             <?php
         }
                 
@@ -205,6 +239,7 @@
 
                         
                     </tr>
+                    <!-- </a> -->
                 
 
                 <?php
