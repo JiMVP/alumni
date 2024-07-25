@@ -1456,6 +1456,18 @@ div.stdft{
 	/* width: 100%; */
 	background-color: rgb(224, 230, 247);
 }
+@media only screen and (max-width:931px){
+	.admin-cont-alumlist table{
+		/* width: 100%; */
+		font-size: 15px;
+	}
+}
+@media only screen and (max-width:778px){
+	.admin-cont-alumlist table{
+		/* width: 100%; */
+		font-size: 10px;
+	}
+}
 .admin-cont-alumlist tr:nth-child(odd) {
 	background-color : rgb(193, 207, 245);
 }
@@ -1471,9 +1483,12 @@ div.stdft{
 }
 
 .admin-cont-alumlist th{
-	/* width: 100%; */
+	width: 100%;
 	background-color: rgb(1, 3, 126);
 	color: white;
+}
+.admin-cont-alumlist td{
+	width: 100%;
 }
 .admin-cont-alumlist table{
 	width: 100%;

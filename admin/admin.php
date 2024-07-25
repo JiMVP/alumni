@@ -260,7 +260,7 @@
                     <div class="admin-cvctn-postbtns">
                             
                         <a class="admin-cycpb-verify" href="/alumni/configfiles/veruser.php?id=<?php echo $id; ?>">VERIFY</a>
-                        <a class="admin-cycpb-details" href="#">FULL DETAILS</a>
+                        <a class="admin-cycpb-details" href="aluminfo.php?id=<?php echo $id; ?>">FULL DETAILS</a>
                         <a class="admin-cycpb-delete" href="/alumni/configfiles/rmuser.php?id=<?php echo $id; ?>">
                             <!-- <form action="configfiles/rmuser.php" id="admin-cycpb-del-form" method="post" style="display:none"></form> -->
                             DELETE

@@ -13,17 +13,36 @@
 		$sql=mysqli_query($con, "SELECT * FROM `alumacc` WHERE `usn` = '$usn' AND `pwd`='$pwd'");
 		$sqlfet=mysqli_fetch_assoc($sql);
 		$fid=$sqlfet['id'];
+		$falumid=$sqlfet['alum-user_id'];
+		// echo $falumid;
 		$fusn=$sqlfet['usn'];
 		$fpwd=$sqlfet['pwd'];
-		
-		if($usn==$fusn && $pwd==$fpwd){
-			session_start();
-			$_SESSION["usn"] = $usn;
-			$_SESSION["id"] = $fid;
-			header("location:home.php");
+
+		$getuser=mysqli_query($con, "SELECT `verified` FROM `alum-user` WHERE `id` = '$falumid'");
+		$fetuser=mysqli_fetch_assoc($getuser);
+		$verified=$fetuser['verified'];
+
+		echo $fid;
+		echo $falumid;
+		// echo $fusn;
+		// echo $fpwd;
+		echo $verified;
+
+		if($verified=='1'){
+			if($usn==$fusn && $pwd==$fpwd){
+				session_start();
+				$_SESSION["usn"] = $usn;
+				$_SESSION["id"] = $fid;
+				header("location:home.php");
+			}else{
+				header("location:login.html?notif='Login Error'");
+			}
+			
 		}else{
-			header("location:login.html?notif='Login Error'");
+			header("location:login.html?notif='Account Unverified'");
 		}
+		
+		
 
 	}
 

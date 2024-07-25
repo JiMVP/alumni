@@ -6,6 +6,7 @@
 
         $id=$_GET['id'];
 
+        mysqli_query($con, "DELETE FROM `alumacc` WHERE `alum-user_id`='$id';");
         mysqli_query($con, "DELETE FROM `alum-user` WHERE `id`='$id';");
         echo "DROP SUCCESS (hopefully)";
         header("location:/alumni/admin/admin.php");
