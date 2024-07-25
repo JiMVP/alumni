@@ -1,8 +1,5 @@
-<html> 
-<body>
-<div style="color:red">ALUMNI INFORMATION MANAGEMENT SYSTEM</div>
+ALUMNI INFORMATION MANAGEMENT SYSTEM
 
-some of the core functions functions well now,<br> 
+some of the core functions functions well now, 
 but it still looks like crap for a capstone project (smh)
-</body>
-</html>
+
