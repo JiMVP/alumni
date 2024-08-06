@@ -1,6 +1,6 @@
 <?php
 
-    include "config.php";
+    include dirname(__DIR__)."/config.php";
     session_start();
 
     use PHPMailer\PHPMailer\PHPMailer;
@@ -10,7 +10,7 @@
 	require 'phpmailer/src/PHPMailer.php';
 	require 'phpmailer/src/SMTP.php';
 
-    if($_GET){
+    // if(isset($_GET['id'])){
 
         $id=$_GET['id'];
         $getemail=mysqli_query($con, "SELECT * FROM `alum-user` WHERE `id`='$id'");
@@ -51,8 +51,10 @@
         $mail ->Body =$message;
         $mail ->send();
 
-        header("location:admin/admin.php");
+        echo $message;
 
-    }
+        // header("location:admin/admin.php");
+
+    // }
 
 ?>
