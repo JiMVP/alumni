@@ -74,10 +74,10 @@ while($eventfet=mysqli_fetch_assoc($eventssql)){
 					<div class="index-ce-contain">
 						<div class="index-cectn-post" onclick="window.location.href='login.html';">
 							<div class="index-cectn-postcover">
-								<!-- <img src="image.php?id='<?php echo $id; ?>'" alt="HIGHLIGHTS2"> -->
+								<img src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
 								<?php 
 								
-									echo '<img src="data:image/jpeg;base64,'.base64_encode($cover).'"/>'; 
+									// echo '<img src="data:image/jpeg;base64,'.base64_encode($cover).'" alt="Post Cover Image"/>'; 
 									// echo '<img src="image.php?id='.$id.'"/>';
 
 								?>
@@ -139,13 +139,13 @@ for($i=0; $i<3; $i=$i+1){
 					<div class="index-cjd-contain">
 						<div class="index-cjdctn-post" onclick="window.location.href='login.html';">
 							<div class="index-cjdctn-postcover">
-								<img src="alum-images/HIGHLIGHTS2.png" alt="HIGHLIGHTS2">
+								<img src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
 							</div>
 							<div class="index-cjdctn-posttitle">
 								POST TITLE
 							</div>
 							<div class="index-cjdctn-postcontent">
-								Fadfasdfasdfaf adaf afsdfa fdafasd asdfaef asdfad sf adf asfadfadsf adfga sdf adfasf aeaafsd34es fa ee4f adfa sdfa dfae4fasdf aef afdasfd asfa sdfas dfasf dfdfdfdfd sfdfassaasasa fasdfsfasdfsafda asdf dfddasfadfasfadfadfs adsasdsaasasfdsfsdfadfasda sdasdf						
+								Post Content						
 							</div>
 						</div>
 					</div>
@@ -180,7 +180,7 @@ while($featalumfet=mysqli_fetch_assoc($featalumsql)){
 					<div class="index-cfa-contain">
 						<div class="index-cfactn-post" onclick="window.location.href='login.html';">
 							<div class="index-cfactn-postcover">
-								<img src="alum-images/HIGHLIGHTS2.png" alt="HIGHLIGHTS2">
+								<img src="alum-images/aclclogo.png" alt="Post Cover Image">
 							</div>
 							<div class="index-cfactn-posttitle">
 								<?php echo $lname; ?>
@@ -217,15 +217,16 @@ while($featalumfet=mysqli_fetch_assoc($featalumsql)){
 			<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
 		</div>
 		<div class="index-af-mid-blk">
-			<div>Footer of the dying mel</div>
-			<div>Mel is the only one makin the damned system</div>
-			<div>For the sake of experience</div>
+			<div>Footer</div>
+			<!-- <div>Mel is the only one makin the damned system</div> -->
+			<!-- <div>For the sake of experience</div> -->
 		</div>
 		<div class="index-af-right-blk">
-			alr they on block
-			but not aligned on the left
-			<br>
-			(they are now)
+			<div>ACLC Footer</div>
+			<!-- alr they on block -->
+			<!-- but not aligned on the left -->
+			<!-- <br> -->
+			<!-- (they are now) -->
 		</div>
 	</div>
 </body>

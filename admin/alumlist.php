@@ -263,15 +263,10 @@
 			<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
 		</div>
 		<div class="admin-af-mid-blk">
-			<div>Footer of the dying mel</div>
-			<div>Mel is the only one makin the damned system</div>
-			<div>For the sake of experience</div>
+			<div>Footer</div>
 		</div>
 		<div class="admin-af-right-blk">
-			alr they on block
-			but not aligned on the left
-			<br>
-			(they are now)
+			<div>Footer</div>
 		</div>
 	</div>
 
