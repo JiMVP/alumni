@@ -59,12 +59,12 @@
             $mail ->Body =$message;
             $mail ->send();
 
-                // header("location:/alumni/email.php?id=$id");
+            // header("location:/alumni/email.php?id=$id");
             // echo "localhost/alumni/loginusnpwd.php?id=$id";
             
-        }
-        
+        }       
         // echo "localhost/alumni/email.php?id=$id";
+        
         header("location:/alumni/admin/admin.php");
 
     }else{

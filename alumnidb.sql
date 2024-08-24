@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2024 at 04:48 AM
+-- Generation Time: Aug 24, 2024 at 12:26 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,19 +42,21 @@ CREATE TABLE `alum-user` (
   `branch` varchar(255) NOT NULL,
   `degree` varchar(255) NOT NULL,
   `regdatetime` datetime DEFAULT NULL,
-  `verified` tinyint(1) NOT NULL DEFAULT 0
+  `verified` tinyint(1) NOT NULL DEFAULT 0,
+  `never_verified` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `alum-user`
 --
 
-INSERT INTO `alum-user` (`id`, `lname`, `fname`, `mname`, `suffix`, `usn`, `bday`, `bplace`, `conno`, `email`, `address`, `branch`, `degree`, `regdatetime`, `verified`) VALUES
-(7, 'SALAMIDA', 'JEMWEL GERALD', 'OGARO', 'N/A', '21000131200', '2003-03-12', 'Palo', '09397689360', 'jemsadimalas@gmail.com', 'Blk. 11, Lot 12, Ruby Street, Lolita Homes Subdivision, Brgy. Guindapunan', 'Tacloban', 'BSIT', '2024-07-16 17:44:19', 1),
-(13, 'Jems', 'Adimalas', '', 'N/A', '21000131200', '2019-12-08', 'Daanbantayan, Cebu', '09397689360', 'jemsadimalas@gmail.com', 'Mandaue City, Cebu', 'Mandaue', 'BSIT', '2024-07-22 20:41:03', 0),
-(14, 'SALAMIDA', 'JEMWEL GERALD', 'OGARO', 'N/A', '21000131200', '2003-12-01', 'Albuera, Leyte', '09397689360', 'jemsadimalas@gmail.com', 'Baybayon Ni Agalon, Albuera, Leyte', 'Ormoc', 'BSIT', '2024-07-23 16:07:44', 0),
-(15, 'Adimalas', 'Jems', '', 'N/A', '21000131201', '2024-07-09', 'Tabuelan, Cebu', '09085318985', 'jemsalamida@gmail.com', 'Mabolo St., Cebu City, Cebu', 'Mandaue', 'BSCS', '2024-07-24 17:47:59', 0),
-(17, 'SALAMIDA', '', '', '', '', NULL, '', '', 'jemsadimalas@gmail.com', '', 'Tacloban', '', NULL, 1);
+INSERT INTO `alum-user` (`id`, `lname`, `fname`, `mname`, `suffix`, `usn`, `bday`, `bplace`, `conno`, `email`, `address`, `branch`, `degree`, `regdatetime`, `verified`, `never_verified`) VALUES
+(7, 'SALAMIDA', 'JEMWEL GERALD', 'OGARO', 'N/A', '21000131200', '2003-03-12', 'Palo', '09397689360', 'jemsadimalas@gmail.com', 'Blk. 11, Lot 12, Ruby Street, Lolita Homes Subdivision, Brgy. Guindapunan', 'Tacloban', 'BSIT', '2024-07-16 17:44:19', 1, 1),
+(13, 'Jems', 'Adimalas', '', 'N/A', '21000131200', '2019-12-08', 'Daanbantayan, Cebu', '09397689360', 'jemsadimalas@gmail.com', 'Mandaue City, Cebu', 'Mandaue', 'BSIT', '2024-07-22 20:41:03', 0, 1),
+(14, 'SALAMIDA', 'JEMWEL GERALD', 'OGARO', 'N/A', '21000131200', '2003-12-01', 'Albuera, Leyte', '09397689360', 'jemsadimalas@gmail.com', 'Baybayon Ni Agalon, Albuera, Leyte', 'Ormoc', 'BSIT', '2024-07-23 16:07:44', 0, 1),
+(15, 'Adimalas', 'Jems', '', 'N/A', '21000131201', '2024-07-09', 'Tabuelan, Cebu', '09085318985', 'jemsalamida@gmail.com', 'Mabolo St., Cebu City, Cebu', 'Mandaue', 'BSCS', '2024-07-24 17:47:59', 0, 1),
+(17, 'SALAMIDA', '', '', '', '', NULL, '', '', 'jemsadimalas@gmail.com', '', 'Tacloban', '', NULL, 1, 1),
+(19, 'SALAMIDA', 'JEMWEL GERALD', 'OGARO', 'N/A', '21000132465', '2004-04-06', 'Palo', '09085318985', 'ayarieh@gmail.com', 'Blk. 11, Lot 12, Ruby Street, Lolita Homes Subdivision, Brgy. Guindapunan', 'Mandaue', 'BSN', '2024-08-24 11:52:27', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -78,7 +80,8 @@ INSERT INTO `alumacc` (`id`, `alum-user_id`, `usn`, `pwd`) VALUES
 (2, 13, 'jems2003', 'jems2003'),
 (3, 14, NULL, NULL),
 (4, 15, NULL, NULL),
-(71, 17, NULL, NULL);
+(71, 17, NULL, NULL),
+(73, 19, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -133,13 +136,13 @@ ALTER TABLE `event-test`
 -- AUTO_INCREMENT for table `alum-user`
 --
 ALTER TABLE `alum-user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `alumacc`
 --
 ALTER TABLE `alumacc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT for table `event-test`
