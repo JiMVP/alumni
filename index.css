@@ -198,14 +198,14 @@ body{
 	}
 }
 
-.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox input[type=submit]{
+.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox input[type=submit], .regbox select{
 	height: 50px;
 	font-size: 20px;
 	border-radius: 10px;
 
 }
 @media only screen and (max-width:559px){
-	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox input[type=submit]{
+	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox input[type=submit], .regbox select{
 		height: 30px;
 		font-size: 15px;
 		border-radius: 8px;
@@ -292,7 +292,7 @@ body{
 		margin: 0px;
 	}
 }
-.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password]{
+.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox select{
 	text-align: left;
 	padding: 10px;	
 	width: 70%;
@@ -301,7 +301,7 @@ body{
 	margin: auto;
 }
 @media only screen and (max-width: 435px){
-	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password]{	
+	.regbox input[type=text], .regbox input[type=number], .regbox input[type=email], .regbox input[type=date], .regbox input[type=password], .regbox select{	
 		width: 100%;
 		margin-bottom: 10px;
 	}

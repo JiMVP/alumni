@@ -230,20 +230,40 @@
                             <input type="text" name="reg-prov" required>
                         </div> -->
                         <div class="reg-form-title">
-                            <b>RECENT DEGREE/CERTIFICATE</b>                                           
+                            <b>GRADUATION INFORMATION</b>                                           
                         </div>
                         <div class="reglog-cin-form">
                             <label for="reg-campus">ACLC Campus:</label>
-                            <input type="text" name="reg-campus" required>
+                            <!-- <input type="text" name="reg-campus" requregired> -->
+                            <select name="reg-campus" id="regcampus-opt">
+
+                                <option value="Tacloban">Tacloban</option>
+                                <option value="Ormoc">Ormoc</option>
+                                <option value="Mandaue" selected>Mandaue</option>
+                            </select>
                         </div>
                         <div class="reglog-cin-form">
                             <label for="reg-usn">USN: </label>
                             <input type="text" name="reg-usn" required>
                         </div>
                         <div class="reglog-cin-form">
+                            <label for="reg-sygrad">School Year Graduated:</label>
+                            <input type="text" name="reg-sygrad" required>
+                        </div>
+                        <div class="reglog-cin-form">
+                            <label for="reg-honor">Honors:</label>
+                            <!-- <input type="text" name="reg-honor" required> -->
+                            <select name="reg-honor" id="reghonor-opt">
+
+                                <option value="honor">With Honors</option>
+                                <option value="high">With High Honors</option>
+                                <option value="latin">With Latin Honors</option>
+                            </select>
+                        </div>
+                        <!-- <div class="reglog-cin-form">
                             <label for="reg-degree">Degree / Certificate:</label>
                             <input type="text" name="reg-degree" required>
-                        </div>
+                        </div> -->
                         <!-- <div class="reglog-cin-form">
                             <label for="reg-degree">Date (HIDDEN):</label>
                             <input type="datetime-local" name="reg-campus" value="" required>
