@@ -131,6 +131,7 @@
 		}
 
 		mysqli_query($con, "UPDATE `alumacc` SET `usn`='$alumaccusn', `pwd`='$alumaccpwd' WHERE `alum-user_id`='$alumaccid'");
+		mysqli_query($con, "UPDATE `alum-user` SET `verified`=1, `never_verified`=0 WHERE `id`='$alumaccid'");
 		header("location:login.html");
 
 
