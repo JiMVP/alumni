@@ -1,0 +1,163 @@
+* {
+	font-family: sans-serif;
+	box-sizing: border-box;
+	text-align: center;
+}
+html{
+	min-width: 180px;
+}
+body{
+	background-color: white;
+	margin: auto;
+	font-size: 20px;
+}
+.std-contain{
+	background-color: whitesmoke;
+	width: 1190px;
+	margin:auto;
+	min-height: 600px;
+}
+@media only screen and (max-width: 1190px) {
+	.std-contain{
+		width: 100%;
+	}
+}
+
+.popup-menu-width{
+    width: 300px;
+}
+.popup-menuopt-width{
+    width: 100%;
+}
+.popup-menu-defaults{
+    position: fixed;
+    height: 1000px;
+    opacity: 0.9;
+}
+
+/*Default Color Schemes*/
+.user-colors{/*Color Scheme for Pages accessible for Users*/
+    background-color: rgb(1, 3, 126);
+}
+.admin-colors{/*Color Scheme for Pages accessible for Admin only*/
+    background-color: rgb(150, 21, 21);
+}
+.menu-txtcolor{/*Color scheme for text*/
+    color: whitesmoke;
+}
+
+.main-menu-dis{/*Menu hides content*/
+    display: flex;
+}
+.popup-menu-dis{/*Menu hides content*/
+    display: none;
+}
+@media only screen and (max-width:753px){
+    .main-menu-dis{
+        display:none;
+    }
+    .popup-menu-dis{
+        display: block;
+    }
+}
+
+/*Menu content displaying*/
+.menu-flex{/*Menu displays content on top and/or bottom*/
+    display: flex;
+}
+.menu-block{/*Menu displays content on left and/or right*/
+    display: block;
+}
+.menu-none{/*Menu displays no content*/
+    display: none;
+}
+
+/*Menu text displaying*/
+.menu-txtalign-left{/*menu displays content on left block*/
+    text-align: left;
+}
+.menu-txtalign-center{/*menu displays content on center*/
+    text-align:center;
+}
+.menu-notxtdecor{/*menu displays no text decoration */
+    text-decoration: none;
+}
+
+/*Color scheme of text in button*/
+.menu-btn-txtcolor{
+    color: whitesmoke;
+}
+.menu-btn-txtcolor:link, .menu-btn-txtcolor:visited{
+    color: whitesmoke;
+}
+.menu-btn-txtcolor:hover{
+    color: black;
+}
+.menu-btn-txtcolor:active{
+    color: whitesmoke;
+}
+
+/*Color Scheme of buttons for User Pages*/
+.user-btn-colors{
+    background-color: rgb(1, 3, 126);
+}
+.user-btn-colors:link, .user-btn-colors:visited{
+    background-color: rgb(1, 3, 126);
+}
+.user-btn-colors:hover{
+    background-color: whitesmoke;
+}
+.user-btn-colors:active{
+    background-color: rgb(150, 21, 21);
+}
+.user-selbtn-colors{
+    background-color: rgb(150, 21, 21);
+}
+.user-selbtn-colors:link, .user-selbtn-colors:visited{
+    background-color: rgb(150, 21, 21);
+}
+.user-selbtn-colors:hover{
+    background-color: whitesmoke;
+}
+.user-selbtn-colors:active{
+    background-color: rgb(150, 21, 21);
+}
+
+/*Color Scheme of buttons for Admin Pages*/
+.admin-btn-colors{
+    background-color: rgb(150, 21, 21);
+}
+.admin-btn-colors:link, .admin-btn-colors:visited{
+    background-color: rgb(150, 21, 21);
+}
+.admin-btn-colors:hover{
+    background-color: whitesmoke;
+}
+.admin-btn-colors:active{
+    background-color: rgb(1, 3, 126);
+}
+.admin-selbtn-colors{
+    background-color: rgb(1, 3, 126);
+}
+.admin-selbtn-colors:link, .admin-btn-colors:visited{
+    background-color: rgb(1, 3, 126);
+}
+.admin-selbtn-colors:hover{
+    background-color: whitesmoke;
+}
+.admin-selbtn-colors:active{
+    background-color: rgb(1, 3, 126);
+}
+
+.menu-padding{/*Padding for menu buttons*/
+    padding: 41px 40px;
+}
+.menu-logo{/*Defaults for logo in menu*/
+    width: 100px;
+    height: 100px;
+    padding: 10px 10px;
+}
+.menu-width-200px{/*200px width for div in menu*/
+    width: 200px;
+}
+

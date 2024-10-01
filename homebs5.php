@@ -43,10 +43,8 @@
                     <b>ACLC <?php echo "BRANCH" ?> ALUMNI</b>
                 </div>
             
-                <a href="" class="col-sm-2 m-0 tb-menu-selectedopt">
-                
+                <a href="" class="col-sm-2 m-0 tb-menu-selectedopt">                
                         
-                    
                     <!-- <p class="h6"> -->
                         TEST
                     <!-- </p> -->
