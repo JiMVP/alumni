@@ -23,21 +23,83 @@ body{
 	}
 }
 
+/*text colors*/
+.user-txtcolor{
+    color: rgb(1, 3, 126);
+}
+.admin-txtcolor{
+    color: rgb(150, 21, 21);
+}
+
+/*title text defaults*/
+.title-fontsize{
+    font-size: 35px;
+}
+.title-padding{
+    padding: 20px;
+}
+
+/*positions*/
+.pos-rel{
+    position: relative;
+}
+.pos-relstat{
+    position: relative;
+}
+@media only screen and (max-width:753px){
+    .pos-relstat{
+        position: static;
+    }
+}
+.pos-ab{
+    position: absolute;
+}
+.pos-abstat{
+    position: absolute;
+}
+@media only screen and (max-width:960px){
+    .pos-abstat{
+        position: static;
+    }
+}
+.pos-sticky{
+    position: sticky;
+}
+.pos-top{
+    top: 0;
+}
+.pos-left{
+    left: 0px;
+}
+
+/*separate justify-content settings*/
+.justice-center{
+    justify-content: center;
+}
+
+/*popup menu defaults*/
 .popup-menu-width{
     width: 300px;
 }
 .popup-menuopt-width{
     width: 100%;
 }
-.popup-menu-defaults{
-    position: fixed;
+.popup-menu-fixed{
+    position: fixed; 
+}
+.popup-menu-height{
     height: 1000px;
+}
+.popup-menu-opac{
     opacity: 0.9;
 }
 
 /*Default Color Schemes*/
 .user-colors{/*Color Scheme for Pages accessible for Users*/
     background-color: rgb(1, 3, 126);
+}
+.user-lightcolors{
+    background-color: rgb(224, 230, 247);
 }
 .admin-colors{/*Color Scheme for Pages accessible for Admin only*/
     background-color: rgb(150, 21, 21);
@@ -64,6 +126,12 @@ body{
 /*Menu content displaying*/
 .menu-flex{/*Menu displays content on top and/or bottom*/
     display: flex;
+    justify-content: center;
+}
+@media only screen and (max-width:960px){
+    .menu-flex{
+        justify-content: left;
+    }
 }
 .menu-block{/*Menu displays content on left and/or right*/
     display: block;
@@ -149,6 +217,7 @@ body{
     background-color: rgb(1, 3, 126);
 }
 
+/*menu defaults*/
 .menu-padding{/*Padding for menu buttons*/
     padding: 41px 40px;
 }
@@ -158,6 +227,72 @@ body{
     padding: 10px 10px;
 }
 .menu-width-200px{/*200px width for div in menu*/
-    width: 200px;
+    width: 150px;
 }
 
+/*masthead background image defaults*/
+.mast-height-auto{
+    height: auto;
+}
+.mast-bgimg{
+    background-image: url("alum-images/banner-tp.png");
+}
+.mast-bgnorep{
+    background-repeat: no-repeat;
+}
+.mast-bgsize{
+    background-size: 100%;
+}
+
+.mast-opacity-1{
+    opacity: 1.0;
+}
+
+/*masthead image container defaults*/
+.mast-imgcon-padding{
+    padding: 100px;
+}
+.mast-imgcon-width{
+    width: 100%;
+}
+@media only screen and (max-width:489px){
+    .mast-imgcon-padding{
+        padding: 100px 0px;
+    }
+}
+
+/*masthead image defaults*/
+.mast-img-width{
+    width: 500px;
+    min-width: 274px;
+}
+@media only screen and (max-width:715px){
+    .mast-img-width{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:489px){
+    .mast-img-width{
+        width: 50%;
+    }
+}
+
+/*misc default widths*/
+.width-50\%{
+    width: 50%;
+}
+
+/*misc default paddings*/
+.padding-10px{
+    padding: 10px;
+}
+
+/*misc default margins*/
+.margin-sides-10\%{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.margin-sides-30\%{
+    margin-left: 30%;
+    margin-right: 30%;
+}

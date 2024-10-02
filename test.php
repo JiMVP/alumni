@@ -36,19 +36,21 @@
 </head>
 <body id="body">
     
+    
     <div name="topbar-menu" class="menu-txtcolor user-colors menu-flex">
-        
-        <div class="menu-width-200px"><img class="menu-logo" src="alum-images/aclclogo.png" alt="ACLC Logo"></div>
-        <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" onclick="popup()" href="#">MENU</a>
+
+        <div class="menu-width-200px pos-abstat pos-left"><img class="menu-logo" src="alum-images/aclclogo.png" alt="ACLC Logo"></div>        
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" onclick="popup()">MENU</a>
         <a class="menu-btn-txtcolor user-selbtn-colors menu-padding main-menu-dis menu-notxtdecor" href="">HOME</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">ALUMNI</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">GALLERY</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">ABOUT</a>
-        
+    
     </div>
+    
     <!-- <div><a href="">MENU BUTTON</a></div> -->
     
-    <div name="popup-menu" id="popup-menu" class="popup-menu-defaults menu-txtcolor user-colors menu-none popup-menu-width">
+    <div name="popup-menu" id="popup-menu" class="popup-menu-fixed popup-menu-height popup-menu-opac menu-txtcolor user-colors menu-none popup-menu-width pos-sticky">
 
         <a class="menu-btn-txtcolor user-selbtn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">HOME</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ALUMNI</a>
@@ -56,8 +58,33 @@
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ABOUT</a>
 
     </div>
+    <div name="masthead" class="mast-bgimg mast-height-auto mast-bgnorep mast-bgsize">
+        <div class="mast-imgcon-padding mast-imgcon-width mast-opacity-1">
+            <img class="mast-img-width" src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
+            <div><img class="mast-img-width" src="alum-images/alumni.png" alt="ALUMNI"></div>
+        </div>
+    </div>
+
+    
+
     <div class="std-contain">
+
+        <div class="user-lightcolors title-padding">
         
+            <div class="user-txtcolor title-fontsize title-padding"><b>FELLOW ACLC ALUMNI, DON'T MISS OUT ON OUR ALUMNI EVENTS</b></div>
+            <div class="user-txtcolor padding-10px">REGISTER AND GET VERIFIED NOW!</div>
+            <a class="menu-notxtdecor" href=""><div class="user-btn-colors  menu-btn-txtcolor  margin-sides-30% padding-10px">REGISTER</div></a>
+            <div class="user-txtcolor padding-10px">ALREADY VERIFIED AND HAVE AN ACLC ALUMNI ACCOUNT?</div>
+
+            <!--TO PREVENT PADDINGS OVERLAPPING OTHER ELEMENTS, USE THEM FOR A TAG WITHIN A DIV. IF CANNOT, USE THE NEXT LINE AS AN EXAMPLE:-->
+            <a class="menu-notxtdecor" href=""><div class="user-btn-colors menu-btn-txtcolor  margin-sides-30% padding-10px">LOG IN</div></a>
+            <br>
+        </div>
+        
+        <div class="user-txtcolor title-fontsize title-padding"><b>HIGHLIGHTS</b></div>
+        
+        <br>
+
     </div>
     
     <!-- HELLO
