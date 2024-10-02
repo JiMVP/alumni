@@ -74,7 +74,7 @@
             <div class="user-txtcolor title-fontsize title-padding"><b>FELLOW ACLC ALUMNI, DON'T MISS OUT ON OUR ALUMNI EVENTS</b></div>
             <div class="user-txtcolor padding-10px">REGISTER AND GET VERIFIED NOW!</div>
             <a class="menu-notxtdecor" href=""><div class="user-btn-colors  menu-btn-txtcolor  margin-sides-30% padding-10px">REGISTER</div></a>
-            <div class="user-txtcolor padding-10px">ALREADY VERIFIED AND HAVE AN ACLC ALUMNI ACCOUNT?</div>
+            <div class="user-txtcolor padding-10px">ALREADY VERIFIED WITH AN ACLC ALUMNI ACCOUNT?</div>
 
             <!--TO PREVENT PADDINGS OVERLAPPING OTHER ELEMENTS, USE THEM FOR A TAG WITHIN A DIV. IF CANNOT, USE THE NEXT LINE AS AN EXAMPLE:-->
             <a class="menu-notxtdecor" href=""><div class="user-btn-colors menu-btn-txtcolor  margin-sides-30% padding-10px">LOG IN</div></a>
@@ -82,9 +82,35 @@
         </div>
         
         <div class="user-txtcolor title-fontsize title-padding"><b>HIGHLIGHTS</b></div>
-        
-        <br>
 
+        <div class="cont-bgcolor title-padding">         
+            <div >
+                <img class="cont-img-width cont-img-maxwidth cont-img-maxheight" src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
+            </div>          
+            <div class="padding-10px">
+                <div class="padding-10px user-txtcolor title-fontsize">TITLE</div>
+                <div class="padding-10px">Contents</div>
+            </div>
+        </div>
+        <br>
+        <!-- <br>
+        <div class="cont-bgcolor title-padding">         
+            <div >
+                <img class="cont-img-width cont-img-maxwidth cont-img-maxheight" src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
+            </div>          
+            <div class="padding-10px">
+                <div class="padding-10px user-txtcolor title-fontsize">TITLE</div>
+                <div class="padding-10px">Contents</div>
+            </div>
+        </div> -->
+
+    </div>
+    <div name="footer" class="cont-bgcolor foot-flex foot-padding-top foot-padding-bot">
+        <div class="foot-width">
+            <img class="foot-img" src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
+        </div>
+        <div class="foot-width menu-txtalign-left user-txtcolor">Footer</div>
+        <div class="foot-width menu-txtalign-left user-txtcolor">Footer</div>
     </div>
     
     <!-- HELLO

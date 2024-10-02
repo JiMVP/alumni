@@ -74,10 +74,10 @@ while($eventfet=mysqli_fetch_assoc($eventssql)){
 					<div class="index-ce-contain">
 						<div class="index-cectn-post" onclick="window.location.href='login.html';">
 							<div class="index-cectn-postcover">
-								<img src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
+								<!-- <img src="alum-images/aclclogo.png" alt="HIGHLIGHTS2"> -->
 								<?php 
 								
-									// echo '<img src="data:image/jpeg;base64,'.base64_encode($cover).'" alt="Post Cover Image"/>'; 
+									echo '<img src="data:image/jpeg;base64,'.base64_encode($cover).'" alt="Post Cover Image"/>'; 
 									// echo '<img src="image.php?id='.$id.'"/>';
 
 								?>

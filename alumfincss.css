@@ -99,7 +99,8 @@ body{
     background-color: rgb(1, 3, 126);
 }
 .user-lightcolors{
-    background-color: rgb(224, 230, 247);
+    /* background-color: rgb(224, 230, 247); */
+    background-color: rgb(171, 191, 244);
 }
 .admin-colors{/*Color Scheme for Pages accessible for Admin only*/
     background-color: rgb(150, 21, 21);
@@ -275,6 +276,49 @@ body{
     .mast-img-width{
         width: 50%;
     }
+}
+
+/*content background settings*/
+.cont-bgcolor{
+    background-color: rgb(224, 230, 247);
+}
+
+/*content image settings*/
+.cont-img-width{
+    width: 100%;
+}
+.cont-img-maxwidth{
+    max-width: 350px;
+}
+.cont-img-maxheight{
+    max-height: 350px;
+}
+
+/*footer defaults*/
+.foot-width{
+    width: 33.3%;
+}
+@media only screen and (max-width:930px){
+    .foot-width{
+        width: 100%;
+    }
+}
+.foot-flex{
+    display: flex;
+}
+@media only screen and (max-width:930px){
+    .foot-flex{
+        display: block;
+    }
+}
+.foot-padding-top{
+    padding-top: 100px;
+}
+.foot-padding-bot{
+    padding-bottom: 50px;
+}
+.foot-img{
+    width: 60%;
 }
 
 /*misc default widths*/
