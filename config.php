@@ -33,7 +33,7 @@
 				session_start();
 				$_SESSION["usn"] = $usn;
 				$_SESSION["id"] = $fid;
-				header("location:home.php");
+				header("location:test.php");
 			}else{
 				header("location:login.html?notif='Login Error'");
 			}

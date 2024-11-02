@@ -1,21 +1,10 @@
 <?php
     include "config.php";
-    session_start();
-    if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
-        header("location:index.php");
-    }
-    $id=$_SESSION["id"];
-    $usn=$_SESSION["usn"];
-    $alumuserquery=mysqli_query($con, "SELECT * FROM `alumacc` WHERE `id`='$id' AND `usn`='$usn'");
-    $fetchalumuser=mysqli_fetch_assoc($alumuserquery);
-    $alumuserid=$fetchalumuser['alum-user_id'];
-    $namequery=mysqli_query($con, "SELECT * FROM `alum-user` WHERE `id`='$alumuserid'");
-    $fetchname=mysqli_fetch_assoc($namequery);
-    $lname=$fetchname['lname'];
-    $fname=$fetchname['fname'];
-    $mname=$fetchname['mname'];
-    $name="$lname, $fname, $mname";
-    // echo $_SESSION["id"];
+    // session_start();
+    // if(!(isset($_SESSION["usn"]) && isset($_SESSION["id"]))){
+    //     header("location:index.php");
+    // }
+    // echo $_SESSION["usn"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,11 +74,11 @@
                 
         <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" onclick="popup()">MENU</a>
         <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" >PROFILE</a> -->
-        <a class="menu-btn-txtcolor user-selbtn-colors menu-padding main-menu-dis menu-notxtdecor" href="">HOME</a>
-        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">ALUMNI</a>
-        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">GALLERY</a>
-        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor pos-rel" href="">ABOUT</a>
-        <a class="menu-btn-txtcolor user-btn-colors menu-padding menu-block menu-notxtdecor pos-ab pos-right" onclick="profpopup()">PROFILE</a>
+        <a class="menu-btn-txtcolor user-selbtn-colors menu-padding main-menu-dis menu-notxtdecor" href="#">HOME</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="login.html">ALUMNI</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="#">GALLERY</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor pos-rel" href="#">ABOUT</a>
+        <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding menu-block menu-notxtdecor pos-ab pos-right" onclick="profpopup()">PROFILE</a> -->
         <!-- <div class="menu-width-200px pos-ab pos-right"><img class="menu-logo" src="alum-images/aclclogo.png" alt="ACLC Logo"></div>   -->
     
     </div>
@@ -104,26 +93,49 @@
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ABOUT</a>
 
     </div>
-    <form id="tb-menu-form" action="logout.php" method="post">
+    <!-- <form id="tb-menu-form" action="logout.php" method="post">
     <div name="popup-profmenu" id="popup-profmenu" class="popup-menu-fixed popup-menu-height popup-menu-opac menu-txtcolor user-colors menu-none popup-menu-width pos-sticky">
 
-        <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href=""><?php echo $name; ?></a>
+        <a class="menu-btn-txtcolor user-selbtn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">NAME</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" onclick="logout()">LOG OUT</a>
 
     </div>
-    </form>
-    <!-- <div name="masthead" class="mast-bgimg mast-height-auto mast-bgnorep mast-bgsize">
+    </form> -->
+    <div name="masthead" class="mast-bgimg mast-height-auto mast-bgnorep mast-bgsize">
         <div class="mast-imgcon-padding mast-imgcon-width mast-opacity-1">
             <img class="mast-img-width" src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
             <div><img class="mast-img-width" src="alum-images/alumni.png" alt="ALUMNI"></div>
         </div>
-    </div> -->
+    </div>
 
     
 
     <div class="std-contain">
 
+        <div class="user-lightcolors title-padding">
         
+            <div class="user-txtcolor title-fontsize title-padding"><b>FELLOW ACLC ALUMNI, DON'T MISS OUT ON OUR ALUMNI EVENTS</b></div>
+            <div class="user-txtcolor padding-10px">REGISTER AND GET VERIFIED NOW!</div>
+            <a class="menu-notxtdecor" href="register.html"><div class="user-btn-colors  menu-btn-txtcolor  margin-sides-30% padding-10px">REGISTER</div></a>
+            <div class="user-txtcolor padding-10px">ALREADY VERIFIED WITH AN ACLC ALUMNI ACCOUNT?</div>
+
+            <!--TO PREVENT PADDINGS OVERLAPPING OTHER ELEMENTS, USE THEM FOR A TAG WITHIN A DIV. IF CANNOT, USE THE NEXT LINE AS AN EXAMPLE:-->
+            <a class="menu-notxtdecor" href="login.html"><div class="user-btn-colors menu-btn-txtcolor  margin-sides-30% padding-10px">LOG IN</div></a>
+            <br>
+        </div>
+        
+        <div class="user-txtcolor title-fontsize title-padding"><b>HIGHLIGHTS</b></div>
+
+        <div class="cont-bgcolor title-padding">         
+            <div >
+                <img class="cont-img-width cont-img-maxwidth cont-img-maxheight" src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
+            </div>          
+            <div class="padding-10px">
+                <div class="padding-10px user-txtcolor title-fontsize">TITLE</div>
+                <div class="padding-10px">Contents</div>
+            </div>
+        </div>
+        <br>
         <!-- <br>
         <div class="cont-bgcolor title-padding">         
             <div >

@@ -1,7 +1,7 @@
 <?php
 
 	include "config.php";
-    // header("location:login.html");
+    header("location:testcopy.php");
 
 ?>
 <html>
@@ -14,7 +14,7 @@
 </head>
 <body id="body">
 	<div class="index-topbar">
-		<div class="index-tb-logo"><img></div>
+		<div class="index-tb-logo"><img class="menu-logo" src="alum-images/aclclogo.png" alt="ACLC Logo"></div>
 		<a class="tb-a" id="tb-a-bars" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-bars" id="bars"  style="font-size:50px;color:white"></i></div></a>
 		<a class="tb-a" id="tb-a-x" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-xmark" id="x"  style="font-size:50px;color:white"></i></div></a>
 		<!-- <div class="tb-title"></div> -->

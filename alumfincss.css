@@ -71,6 +71,9 @@ body{
 .pos-left{
     left: 0px;
 }
+.pos-right{
+    right: 0;
+}
 
 /*separate justify-content settings*/
 .justice-center{

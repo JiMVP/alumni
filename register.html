@@ -5,87 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ACLC Alumni Registration</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="alumfincss.css">
     <script src="https://kit.fontawesome.com/8a1d3beb0c.js" crossorigin="anonymous"></script>
     <script>
 
-        function popmenu(){
-            var catstat = document.getElementById("index-popup-menu").style.display;
-            // var catstat2 = document.getElementById("index-popup-selectedmenu").style.display;
-            var xlogo = document.getElementById("x").style.display;
-            var barlogo = document.getElementById("bars").style.display;
-            if(catstat == "none"){
-                // document.getElementById("index-popup-selectedmenu").style.display="block";
-                document.getElementById("index-popup-menu").style.display="block";
-                document.getElementById("x").style.display="block";
-                document.getElementById("bars").style.display="none";
-                document.getElementById("tb-a-x").style.display="block";
-                document.getElementById("tb-a-bars").style.display="none";
+        function popup(){
+            var display = document.getElementById("popup-menu").style.display;
+            var profdisplay = document.getElementById("popup-profmenu").style.display;
+            if(profdisplay == "block"){
+                document.getElementById("popup-profmenu").style.display="none";
+            }
+            if(display == "none"){
+                document.getElementById("popup-menu").style.display="block";
                 document.getElementById("body").style.overflow="hidden";
-            }else if(catstat == "block"){
-                // document.getElementById("index-popup-selectedmenu").style.display="none";
-                document.getElementById("index-popup-menu").style.display="none";
-                document.getElementById("x").style.display="none";
-                document.getElementById("bars").style.display="block";
-                document.getElementById("tb-a-x").style.display="none";
-                document.getElementById("tb-a-bars").style.display="block";
+            }else if(display == "block"){
+                document.getElementById("popup-menu").style.display="none";
                 document.getElementById("body").style.overflow="scroll";
             }else{
-                // document.getElementById("index-popup-selectedmenu").style.display="block";
-                document.getElementById("index-popup-menu").style.display="block";
-                document.getElementById("x").style.display="block";
-                document.getElementById("bars").style.display="none";
-                document.getElementById("tb-a-x").style.display="block";
-                document.getElementById("tb-a-bars").style.display="none";
+                document.getElementById("popup-menu").style.display="block";
                 document.getElementById("body").style.overflow="hidden";
             }
-            
         }
-        function cont_home(){
-            // if(document.getElementById("cont-home").style.display == "none"){
-            // document.getElementById("cont-home").style.display="block";
-            // document.getElementById("cont-dir").style.display="none";
-            // document.getElementById("cont-prof").style.display="none";
-    
-            if(document.getElementById("index-popup-menu").style.display=="block"){
-                document.getElementById("index-popup-menu").style.display="none";
-                // document.getElementById("index-popup-selectedmenu").style.display="none";
-                document.getElementById("x").style.display="none";
-                document.getElementById("bars").style.display="block";
-                document.getElementById("tb-a-x").style.display="none";
-                document.getElementById("tb-a-bars").style.display="block";
+        function profpopup(){
+            var profdisplay = document.getElementById("popup-profmenu").style.display;
+            var display = document.getElementById("popup-menu").style.display;
+            if(display == "block"){
+                document.getElementById("popup-menu").style.display="none";
+            }else if(profdisplay == "none"){
+                document.getElementById("popup-profmenu").style.display="block";
+                document.getElementById("body").style.overflow="hidden";
+            }else if(profdisplay == "block"){
+                document.getElementById("popup-profmenu").style.display="none";
                 document.getElementById("body").style.overflow="scroll";
-            }
-            // }	
-            // document.getElementById("context").style.display="none";
+            }else{
+                document.getElementById("popup-profmenu").style.display="block";
+                document.getElementById("body").style.overflow="hidden";
+            }           
         }
     
     </script>
 </head>
 <body id="body" style="background-color: whitesmoke;">
-    <div class="index-topbar">
-		<div class="index-tb-logo"><img src="alum-images/aclclogo.png" alt="ACLC Logo"></div>
-		<a class="tb-a" id="tb-a-bars" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-bars" id="bars"  style="font-size:50px;color:white"></i></div></a>
-		<a class="tb-a" id="tb-a-x" href="#" onclick="popmenu()" onmouseover="barshover()"><div class="tb-icon"><i class="fas fa-xmark" id="x"  style="font-size:50px;color:white"></i></div></a>
-		<!-- <div class="tb-title"></div> -->
-		<div class="index-tb-menu">
-			<a href="index.php" ><div class="tb-menu-opt">HOME</div></a>
-			<a href="register.html"><div class="tb-menu-selectedopt">ALUMNI</div></a>
-			<a href="#"><div class="tb-menu-opt">GALLERY</div></a>
-			<a href="#"><div class="tb-menu-opt">ABOUT</div></a>
-			<!-- <a href="login.html"><div class="tb-menu-opt">Log In</div></a> -->
-		</div>
-	</div>
-	<!-- <div class="index-popup-selectedmenu" id="index-popup-selectedmenu">
-		
-	</div> -->
-	<div class="index-popup-menu" id="index-popup-menu">
-		<a href="index.php" onclick="cont_home()"><div class="index-popmenu-opt">HOME</div></a>
-				
-		<a href="register.html" ><div class="index-popmenu-selectedopt">ALUMNI</div></a>
-			
-		<a href="#" ><div class="index-popmenu-opt">GALLERY</div></a>
-		<a href="#" ><div class="index-popmenu-opt">ABOUT</div></a>		
-	</div>
+    <div name="topbar-menu" class="menu-txtcolor user-colors menu-flex">
+
+        <div class="menu-width-200px pos-abstat pos-left"><img class="menu-logo" src="alum-images/aclclogo.png" alt="ACLC Logo"></div>
+                
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" onclick="popup()">MENU</a>
+        <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" >PROFILE</a> -->
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="testcopy.php">HOME</a>
+        <a class="menu-btn-txtcolor user-selbtn-colors menu-padding main-menu-dis menu-notxtdecor" href="#">ALUMNI</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="#">GALLERY</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor pos-rel" href="#">ABOUT</a>
+        <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding menu-block menu-notxtdecor pos-ab pos-right" onclick="profpopup()">PROFILE</a> -->
+        <!-- <div class="menu-width-200px pos-ab pos-right"><img class="menu-logo" src="alum-images/aclclogo.png" alt="ACLC Logo"></div>   -->
+    
+    </div>
+    
+    <!-- <div><a href="">MENU BUTTON</a></div> -->
+    
+    <div name="popup-menu" id="popup-menu" class="popup-menu-fixed popup-menu-height popup-menu-opac menu-txtcolor user-colors menu-none popup-menu-width pos-sticky">
+
+        <a class="menu-btn-txtcolor user-selbtn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">HOME</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ALUMNI</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">GALLERY</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ABOUT</a>
+
+    </div>
     <div class="std-contain" style="background-color: whitesmoke;">
         <div class="reglogin-contain">
             <div class="regbox">
@@ -279,20 +264,12 @@
             </div>
         </div>
     </div>
-    <div class="index-agenft">
-		<div class="index-af-left-blk">
-			<div class="index-af-lb-img">
-				<img src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
-			</div>
-			<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
-		</div>
-		<div class="index-af-mid-blk">
-			<div>Footer</div>
-			
-		</div>
-		<div class="index-af-right-blk">
-			<div>Footer</div>
-		</div>
-	</div>
+    <div name="footer" class="cont-bgcolor foot-flex foot-padding-top foot-padding-bot">
+        <div class="foot-width">
+            <img class="foot-img" src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
+        </div>
+        <div class="foot-width menu-txtalign-left user-txtcolor">Footer</div>
+        <div class="foot-width menu-txtalign-left user-txtcolor">Footer</div>
+    </div>
 </body>
 </html>
