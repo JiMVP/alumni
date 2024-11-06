@@ -12,7 +12,7 @@ body{
 	font-size: 20px;
 }
 .std-contain{
-	background-color: whitesmoke;
+	background-color: white;
 	width: 1190px;
 	margin:auto;
 	min-height: 600px;
@@ -281,6 +281,19 @@ body{
     }
 }
 
+/*content settings*/
+.cont-width{
+    width: 33.3%;
+}
+@media only screen and (max-width:930px){
+    .cont-width{
+        width: 100%;
+    }
+}
+.cont-padding{
+    padding: 10px;
+}
+
 /*content background settings*/
 .cont-bgcolor{
     background-color: rgb(224, 230, 247);
@@ -291,10 +304,18 @@ body{
     width: 100%;
 }
 .cont-img-maxwidth{
-    max-width: 350px;
+    max-width: 250px;
 }
 .cont-img-maxheight{
-    max-height: 350px;
+    max-height: 250px;
+}
+@media only screen and (max-width:930px){
+    .cont-img-maxwidth{
+        max-width: 350px;
+    }
+    .cont-img-maxheight{
+        max-height: 350px;
+    }
 }
 
 /*footer defaults*/

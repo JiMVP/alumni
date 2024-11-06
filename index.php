@@ -1,7 +1,7 @@
 <?php
 
 	include "config.php";
-    header("location:testcopy.php");
+    // header("location:testcopy.php");
 
 ?>
 <html>
