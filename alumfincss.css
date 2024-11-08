@@ -39,6 +39,12 @@ body{
     padding: 20px;
 }
 
+/*non-responsive display settings*/
+.disflex{
+    width: 100%;
+    display: flex;
+}
+
 /*positions*/
 .pos-rel{
     position: relative;
@@ -281,7 +287,7 @@ body{
     }
 }
 
-/*content settings*/
+/*content settings - test.php*/
 .cont-width{
     width: 33.3%;
 }
@@ -294,12 +300,12 @@ body{
     padding: 10px;
 }
 
-/*content background settings*/
+/*content background settings - test.php*/
 .cont-bgcolor{
     background-color: rgb(224, 230, 247);
 }
 
-/*content image settings*/
+/*content image settings - test.php*/
 .cont-img-width{
     width: 100%;
 }
@@ -316,6 +322,24 @@ body{
     .cont-img-maxheight{
         max-height: 350px;
     }
+}
+
+/*content settings - alumni.php*/
+.alum-cont-width{
+    width: 33.3%    
+}
+@media only screen and (max-width:930px){
+    .alum-cont-width{
+        width: 33.3%;
+    }
+}
+
+/*content text defaults - alumni.php*/
+.alum-txtfontsize{
+    font-size: 20px;
+}
+.alum-padding{
+    padding: 5px;
 }
 
 /*footer defaults*/

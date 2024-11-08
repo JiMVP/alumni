@@ -86,9 +86,9 @@
                 
         <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" onclick="popup()">MENU</a>
         <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" >PROFILE</a> -->
-        <a class="menu-btn-txtcolor user-selbtn-colors menu-padding main-menu-dis menu-notxtdecor" href="">HOME</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="test.php">HOME</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">EVENTS</a>
-        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="alumni.php">ALUMNI</a>
+        <a class="menu-btn-txtcolor user-selbtn-colors menu-padding main-menu-dis menu-notxtdecor" href="">ALUMNI</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">GALLERY</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor pos-rel" href="">ABOUT</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding menu-block menu-notxtdecor pos-ab pos-right" onclick="profpopup()">PROFILE</a>
@@ -100,9 +100,9 @@
     
     <div name="popup-menu" id="popup-menu" class="popup-menu-fixed popup-menu-height popup-menu-opac menu-txtcolor user-colors menu-none popup-menu-width pos-sticky">
 
-        <a class="menu-btn-txtcolor user-selbtn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">HOME</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="test.php">HOME</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">EVENTS</a>
-        <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="alumni.php">ALUMNI</a>
+        <a class="menu-btn-txtcolor user-selbtn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ALUMNI</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">GALLERY</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ABOUT</a>
 
@@ -115,111 +115,56 @@
 
     </div>
     </form>
-    <!-- <div name="masthead" class="mast-bgimg mast-height-auto mast-bgnorep mast-bgsize">
-        <div class="mast-imgcon-padding mast-imgcon-width mast-opacity-1">
-            <img class="mast-img-width" src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
-            <div><img class="mast-img-width" src="alum-images/alumni.png" alt="ALUMNI"></div>
-        </div>
-    </div> -->
-
-    
 
     <div class="std-contain">
-
-        <div class="user-txtcolor title-fontsize title-padding"><b>EVENTS</b></div>
-        <div name="index-events-container" class="foot-flex">
-
-            <?php
-				
-$eventssql = mysqli_query($con, "SELECT * FROM `event-test` WHERE 1");
-// for($i=0; $i<3; $i=$i+1){
-$i = 0;
-while($eventfet=mysqli_fetch_assoc($eventssql)){
-
-	$id=$eventfet['id'];
-	$cover=$eventfet['cover'];
-	$title=$eventfet['title'];
-	$post=$eventfet['post'];
-
-		    ?>
-
-        
-            <div class="title-padding cont-width cont-padding">
-                <div class="cont-bgcolor">         
-                    <div >
-                        <?php 
-								
-                        echo '<img class="cont-img-width cont-img-maxheight" src="data:image/jpeg;base64,'.base64_encode($cover).'" alt="Post Cover Image"/>'; 
-                                // echo '<img src="image.php?id='.$id.'"/>';
-
-                        ?>
-                        <!-- <img class="cont-img-width cont-img-maxwidth cont-img-maxheight" src="alum-images/aclclogo.png" alt="HIGHLIGHTS2"> -->
-                    </div>          
-                    <div class="padding-10px">
-                        <div class="padding-10px user-txtcolor title-fontsize"><?php echo "$title"; ?></div>
-                        <div class="padding-10px"><?php echo substr($post,0,120)."..."; ?>	</div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="title-padding cont-width cont-padding">
-                <div class="cont-bgcolor">         
-                    <div >
-                        <img class="cont-img-width cont-img-maxwidth cont-img-maxheight" src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
-                    </div>          
-                    <div class="padding-10px">
-                        <div class="padding-10px user-txtcolor title-fontsize">TITLE</div>
-                        <div class="padding-10px">Contents</div>
-                    </div>
-                </div>
-            </div>
-            <div class="title-padding cont-width cont-padding">
-                <div class="cont-bgcolor">         
-                    <div >
-                        <img class="cont-img-width cont-img-maxwidth cont-img-maxheight" src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
-                    </div>          
-                    <div class="padding-10px">
-                        <div class="padding-10px user-txtcolor title-fontsize">TITLE</div>
-                        <div class="padding-10px">Contents</div>
-                    </div>
-                </div>
-            </div> -->
         
 
-            <?php
-	$i=$i+1;
-	if(!($i<3)){
-		break;
-	}
-}
-
-		    ?>
-
-        </div>
-        <div class="user-txtcolor title-fontsize title-padding"><b>ALUMNI</b></div>
-        <div class="foot-flex">
-
-            <?php
+        <?php
 
 // $content = [
 // 	"them mfkin roxxo got bitchslapped by azul the entire damn series",
 // 	"azul sweeps roxxo 2-0 in dominance",
 // 	"roxxo allegedly having connection issues despite biased commentary from the casters",
 // ];
-$featalumsql = mysqli_query($con, "SELECT * FROM `alum-user` WHERE `verified`=1 AND `branch`='$branch' AND NOT `id`='$alumuserid'");
+// $featalumsql = mysqli_query($con, "SELECT * FROM `alum-user` WHERE `verified`=1 AND `branch`='$branch' AND NOT `id`='$alumuserid'");
+$featalumsql = mysqli_query($con, "SELECT * FROM `alum-user` WHERE `verified`=1 AND `branch`='$branch'");
 // for($i=0; $i<3; $i=$i+1){
+
 $i=0;
+
 while($featalumfet=mysqli_fetch_assoc($featalumsql)){
+
+    
 
 	$alumlname = $featalumfet['lname'];
 	$alumfname = $featalumfet['fname'];
 
-			?>
+    if($i<6){
 
-            <div class="title-padding cont-width cont-padding">
-                <div class="cont-bgcolor">         
+        if($i==0){
+
+            ?>
+    
+        <div class="foot-flex">
+            <div class="disflex">
+    
+            <?php
+    
+        }elseif($i==3){
+            ?>
+            <div class="disflex">
+            <?php
+        }
+
+        ?>
+        
+            
+
+            <div class="alum-padding alum-cont-width cont-padding">
+                <div class="cont-bgcolor">
                     <div >
                         <?php 
-								
+                                
                         // echo '<img class="cont-img-width cont-img-maxwidth cont-img-maxheight" src="data:image/jpeg;base64,'.base64_encode($cover).'" alt="Post Cover Image"/>'; 
                                 // echo '<img src="image.php?id='.$id.'"/>';
 
@@ -227,37 +172,58 @@ while($featalumfet=mysqli_fetch_assoc($featalumsql)){
                         <img class="cont-img-width cont-img-maxheight" src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
                     </div>          
                     <div class="padding-10px">
-                        <div class="padding-10px user-txtcolor title-fontsize"><?php echo "$alumlname, $alumfname"; ?></div>
+                        <div class="padding-10px user-txtcolor alum-txtfontsize"><?php echo "$alumlname, $alumfname"; ?></div>
                         <div class="padding-10px"><?php //echo substr($post,0,120)."..."; ?>	</div>
                     </div>
                 </div>
             </div>
+            
+            
+        <?php
 
-            <?php
+        
 
-	$i++;
-	if(!($i<3)){
-		break;
-	}
+    }
+    
+    $i++;
+    
+    if($i==3){
+        ?>
+            </div>
+        <?php
+    }
+    if($i==6){
 
+        ?>
+
+            </div>
+        </div>
+        
+        <?php
+
+        $i=0;
+
+    }
+	    
+	// if(!($i<6)){
+	// 	break;
 }
+
+if($i!=6){
+    ?>
+            </div>
+        </div>
+
+    <?php
+}
+
+
 
 			?>
 
-        </div>
         
-        <!-- <br>
-        <div class="cont-bgcolor title-padding">         
-            <div >
-                <img class="cont-img-width cont-img-maxwidth cont-img-maxheight" src="alum-images/aclclogo.png" alt="HIGHLIGHTS2">
-            </div>          
-            <div class="padding-10px">
-                <div class="padding-10px user-txtcolor title-fontsize">TITLE</div>
-                <div class="padding-10px">Contents</div>
-            </div>
-        </div> -->
-
     </div>
+
     <div name="footer" class="cont-bgcolor foot-flex foot-padding-top foot-padding-bot">
         <div class="foot-width">
             <img class="foot-img" src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
@@ -266,15 +232,5 @@ while($featalumfet=mysqli_fetch_assoc($featalumsql)){
         <div class="foot-width menu-txtalign-left user-txtcolor">Footer</div>
     </div>
     
-    <!-- HELLO
-
-    <div class="red">HELLO</div>
-    <div class="bgblue">HELLO</div>
-    <div class="fontsize">HELLO</div>
-    <div class="red bgblue fontsize">HELLO</div>
-    <br>
-    <br> -->
-    
-
 </body>
 </html>
