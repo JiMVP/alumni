@@ -82,7 +82,7 @@
         <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" >PROFILE</a> -->
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="test.php">HOME</a>
         <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">EVENTS</a> -->
-        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">ALUMNI</a>
+        <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="alumni.php">ALUMNI</a>
         <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">GALLERY</a> -->
         <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor pos-rel" href="">ABOUT</a> -->
         <form id="tb-menu-form" action="logout.php" method="post">
@@ -126,6 +126,7 @@ echo "$address <br>";
 echo "$branch <br>";
 
         ?>
+        
     </div>
 
     <div name="footer" class="cont-bgcolor foot-flex foot-padding-top foot-padding-bot">

@@ -342,6 +342,27 @@ body{
     padding: 5px;
 }
 
+/*cover background image defaults*//*DISAVOWED*/
+/* .coverimg-bgimg{
+    background-image: url("alum-images/amber-cropped.png");
+}
+.coverimg-min-height{
+    min-height: 300px;
+} */
+
+/*content cover photo defaults - profile.php*//*DISAVOWED*/
+/* .coverimg-padding{
+    padding-top: 200px;
+}
+.coverimg-width{
+    width: 100%;
+}
+@media only screen and (max-width:489px){
+    .coverimg-padding{
+        padding: 50% 0px;
+    }
+} */
+
 /*footer defaults*/
 .foot-width{
     width: 33.3%;
