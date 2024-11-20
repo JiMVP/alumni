@@ -81,6 +81,8 @@
 		$regcampus=$_POST['reg-campus'];
 		// $regcampus=$_POST['reg-campus'];
 		$regdegree=$_POST['reg-degree'];
+		$regsygrad=$_POST['reg-sysgrad'];
+		$reghonor=$_POST['reg-honor'];
 		$regdatetime=date("Y-m-d H:i:s");
 
 		mysqli_query($con, "INSERT INTO `alum-user` (
@@ -96,7 +98,9 @@
 			`email`, 
 			`address`, 
 			`branch`, 
-			`degree`, 
+			`degree`,
+			`SY`,
+			`honors`, 
 			`regdatetime`
 		) 
 		VALUES(
@@ -112,7 +116,9 @@
 			'$regemail', 
 			'$regadd', 
 			'$regcampus', 
-			'$regdegree', 
+			'$regdegree',
+			'$regsysgrad',
+			'$reghonor', 
 			'$regdatetime'
 		)");
 

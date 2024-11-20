@@ -210,12 +210,13 @@ $featalumsql = mysqli_query($con, "SELECT * FROM `alum-user` WHERE `verified`=1 
 $i=0;
 while($featalumfet=mysqli_fetch_assoc($featalumsql)){
 
+    $alumid = $featalumfet['id'];
 	$alumlname = $featalumfet['lname'];
 	$alumfname = $featalumfet['fname'];
 
 			?>
 
-            <div class="title-padding cont-width cont-padding">
+            <a class="title-padding cont-width cont-padding" href="alumniprof.php?id=<?php echo $alumid; ?>">
                 <div class="cont-bgcolor">         
                     <div >
                         <?php 
@@ -231,7 +232,7 @@ while($featalumfet=mysqli_fetch_assoc($featalumsql)){
                         <div class="padding-10px"><?php //echo substr($post,0,120)."..."; ?>	</div>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <?php
 

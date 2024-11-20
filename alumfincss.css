@@ -44,10 +44,16 @@ body{
     width: 100%;
     display: flex;
 }
+.float-right{
+    float: right;
+}
 
 /*positions*/
 .pos-rel{
     position: relative;
+}
+.right-100\%{
+    right: 100%;
 }
 .pos-relstat{
     position: relative;

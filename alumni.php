@@ -88,7 +88,7 @@
         <!-- <a class="menu-btn-txtcolor user-btn-colors menu-padding popup-menu-dis menu-notxtdecor" >PROFILE</a> -->
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="test.php">HOME</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">EVENTS</a>
-        <a class="menu-btn-txtcolor user-selbtn-colors menu-padding main-menu-dis menu-notxtdecor" href="">ALUMNI</a>
+        <a class="menu-btn-txtcolor user-selbtn-colors menu-padding main-menu-dis menu-notxtdecor" href="alumni.php">ALUMNI</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor" href="">GALLERY</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding main-menu-dis menu-notxtdecor pos-rel" href="">ABOUT</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-padding menu-block menu-notxtdecor pos-ab pos-right" onclick="profpopup()">PROFILE</a>
@@ -102,7 +102,7 @@
 
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="test.php">HOME</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">EVENTS</a>
-        <a class="menu-btn-txtcolor user-selbtn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ALUMNI</a>
+        <a class="menu-btn-txtcolor user-selbtn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="alumni.php">ALUMNI</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">GALLERY</a>
         <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ABOUT</a>
 
@@ -135,7 +135,7 @@ $i=0;
 while($featalumfet=mysqli_fetch_assoc($featalumsql)){
 
     
-
+    $alumid = $featalumfet['id'];
 	$alumlname = $featalumfet['lname'];
 	$alumfname = $featalumfet['fname'];
 
@@ -160,7 +160,7 @@ while($featalumfet=mysqli_fetch_assoc($featalumsql)){
         
             
 
-            <div class="alum-padding alum-cont-width cont-padding">
+            <a class="alum-padding alum-cont-width cont-padding" href="alumniprof.php?id=<?php echo $alumid; ?>">
                 <div class="cont-bgcolor">
                     <div >
                         <?php 
@@ -176,7 +176,7 @@ while($featalumfet=mysqli_fetch_assoc($featalumsql)){
                         <div class="padding-10px"><?php //echo substr($post,0,120)."..."; ?>	</div>
                     </div>
                 </div>
-            </div>
+            </a>
             
             
         <?php

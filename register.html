@@ -232,6 +232,17 @@
                             <input type="text" name="reg-usn" required>
                         </div>
                         <div class="reglog-cin-form">
+                            <label for="reg-degree">Degree:</label>
+                            <!-- <input type="text" name="reg-honor" required> -->
+                            <select name="reg-degree" id="regdegree-opt">
+
+                                <option value="BSIT">BSIT</option>
+                                <option value="BSCS">BSCS</option>
+                                <option value="BSHM">BSHM</option>
+                                <option value="BSN">BSN</option>
+                            </select>
+                        </div>
+                        <div class="reglog-cin-form">
                             <label for="reg-sygrad">School Year Graduated:</label>
                             <input type="text" name="reg-sygrad" required>
                         </div>
@@ -240,11 +251,12 @@
                             <!-- <input type="text" name="reg-honor" required> -->
                             <select name="reg-honor" id="reghonor-opt">
 
-                                <option value="honor">With Honors</option>
-                                <option value="high">With High Honors</option>
-                                <option value="latin">With Latin Honors</option>
+                                <option value="With Honors">With Honors</option>
+                                <option value="With High Honors">With High Honors</option>
+                                <option value="With Latin Honors">With Latin Honors</option>
                             </select>
                         </div>
+                        
                         <!-- <div class="reglog-cin-form">
                             <label for="reg-degree">Degree / Certificate:</label>
                             <input type="text" name="reg-degree" required>
