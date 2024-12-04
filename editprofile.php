@@ -77,7 +77,6 @@
 	    }
     </script>
 </head>
-
 <body id="body">
     
     <div name="topbar-menu" class="menu-txtcolor user-colors menu-flex">
@@ -109,66 +108,24 @@
         <!-- <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href="">ABOUT</a> -->
 
     </div>
-    <!-- <form id="tb-menu-form" action="logout.php" method="post">
-    <div name="popup-profmenu" id="popup-profmenu" class="popup-menu-fixed popup-menu-height popup-menu-opac menu-txtcolor user-colors menu-none popup-menu-width pos-sticky">
-
-        <a class="menu-btn-txtcolor user-selbtn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" href=""><?php //echo $name; ?></a>
-        <a class="menu-btn-txtcolor user-btn-colors menu-block menu-txtalign-left menu-padding menu-notxtdecor" onclick="logout()">LOG OUT</a>
-
-    </div>
-    </form> -->
-
     <div class="std-contain">
-        <!-- The profile outputs -->
+        <form action="config.php" method="POST">
 
-        <div class="disflex menu-txtalign-center title-padding">
-            <div>PROFILE PIC</div>
-            <div class="user-txtcolor title-fontsize title-padding"><b><?php echo "$name <br>"; ?></b></div>
-            
-        </div>
-        <div class="menu-txtalign-left">
-            <a class="menu-btn-txtcolor user-btn-colors title-padding menu-notxtdecor" href="editprofile.php">EDIT PROFILE</a>
-        </div>
-        <div class="disflex menu-txtalign-center title-padding">
-
-            <div class="popup-menuopt-width">
-
-                <div class="user-txtcolor title-padding"><b>USER DETAILS</b></div>
-
-                <?php
-
-
-
-echo "$bday <br>";
-echo "$bplace <br>";
-echo "$conno <br>";
-echo "$email <br>";
-echo "$address <br>";
-
-                ?>
-
-            </div>
-            <div class="popup-menuopt-width">
-
-                <div class="user-txtcolor title-padding"><b>MISCELLANEOUS</b></div>
-
-                <?php 
-
-echo "$alumuserid <br>";
-echo "$id <br>";
-echo "$branch <br>";
-
-                ?>
+            <div>
+                <!-- <label for="lname">Last Name: </label> -->
+                <input type="text" name="alumuserid" value="<?php echo "$alumuserid"; ?>">
             </div>
 
-        </div>
+            <div>
+                <label for="lname">Last Name: </label>
+                <input type="text" name="lname" value="<?php echo "$lname"; ?>">
+            </div>
+            <div>
+                <input type="submit" name="editprofsubmit">
+            </div>
 
-        
-
-        
-        
+        </form>
     </div>
-
     <div name="footer" class="cont-bgcolor foot-flex foot-padding-top foot-padding-bot">
         <div class="foot-width">
             <img class="foot-img" src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
@@ -176,6 +133,6 @@ echo "$branch <br>";
         <div class="foot-width menu-txtalign-left user-txtcolor">Footer</div>
         <div class="foot-width menu-txtalign-left user-txtcolor">Footer</div>
     </div>
-
+    
 </body>
 </html>

@@ -144,6 +144,13 @@
 
 	}
 
+	if(isset($_POST['editprofsubmit'])){
+		$id=$_POST['alumuserid'];
+		$lname=$_POST['lname'];
+		mysqli_query($con, "UPDATE `alum-user` SET `lname`='$lname' WHERE `id`='$id'");
+		header("location:profile.php"); 
+	}
+
 	if(isset($_POST['admin-login-submit'])){
 		// echo "config";
 		$adminusn = array(
