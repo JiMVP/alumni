@@ -128,7 +128,7 @@
 		<div class="admin-tb-menu">
 			<a href="admin.php" ><div class="admin-tb-menu-opt">HOME</div></a>
 			<a href=""><div class="admin-tb-menu-selectedopt">ALUMNI LIST</div></a>
-			<a href="#"><div class="admin-tb-menu-opt">EVENTS & JOBS</div></a>
+			<a href="cinevent.php"><div class="admin-tb-menu-opt">EVENTS & JOBS</div></a>
             <a href="#"><div class="admin-tb-menu-opt">GALLERY</div></a>
             <a href="#" onclick="logout()"><div class="admin-tb-menu-opt">LOG OUT</div></a>
 			<!-- <a href="#"><div class="admin-tb-menu-opt">ABOUT</div></a> -->

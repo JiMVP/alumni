@@ -9,6 +9,7 @@
     $alumuserquery=mysqli_query($con, "SELECT * FROM `alumacc` WHERE `id`='$id' AND `usn`='$usn'");
     $fetchalumuser=mysqli_fetch_assoc($alumuserquery);
     $alumuserid=$fetchalumuser['alum-user_id'];
+    // $alumlogincnt=$fetchalumuser['logincount'];
     $namequery=mysqli_query($con, "SELECT * FROM `alum-user` WHERE `id`='$alumuserid'");
     $fetchname=mysqli_fetch_assoc($namequery);
     $lname=$fetchname['lname'];
@@ -16,6 +17,9 @@
     $mname=$fetchname['mname'];
     $name="$lname, $fname, $mname";
     $branch=$fetchname['branch'];
+    // $getocc=mysqli_query($con, "SELECT * FROM `alumocc` WHERE `id`='$id' AND `alum-user_id`='$alumuserid'");
+    // $fetocc=mysqli_fetch_assoc($getocc);
+    // $occ=$fetocc['occupation'];
     // echo $_SESSION["id"];
 ?>
 <!DOCTYPE html>
@@ -125,6 +129,22 @@
     
 
     <div class="std-contain">
+
+        <!-- <?php
+        
+// if($occ==NULL){
+
+//     ?>
+
+//         <div name="occprompt" class="popup-menu-fixed user-colors">
+//             OCC PROMPT
+//         </div>
+
+//     <?php
+
+// }
+        
+        ?> -->
 
         <div class="user-txtcolor title-fontsize title-padding"><b>EVENTS</b></div>
         <div name="index-events-container" class="foot-flex">

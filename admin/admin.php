@@ -127,7 +127,7 @@
 		<div class="admin-tb-menu">
 			<a href="" ><div class="admin-tb-menu-selectedopt">HOME</div></a>
 			<a href="alumlist.php"><div class="admin-tb-menu-opt">ALUMNI LIST</div></a>
-			<a href="#"><div class="admin-tb-menu-opt">EVENTS & JOBS</div></a>
+			<a href="cinevent.php"><div class="admin-tb-menu-opt">EVENTS & JOBS</div></a>
             <a href="#"><div class="admin-tb-menu-opt">GALLERY</div></a>
             <a href="#" onclick="logout()"><div class="admin-tb-menu-opt">LOG OUT</div></a>
 			<!-- <a href="#"><div class="admin-tb-menu-opt">ABOUT</div></a> -->
@@ -140,7 +140,7 @@
 	<div class="admin-popup-menu" id="index-popup-menu">
 		<a href="#" onclick="cont_home()"><div class="admin-popmenu-selectedopt">HOME</div></a>		
 		<a href="alumlist.php" ><div class="admin-popmenu-opt">ALUMNI LIST</div></a>		
-		<a href="#" ><div class="admin-popmenu-opt">EVENTS & JOBS</div></a>	
+		<a href="cinevent.php" ><div class="admin-popmenu-opt">EVENTS & JOBS</div></a>	
         <a href="#" ><div class="admin-popmenu-opt">GALLERY</div></a>
         <a href="#" onclick="logout()"><div class="admin-popmenu-opt">LOG OUT</div></a>	
 	</div>
@@ -280,8 +280,7 @@
 
             </div>
             <!-- <div style="border:solid 1px black; padding:10px">PENDING ALUMNI VERIFICATION LIST</div> -->
-            <div class="admin-cont-title"><div><b>EVENTS & JOBS</b></div></div>
-            <div class="admin-cont-title"><div><b>FEATURED ALUMNI</b></div></div>
+            
         </div>        
     </div>
     <div class="admin-agenft">

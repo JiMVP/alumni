@@ -24,6 +24,7 @@
 
             mysqli_query($con, "UPDATE `alum-user` SET `never_verified` = '0' WHERE `id` = '$id'");
             mysqli_query($con, "INSERT INTO `alumacc`(`alum-user_id`) VALUES ('$id')");
+            // mysqli_query($con, "INSERT INTO `alumocc`(`alum-user_id`) VALUES ('$id')");
 
             $lname=$fetsql['lname'];
             $fname=$fetsql['fname'];

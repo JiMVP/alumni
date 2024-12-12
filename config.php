@@ -85,6 +85,8 @@
 		$reghonor=$_POST['reg-honor'];
 		$regdatetime=date("Y-m-d H:i:s");
 
+		
+
 		mysqli_query($con, "INSERT INTO `alum-user` (
 			`lname`, 
 			`fname`, 
@@ -134,6 +136,14 @@
 		$alumaccconfpwd=$_POST['alumacc-confpwd'];
 		if($alumaccpwd != $alumaccconfpwd){
 			header("location:loginusnpwd.php?id=$alumaccid&prompt=confpwderror");
+		}
+
+		$passcomparesql=mysqli_query($con, "SELECT `pwd` FROM `alumacc` WHERE 1");
+		while($fetpasscomp=mysqli_fetch_assoc($passcomparesql)){
+			$passcompare=$fetpasscomp['pwd'];
+			if($alumaccpwd==$passcompare){
+				header("location:loginusnpwd.php?id=$alumaccid&prompt=pwdinvalid");
+			}
 		}
 
 		mysqli_query($con, "UPDATE `alumacc` SET `usn`='$alumaccusn', `pwd`='$alumaccpwd' WHERE `alum-user_id`='$alumaccid'");

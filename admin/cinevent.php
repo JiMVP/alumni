@@ -5,36 +5,8 @@
     if(!(isset($_SESSION['admin-branch']))){
         header("location:login.html");
     }
-    if(!($_GET)){
-        header("location:login.html");
-    }
-    
     
     $adminbr = $_SESSION['admin-branch'];
-    $id=$_GET['id'];
-
-    $getalumsql=mysqli_query($con, "SELECT * FROM `alum-user` WHERE `id`='$id' AND `branch`='$adminbr';");
-    $fetalum=mysqli_fetch_assoc($getalumsql);
-    $lname=$fetalum['lname'];
-    $fname=$fetalum['fname'];
-    $mname=$fetalum['mname'];
-    $suffix=$fetalum['suffix'];
-    $midini=substr($mname,0,1);
-    $bday=$fetalum['bday'];
-    $bplace=$fetalum['bplace'];
-    $conno=$fetalum['conno'];
-    $email=$fetalum['email'];
-    $address=$fetalum['address'];
-    // $campus=$fetalum['branch'];
-    $usn=$fetalum['usn'];
-    $course=$fetalum['degree'];
-    $verified=$fetalum['verified'];
-
-    if($suffix == "N/A"){                       
-        $fullname = "$lname, $fname $mname";                                                
-    }else{                        
-        $fullname = "$lname, $fname $mname $suffix";                         
-    } 
 
 ?>
 <!DOCTYPE html>
@@ -42,7 +14,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo "$fullname | ACLC $adminbr Admin"; ?></title>
+    <title>
+        ACLC 
+        
+        <?php 
+    
+    // if($adminbr == "Cebu")
+    //     echo "Mandaue";
+    // else
+        echo $adminbr; 
+    
+    ?> 
+
+        Admin 
+    </title>
     <link rel="stylesheet" href="/alumni/index.css">
     <script src="https://kit.fontawesome.com/8a1d3beb0c.js" crossorigin="anonymous"></script>
     <script>
@@ -109,7 +94,7 @@
     </script>
 </head>
 <body id="body">
-<form id ="admin-tb-menu-form" action="logout.php" method="post" style="display:none"></form>
+    <form id ="admin-tb-menu-form" action="logout.php" method="post" style="display:none"></form>
     <div class="admin-topbar">
 		<div class="admin-tb-logo">
             <img src="/alumni/alum-images/aclclogo.png" alt="ACLC Logo">
@@ -142,7 +127,7 @@
 		<div class="admin-tb-menu">
 			<a href="admin.php" ><div class="admin-tb-menu-opt">HOME</div></a>
 			<a href="alumlist.php"><div class="admin-tb-menu-opt">ALUMNI LIST</div></a>
-			<a href="#"><div class="admin-tb-menu-opt">EVENTS & JOBS</div></a>
+			<a href="#"><div class="admin-tb-menu-selectedopt">EVENTS & JOBS</div></a>
             <a href="#"><div class="admin-tb-menu-opt">GALLERY</div></a>
             <a href="#" onclick="logout()"><div class="admin-tb-menu-opt">LOG OUT</div></a>
 			<!-- <a href="#"><div class="admin-tb-menu-opt">ABOUT</div></a> -->
@@ -153,33 +138,66 @@
 		
 	</div> -->
 	<div class="admin-popup-menu" id="index-popup-menu">
-		<a href="admin.php" onclick="cont_home()"><div class="admin-popmenu-opt">HOME</div></a>		
+		<a href="#" onclick="cont_home()"><div class="admin-popmenu-selectedopt">HOME</div></a>		
 		<a href="alumlist.php" ><div class="admin-popmenu-opt">ALUMNI LIST</div></a>		
-		<a href="cinevent.php" ><div class="admin-popmenu-opt">EVENTS & JOBS</div></a>	
+		<a href="#" ><div class="admin-popmenu-opt">EVENTS & JOBS</div></a>	
         <a href="#" ><div class="admin-popmenu-opt">GALLERY</div></a>
         <a href="#" onclick="logout()"><div class="admin-popmenu-opt">LOG OUT</div></a>	
 	</div>
+    
+
+        <?php
+    
+    
+
+    // if($adminbr == "Tacloban"){
+
+        ?>
+<!--     
+    <div class="tacadmin-masthd">
+
+        <div class="tacadmin-mast-aclc-img">
+			<img src="/alumni/alum-images/aclctaclogo2-tp.png" alt="ACLC COLLEGE">
+			<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
+		</div>	
+
+    </div> -->
+        <?php
+
+    // }else if($adminbr == "Ormoc"){
+
+        ?>
+<!-- 
+    <div class="mocadmin-masthd">
+        <div class="mocadmin-mast-aclc-img">
+			<img src="/alumni/alum-images/aclcormoclogo-tp.png" alt="ACLC COLLEGE OF ORMOC">
+			<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
+		</div>	
+    </div> -->
+
+        <?php
+
+    // }else if($adminbr == "Mandaue"){
+
+        ?>
+<!-- 
+    <div class="cebadmin-masthd">
+        <div class="cebadmin-mast-aclc-img">
+			<img src="/alumni/alum-images/aclccebulogo-tp2.png" alt="ACLC COLLEGE">
+			<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
+
+		</div>	
+    </div> -->
+
+        <?php
+
+    // }
+        
+        ?>
 
     <div class="std-contain">
-        <div class="admin-content">
-            <a class="admin-cycpb-verify" href="/alumni/configfiles/veruser.php?id=<?php echo $id; ?>">VERIFY</a>
-            <a class="admin-cycpb-delete" href="/alumni/configfiles/unveruser.php?id=<?php echo $id; ?>">UNVERIFY</a>
-        </div>
+        EVENTS
     </div>
 
-    <div class="admin-agenft">
-		<div class="admin-af-left-blk">
-			<div class="admin-af-lb-img">
-				<img src="/alumni/alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
-			</div>
-			<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
-		</div>
-		<div class="admin-af-mid-blk">
-			<div>Footer</div>
-		</div>
-		<div class="admin-af-right-blk">
-			<div>Footer</div>
-		</div>
-	</div>
 </body>
 </html>
