@@ -29,6 +29,7 @@
         Admin 
     </title>
     <link rel="stylesheet" href="/alumni/index.css">
+    <link rel="stylesheet" href="/alumni/alumfincss.css">
     <script src="https://kit.fontawesome.com/8a1d3beb0c.js" crossorigin="anonymous"></script>
     <script>
 
@@ -146,54 +147,54 @@
 	</div>
     
 
-        <?php
+        <!-- <?php
     
     
 
-    if($adminbr == "Tacloban"){
+    // if($adminbr == "Tacloban"){
 
-        ?>
+    //     ?>
     
-    <div class="tacadmin-masthd">
+    // <div class="tacadmin-masthd">
 
-        <div class="tacadmin-mast-aclc-img">
-			<img src="/alumni/alum-images/aclctaclogo2-tp.png" alt="ACLC COLLEGE">
-			<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
-		</div>	
+    //     <div class="tacadmin-mast-aclc-img">
+	// 		<img src="/alumni/alum-images/aclctaclogo2-tp.png" alt="ACLC COLLEGE">
+	// 		<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
+	// 	</div>	
 
-    </div>
-        <?php
+    // </div>
+    //     <?php
 
-    }else if($adminbr == "Ormoc"){
+    // }else if($adminbr == "Ormoc"){
 
-        ?>
+    //     ?>
 
-    <div class="mocadmin-masthd">
-        <div class="mocadmin-mast-aclc-img">
-			<img src="/alumni/alum-images/aclcormoclogo-tp.png" alt="ACLC COLLEGE OF ORMOC">
-			<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
-		</div>	
-    </div>
+    // <div class="mocadmin-masthd">
+    //     <div class="mocadmin-mast-aclc-img">
+	// 		<img src="/alumni/alum-images/aclcormoclogo-tp.png" alt="ACLC COLLEGE OF ORMOC">
+	// 		<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
+	// 	</div>	
+    // </div>
 
-        <?php
+    //     <?php
 
-    }else if($adminbr == "Mandaue"){
+    // }else if($adminbr == "Mandaue"){
 
-        ?>
+    //     ?>
 
-    <div class="cebadmin-masthd">
-        <div class="cebadmin-mast-aclc-img">
-			<img src="/alumni/alum-images/aclccebulogo-tp2.png" alt="ACLC COLLEGE">
-			<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
+    // <div class="cebadmin-masthd">
+    //     <div class="cebadmin-mast-aclc-img">
+	// 		<img src="/alumni/alum-images/aclccebulogo-tp2.png" alt="ACLC COLLEGE">
+	// 		<div class="mast-title" style=""><img src="/alumni/alum-images/admin.png" alt="ADMIN"></div>
 
-		</div>	
-    </div>
+	// 	</div>	
+    // </div>
 
-        <?php
+    //     <?php
 
-    }
+    // }
         
-        ?>
+        ?> -->
 
 		
 	<!-- </div> -->
@@ -283,19 +284,10 @@
             
         </div>        
     </div>
-    <div class="admin-agenft">
-		<div class="admin-af-left-blk">
-			<div class="admin-af-lb-img">
-				<img src="/alumni/alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
-			</div>
-			<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
-		</div>
-		<div class="admin-af-mid-blk">
-			<div>Footer</div>
-		</div>
-		<div class="admin-af-right-blk">
-			<div>Footer</div>
-		</div>
-	</div>
+    <?php
+    
+    include "adminfooter.php";
+    
+    ?>
 </body>
 </html>

@@ -167,19 +167,10 @@
         </div>
     </div>
 
-    <div class="admin-agenft">
-		<div class="admin-af-left-blk">
-			<div class="admin-af-lb-img">
-				<img src="/alumni/alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
-			</div>
-			<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
-		</div>
-		<div class="admin-af-mid-blk">
-			<div>Footer</div>
-		</div>
-		<div class="admin-af-right-blk">
-			<div>Footer</div>
-		</div>
-	</div>
+    <?php
+    
+    include "adminfooter.php";
+    
+    ?>
 </body>
 </html>

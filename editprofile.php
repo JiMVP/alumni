@@ -126,13 +126,11 @@
 
         </form>
     </div>
-    <div name="footer" class="cont-bgcolor foot-flex foot-padding-top foot-padding-bot">
-        <div class="foot-width">
-            <img class="foot-img" src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
-        </div>
-        <div class="foot-width menu-txtalign-left user-txtcolor">Footer</div>
-        <div class="foot-width menu-txtalign-left user-txtcolor">Footer</div>
-    </div>
+    <?php
+    
+    include "alumfooter.php";
+    
+    ?>
     
 </body>
 </html>

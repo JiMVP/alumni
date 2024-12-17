@@ -310,6 +310,9 @@ body{
 .cont-bgcolor{
     background-color: rgb(224, 230, 247);
 }
+.cont-admin-bgcolor{
+    background-color: rgb(247, 224, 224);
+}
 
 /*content image settings - test.php*/
 .cont-img-width{

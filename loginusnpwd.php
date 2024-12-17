@@ -212,24 +212,12 @@ if($_GET){
             </div>
         </div>
     </div>
-    <div class="index-agenft">
-		<div class="index-af-left-blk">
-			<div class="index-af-lb-img">
-				<img src="alum-images/aclcimg-tr.png" alt="ACLC COLLEGE">
-			</div>
-			<!-- <img src="alum-images/aclclogo.png" alt="ACLC Logo"> -->
-		</div>
-		<div class="index-af-mid-blk">
-			<div>Footer of the dying mel</div>
-			<div>Mel is the only one makin the damned system</div>
-			<div>For the sake of experience</div>
-		</div>
-		<div class="index-af-right-blk">
-			alr they on block
-			but not aligned on the left
-			<br>
-			(they are now)
-		</div>
-	</div>
+    
+    <?php
+    
+    include "alumfooter.php";
+    
+    ?>
+
 </body>
 </html>
